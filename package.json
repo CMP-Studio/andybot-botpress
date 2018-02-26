@@ -1,14 +1,21 @@
 {
-  "name": "Node-Website-EC2-Sample-App",
-  "description": "Sample NodeJs web application",
+  "name": "bots",
   "version": "0.0.1",
-  "private": true,
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "botpress": "1.x",
+    "botpress-web": "1.x"
+  },
   "devDependencies": {
     "mocha": "5.0.0",
     "unit.js": "2.0.0",
     "supertest": "3.0.0"
   },
   "scripts": {
+    "start": "botpress start",
     "test": "mocha --recursive tests --exit"
-  }
+  },
+  "author": "Abhishek Chadha",
+  "license": "Botpress Proprietary License"
 }
