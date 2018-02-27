@@ -1,6 +1,8 @@
 version: 0.0
 os: linux
 files:
+  - source: /data
+    destination: /home/ec2-user/data
   - source: /app.js
     destination: /home/ec2-user/node-website
   - source: /package.json
@@ -9,6 +11,10 @@ files:
     destination: /home/ec2-user/node-website/public
   - source: /node_modules/
     destination: /home/ec2-user/node-website/node_modules
+  - source: /content.yml
+    destination: /home/ec2-user/content.yml
+  - source: /botfile.js
+    destination: /home/ec2-user/botfile.js
 
 hooks:
   AfterInstall:
