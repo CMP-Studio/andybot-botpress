@@ -20,6 +20,8 @@ artifacts:
     - app.js
     - appspec.yml
     - content.yml
+    - botfile.js
+    - index.js
     - scripts/*
     - node_modules/**/*
     - public/**/*
