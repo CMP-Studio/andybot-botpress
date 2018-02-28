@@ -19,6 +19,7 @@ artifacts:
     - package.json
     - app.js
     - appspec.yml
+    - content.yml
     - scripts/*
     - node_modules/**/*
     - public/**/*
