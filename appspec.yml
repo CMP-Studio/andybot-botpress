@@ -1,8 +1,6 @@
 version: 0.0
 os: linux
 files:
-  - source: /data
-    destination: /home/ec2-user/data
   - source: /app.js
     destination: /home/ec2-user/node-website
   - source: /package.json
