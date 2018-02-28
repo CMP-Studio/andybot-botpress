@@ -1,4 +1,4 @@
 #!/bin/bash
 cd /home/ec2-user/node-website
 export PORT=80
-forever ./node_modules/.bin/bp start
+npm run start

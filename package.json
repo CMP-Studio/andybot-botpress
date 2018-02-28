@@ -13,7 +13,7 @@
     "supertest": "3.0.0"
   },
   "scripts": {
-    "start": "botpress start",
+    "start": "node app.js",
     "test": "mocha --recursive tests --exit"
   },
   "author": "Abhishek Chadha",
