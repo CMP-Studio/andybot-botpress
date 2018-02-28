@@ -2,17 +2,17 @@ version: 0.0
 os: linux
 files:
   - source: /app.js
-    destination: /home/ec2-user/node-website
+    destination: /home/ec2-user/node-website/app.json
   - source: /package.json
-    destination: /home/ec2-user/node-website
+    destination: /home/ec2-user/node-website/package.json
   - source: /public/
     destination: /home/ec2-user/node-website/public
   - source: /node_modules/
     destination: /home/ec2-user/node-website/node_modules
   - source: /content.yml
-    destination: /home/ec2-user/content.yml
+    destination: /home/ec2-user/node-website/content.yml
   - source: /botfile.js
-    destination: /home/ec2-user/botfile.js
+    destination: /home/ec2-user/node-website/botfile.js
 
 hooks:
 
