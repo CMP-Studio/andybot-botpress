@@ -61,11 +61,11 @@ module.exports = {
   postgres: {
     enabled: true,
     connection: process.env.DATABASE_URL,
-    host: process.env.PG_HOST || '127.0.0.1',
+    host: process.env.PG_HOST || 'bots.chcahw88vxf8.us-east-2.rds.amazonaws.com',
     port: process.env.PG_PORT || 5432,
-    user: process.env.PG_USER || '',
-    password: process.env.PG_PASSWORD || '',
-    database: process.env.PG_DB || '',
+    user: process.env.PG_USER || 'studio',
+    password: process.env.PG_PASSWORD || 'studioadmin',
+    database: process.env.PG_DB || 'bots',
     ssl: process.env.PG_SSL || false
   },
 
