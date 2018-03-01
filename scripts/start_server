@@ -1,5 +1,4 @@
 #!/bin/bash
 cd /home/ec2-user/node-website
 export PORT=80
-nohup npm run start &
-exit 0
+npm run start  >/dev/null 2>&1 &
