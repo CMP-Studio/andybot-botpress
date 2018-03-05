@@ -5,8 +5,10 @@ const projectPath = path.resolve(__dirname)
 const botfilePath = path.join(projectPath, 'botfile.js');
 const botfile = require(botfilePath);
 const bot = new Botpress({botfile: botfilePath});
+const setup = require('./src/setup');
 
 function startBot () {
+  setup();
   const res = bot.start();
 }
 

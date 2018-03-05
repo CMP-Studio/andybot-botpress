@@ -1,0 +1,24 @@
+# Edit this file to set the Messenger's module settings programmatically instead of using the GUI
+# This is regular YAML syntax. See http://docs.ansible.com/ansible/YAMLSyntax.html
+# You can override these settings with ENV variables. They are commented below.
+
+hostname: "<%=hostname%>"
+applicationID: "<%=applicationId%>"
+accessToken: "<%=accessToken%>"
+appSecret: "<%=appSecret%>"
+verifyToken: "<%=verifyToken%>"
+
+displayGetStarted: true
+greetingMessage: "<%=greetingMessage%>"
+persistentMenu: true
+persistentMenuItems:
+<%=menu%>
+
+trustedDomains: ["<%=trustedDomain%>"]
+autoRespondGetStarted: true
+
+chatExtensionHomeUrl: "<%=chatExtensionHomeUrl%>"
+chatExtensionInTest: true
+chatExtensionShowShareButton: true
+
+enabled: true
