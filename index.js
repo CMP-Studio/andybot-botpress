@@ -19,21 +19,21 @@
   Our Slack Community: https://slack.botpress.io
 */
 
-module.exports = function(bp) {
-  // Listens for a first message (this is a Regex)
-  // GET_STARTED is the first message you get on Facebook Messenger
-  bp.hear(/GET_STARTED|hello|hi|test|hey|holla/i, (event, next) => {
-    event.reply('#welcome') // See the file `content.yml` to see the block
-  })
+module.exports = function (bp) {
+	// Listens for a first message (this is a Regex)
+	// GET_STARTED is the first message you get on Facebook Messenger
+	bp.hear(/GET_STARTED|hello|hi|test|hey|holla/i, (event, next) => {
+		event.reply('#welcome') // See the file `content.yml` to see the block
+	})
 
-  // You can also pass a matcher object to better filter events
-  bp.hear({
-    type: /message|text/i,
-    text: /exit|bye|goodbye|quit|done|leave|stop/i
-  }, (event, next) => {
-    event.reply('#goodbye', {
-      // You can pass data to the UMM bloc!
-      reason: 'unknown'
-    })
-  })
+	// You can also pass a matcher object to better filter events
+	bp.hear({
+		type: /message|text/i,
+		text: /exit|bye|goodbye|quit|done|leave|stop/i
+	}, (event, next) => {
+		event.reply('#goodbye', {
+			// You can pass data to the UMM bloc!
+			reason: 'unknown'
+		})
+	})
 }
