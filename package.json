@@ -23,7 +23,7 @@
     "unit.js": "2.0.0"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "forever app.js",
     "test": "mocha --recursive tests --exit"
   },
   "author": "Abhishek Chadha",
