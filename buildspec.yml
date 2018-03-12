@@ -25,3 +25,4 @@ artifacts:
     - scripts/*
     - node_modules/**/*
     - public/**/*
+    - src/**/*
