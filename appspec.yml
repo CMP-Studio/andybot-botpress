@@ -7,6 +7,8 @@ files:
     destination: /home/ec2-user/node-website
   - source: /public/
     destination: /home/ec2-user/node-website/public
+  - source: /src/
+    destination: /home/ec2-user/node-website/src
   - source: /node_modules/
     destination: /home/ec2-user/node-website/node_modules
   - source: /content.yml
