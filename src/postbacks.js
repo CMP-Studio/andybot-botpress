@@ -1,4 +1,12 @@
 module.exports = {
+
+     // Triggers the instructions menu that shares the video
+    HOW_TO_PLAY: 'HOW_TO_PLAY',
+    PRIZES: "PRIZES",
+
+    // Start the summer adventure
+    BEGIN_ADVENTURE: 'BEGIN_ADVENTURE',
+
     SCAN_STAMP: 'SCAN_STAMP',
     CHECK_PROGRESS: 'CHECK_PROGRESS',
     OPPORTUNITIES: 'OPPORTUNITIES',

@@ -8,6 +8,7 @@ const config = {
         verifyToken: "cmp-bots",
         chatExtensionHomeUrl: "https://andybot.org",
         hostname: "bots.pagekite.me/",
+        staticUrl: "https://static.andybot.org/static/",
         trustedDomain: "https://andybot.org"
     },
     production: {        
@@ -17,6 +18,7 @@ const config = {
         verifyToken: "cmp-bots",
         chatExtensionHomeUrl: "https://andybot.org",
         hostname: "http://ec2-18-222-67-64.us-east-2.compute.amazonaws.com/",
+        staticUrl: "https://static.andybot.org/static/",
         trustedDomain: "https://andybot.org"
     }
 }
