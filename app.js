@@ -7,10 +7,9 @@ const botfile = require(botfilePath);
 const bot = new Botpress({botfile: botfilePath});
 const setup = require('./src/setup');
 
-function startBot () {
-  setup();
+async function startBot () {
+  await setup();
   const res = bot.start();
 }
 
-startBot();
-
+startBot()
