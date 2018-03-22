@@ -46,3 +46,8 @@ jspm_packages
 # *** Botpress specifics ***
 /data
 /modules_config
+
+**/.DS_Store
+
+content.yml
+botpress-messenger.config.yml
