@@ -1,0 +1,47 @@
+welcome: # this is the #welcome bloc referenced in index.js
+  - on: facebook
+    image: <%=staticUrl%>img/andy-hello.jpg
+  - typing: true
+    text: I'm AndyBot! Pleased to meet you!
+  - text: Lets get started on an amazing summer adventure.
+    typing: 2s
+    quick_replies:
+      - <<%=postbacks.HOW_TO_PLAY%>> How to Play
+      - <<%=postbacks.BEGIN_ADVENTURE%>> Lets Begin  
+how_to_play:
+  - typing: true
+    text: Glad you asked. Here is some more information on how to play the game
+  - on: facebook
+    template_type: "generic"
+    elements:
+      -
+        title: "How to Play"
+        image_url: "<%=staticUrl%>img/how-to-play.png"
+        buttons:
+          -
+            type: "web_url"
+            title: "Watch Video"
+            url: "https://www.youtube.com/watch?v=7OihGFRY6c8?autoplay=1"
+          -
+            type: "web_url"
+            url: "http://members.carnegiemuseums.org/site/PageServer?pagename=Summer_Adventure_2017"
+            title: "View Website"
+          -
+            type: "postback"
+            title: "Prizes"
+            payload: "PRIZES"
+prizes:
+  - |
+    Glad you asked! By participating in Summer Adventure, you have a chance to win
+
+      - Free museum memberships
+      - Gifts from the museum shop
+      - Muffins from Carnegie Cafe
+  - text: Lets get started when you're ready
+    typing: 2s
+    quick_replies:
+      - <<%=postbacks.BEGIN_ADVENTURE%>> Lets Begin  
+goodbye:
+  - text: You are leaving because of reason {{reason}}
+    typing: true
+  - Hope to see you back again soon! # if no other properties, you can just send a strings
