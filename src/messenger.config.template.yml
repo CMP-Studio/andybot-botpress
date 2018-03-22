@@ -15,7 +15,7 @@ persistentMenuItems:
 <%=menu%>
 
 trustedDomains: ["<%=trustedDomain%>"]
-autoRespondGetStarted: true
+autoRespondGetStarted: false
 
 chatExtensionHomeUrl: "<%=chatExtensionHomeUrl%>"
 chatExtensionInTest: true
