@@ -16,7 +16,7 @@ persistentMenuItems:
 
 trustedDomains: ["<%=trustedDomain%>"]
 autoRespondGetStarted: false
-
+composerInputDisabled: true
 chatExtensionHomeUrl: "<%=chatExtensionHomeUrl%>"
 chatExtensionInTest: true
 chatExtensionShowShareButton: true

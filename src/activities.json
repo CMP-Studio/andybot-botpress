@@ -1,0 +1,257 @@
+{
+    "manifest": [
+        {
+            "activity": "trivia-mineralsgems",
+            "image": "trivia-mineralsgems-carousel.png",
+            "title": "Minerals and Gems Trivia",
+            "subtitle": "How much do you think you know about these fascinating objects?",
+            "museum": "CMNH",
+            "lat": 40.4432724078813,
+            "lng": -79.950002261238,
+            "floor": 1
+        },
+        {
+            "activity": "trivia-architecture",
+            "image": "trivia-architecture-3.png",
+            "title": "Hall of Architecture Trivia",
+            "subtitle": "The Hall of Architecture can transport you across time and space. What will you learn?",
+            "museum": "CMOA",
+            "lat": 40.4433539658363,
+            "lng": -79.9506084404754,
+            "floor": 1
+        }
+    ],
+    "trivia-architecture": [
+        {
+            "text": "The Hall of Architecture contains casts of many famous buildings from all around the world. What material are these copies made of?",
+            "image": "trivia-architecture-1.png",
+            "difficulty": 1,
+            "answer": "Plaster",
+            "incorrect": [
+                "Porcelain",
+                "Concrete"
+            ],
+            "followup": "Plaster casting allowed masterpieces of sculpture and architecture to be brought to Pittsburgh, for everyone to experience at full scale."
+        },
+        {
+            "text": "This intricate cast comes from the doors on the Cathedral of St. Pierre in France. What are the original doors made of?",
+            "image": "trivia-architecture-2.png",
+            "difficulty": 2,
+            "answer": "Oak",
+            "incorrect": [
+                "Bronze",
+                "Steel"
+            ],
+            "followup": "Many of the plaster sculptures in the collection have been painted to give a warm, antique appearance that resembles the original building materials."
+        },
+        {
+            "text": "The Hall of Architecture is modeled after which one of the seven wonders of the ancient world?",
+            "image": "trivia-architecture-3.png",
+            "difficulty": 3,
+            "answer": "Mausoleum at Halicarnassus",
+            "incorrect": [
+                "Lighthouse of Alexandria",
+                "Temple of Artemis"
+            ],
+            "followup": "Look up and you’ll see a column and capital fragment cast from the mausoleum. The Hall of Architecture was designed in 1907 by Pittsburgh architects Frank Alden and Alfred Harlow."
+        },
+        {
+            "text": "Around 1895, which museum rejected Carnegie Museums’ request to produce casts from its molds?",
+            "image": "trivia-architecture-4.png",
+            "difficulty": 3,
+            "answer": "The Metropolitan Museum of Art, New York",
+            "incorrect": [
+                "Musée National des Monuments Français, Paris",
+                "The Victoria and Albert Museum, London"
+            ],
+            "followup": "The Met director’s stiffly-worded rejection “defined what Carnegie Museums’ architectural collection would not be.”"
+        },
+        {
+            "text": "Andrew Carnegie wanted the walls in the Hall of Architecture painted purple, because it is a color associated with royalty.",
+            "image": "trivia-architecture-5.png",
+            "difficulty": 2,
+            "answer": "False ",
+            "incorrect": [
+                "True"
+            ],
+            "followup": "The walls were painted purple in 2013, as a part of the installation by artist Gabriel Sierra for the 2013 Carnegie International."
+        },
+        {
+            "text": "Approximately how many packing cases were required to move the pieces of this cast of the French Benedictine Abbey Church of St. Gilles from France to Pittsburgh?",
+            "image": "trivia-architecture-6.png",
+            "difficulty": 2,
+            "answer": 200,
+            "incorrect": [
+                "20",
+                "2000"
+            ],
+            "followup": "This cast was made in its entirety for Carnegie Museums and it is now the largest cast in the world. Cast and delivered in pieces, it had to be reassembled in the space, taking more than 18 months to complete."
+        },
+        {
+            "text": "This replica of the Parthenon is built to what scale of the original in Athens?",
+            "image": "trivia-architecture-7.png",
+            "difficulty": 2,
+            "answer": "1\/20th",
+            "incorrect": [
+                "1\/50th",
+                "1\/100th"
+            ],
+            "followup": "The Parthenon was built by the ancient Greeks to honor the goddess Athena. In the 2400+ years since its construction, it has endured substantial damage, losing its roof, sculptures, and many columns."
+        },
+        {
+            "text": "This is a bust of which Greek goddess?",
+            "image": "trivia-architecture-8.png",
+            "difficulty": 1,
+            "answer": "Athena",
+            "incorrect": [
+                "Aphrodite",
+                "Artemis"
+            ],
+            "followup": "Athena is often depicted with a snake. She is an important goddess of many things including wisdom, courage, justice, warfare, mathematics, strength, strategy, and the arts. You can find many more figures appearing with snakes throughout the Hall of Architecture."
+        },
+        {
+            "text": "The famous Porch of the Maidens has 6 draped female figures as columns. How many maidens are in its cast in the Hall of Architecture?",
+            "image": "trivia-architecture-9.png",
+            "difficulty": 1,
+            "answer": 4,
+            "incorrect": [
+                "2",
+                "6"
+            ],
+            "followup": "The Porch of the Maidens comes from the Acropolis of Athens, an citadel which contains the remains of several ancient buildings. "
+        },
+        {
+            "text": "The collection of architectural casts at Carnegie Museum of Art is the largest in the world.",
+            "image": "trivia-architecture-10.png",
+            "difficulty": 2,
+            "answer": "False ",
+            "incorrect": [
+                "True"
+            ],
+            "followup": "This collection is the third largest in the world, but the largest in the Americas. While most other collections have been either dispersed or destroyed, Carnegie Museum of Art’s collection has endured as an exhibition of world-class significance."
+        }
+    ],
+    "trivia-mineralsgems": [
+        {
+            "text": "The presence of which element can cause a mineral to appear blue or green?",
+            "image": "trivia-mineralsgems-1.png",
+            "difficulty": 2,
+            "answer": "Copper",
+            "incorrect": [
+                "Sulfur",
+                "Cadmium"
+            ],
+            "followup": "Copper-bearing minerals include Azurite and Malachite, pictured above."
+        },
+        {
+            "text": "Luster refers to how a mineral reflects light. Which of the following is NOT a way to describe luster?",
+            "image": "trivia-mineralsgems-2.png",
+            "difficulty": 1,
+            "answer": "Pungent",
+            "incorrect": [
+                "Greasy",
+                "Metallic"
+            ],
+            "followup": "Other forms of luster include pearly, dull, waxy, earthy, and silky."
+        },
+        {
+            "text": "What is the most common mineral in the crust of the earth?",
+            "image": "trivia-mineralsgems-3.png",
+            "difficulty": 2,
+            "answer": "Quartz",
+            "incorrect": [
+                "Calcite",
+                "Pyrite"
+            ],
+            "followup": "Together, quartz and other silicates form over 90% of the Earth’s crust."
+        },
+        {
+            "text": "Which is the most powerful agent for breaking rocks down to sand and silt-sized particles?",
+            "image": "trivia-mineralsgems-4.png",
+            "difficulty": 1,
+            "answer": "Water",
+            "incorrect": [
+                "Wind",
+                "Ice"
+            ],
+            "followup": "Sand, pebbles, and boulders are carried along by fast-moving water and grind themselves and any rocks the water flows over."
+        },
+        {
+            "text": "Basalt is which of the three main types of rock?",
+            "image": "trivia-mineralsgems-5.png",
+            "difficulty": 1,
+            "answer": "Igneous",
+            "incorrect": [
+                "Sedimentary",
+                "Metamorphic"
+            ],
+            "followup": "Igneous rocks are created when molten rock cools and crystallizes."
+        },
+        {
+            "text": "The science of rocks is called _____?",
+            "image": "trivia-mineralsgems-6.png",
+            "difficulty": 2,
+            "answer": "Lithology",
+            "incorrect": [
+                "Rockology",
+                "Metology"
+            ],
+            "followup": "Rocks are naturally occuring assemblages of two or more minerals. Rocks constitute an essential part of the Earth’s crust. "
+        },
+        {
+            "text": "Which instrument is used to detect radiation in minerals like uraninite?",
+            "image": "trivia-mineralsgems-7.png",
+            "difficulty": 2,
+            "answer": "Geiger Counter",
+            "incorrect": [
+                "Seismograph",
+                "X-Ray Machine"
+            ],
+            "followup": "A geiger counter is a useful tool for prospectors searching for uranium ore in Earth’s core."
+        },
+        {
+            "text": "Ancient philosophers studied and categorized minerals.",
+            "image": "trivia-mineralsgems-8.png",
+            "difficulty": 1,
+            "answer": "True ",
+            "incorrect": [
+                "False"
+            ],
+            "followup": "Mineralogy was the first of the natural sciences to be established systematically. Philosophers such as Pliny in 77 A.D grouped minerals by crystal shape, color, hardness, and composition."
+        },
+        {
+            "text": "Gemstone quality is judged by the 4 C’s. Which of the following is NOT a C used to judge gem quality?",
+            "image": "trivia-mineralsgems-9.png",
+            "difficulty": 1,
+            "answer": "Cost",
+            "incorrect": [
+                "Cut",
+                "Color"
+            ],
+            "followup": "The 4 C’s are cut, clarity, color, and carat."
+        },
+        {
+            "text": "Pittsburgh is abundant in minerals that can be cut and polished into gems.",
+            "image": "trivia-mineralsgems-10.png",
+            "difficulty": 2,
+            "answer": "False ",
+            "incorrect": [
+                "True"
+            ],
+            "followup": "Unfortunately, this is false. Mineral crystals of a clarity considered to be of gem quality occur very rarely in PA. However, Carnegie Museum of Natural History has a notable collection."
+        }
+    ],
+    "poll-warhol": [
+        {
+            "text": "foo",
+            "choices": [
+                "campbells",
+                "brillo"
+            ],
+            "images": [
+                "campbells.png",
+                "foo.png"
+            ]
+        }
+    ]
+}

@@ -9,6 +9,7 @@ const config = {
         chatExtensionHomeUrl: "https://andybot.org",
         hostname: "bots.pagekite.me/",
         staticUrl: "https://static.andybot.org/static/",
+        apiEndpoint: "http://localhost:3001",
         trustedDomain: "https://andybot.org"
     },
     production: {        
@@ -19,6 +20,7 @@ const config = {
         chatExtensionHomeUrl: "https://andybot.org",
         hostname: "http://ec2-18-222-67-64.us-east-2.compute.amazonaws.com/",
         staticUrl: "https://static.andybot.org/static/",
+        apiEndpoint: "http://localhost:3001",
         trustedDomain: "https://andybot.org"
     }
 }
