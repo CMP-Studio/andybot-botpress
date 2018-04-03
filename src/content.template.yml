@@ -46,30 +46,11 @@ how_to_play:
             title: "Prizes"
             payload: "PRIZES"
 
-# activities:
-#   - typing: true
-#     text: Here are some activities you can take part in
-#   - on: facebook
-#     template_type: "generic"
-#     elements:
-#       {{#activities}}
-#       - 
-#         subtitle: "{{subtitle}}"
-#         title: "{{title}}"
-#         image_url: "<%=staticUrl%>img/{{image}}"
-#         buttons:
-#           -
-#             type: "postback"
-#             title: "Start Activitiy"
-#             payload: "START_ACTIVITY:{{activity}}"
-#       {{/activities}}
-
 activities:
   - typing: true
     text: Here are some activities you can take part in
   - on: facebook
-    template_type: "list"
-    top_element_style: "large"
+    template_type: "generic"
     elements:
       {{#activities}}
       - 
@@ -82,11 +63,30 @@ activities:
             title: "Start Activitiy"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
-    buttons:
-      -
-        title: "View More"
-        type: "postback"
-        payload: "MORE_ACTIVITIES"
+
+# activities:
+#   - typing: true
+#     text: Here are some activities you can take part in
+#   - on: facebook
+#     template_type: "list"
+#     top_element_style: "large"
+#     elements:
+#       {{#activities}}
+#       - 
+#         subtitle: "{{subtitle}}"
+#         title: "{{title}}"
+#         image_url: "<%=staticUrl%>img/{{image}}"
+#         buttons:
+#           -
+#             type: "postback"
+#             title: "Start Activitiy"
+#             payload: "START_ACTIVITY:{{activity}}"
+#       {{/activities}}
+#     buttons:
+#       -
+#         title: "View More"
+#         type: "postback"
+#         payload: "MORE_ACTIVITIES"
 
 
 trivia-time:
