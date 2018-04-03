@@ -19,8 +19,6 @@ const botfile = require('../botfile');
 // Creates botpress-messenger.config.yml
 async function setup() {
     const config = await require('./config');
-    const express = require('express');
-    const app = express();
 
     // Setup messenger configuration YML
     const menuYMLText = YAML.stringify(menu).replace('---\n', '');
@@ -43,9 +41,6 @@ async function setup() {
             staticUrl: config.staticUrl
         }
     );
-
-    // Serve static directory
-    app.use(express.static(path.join(__dirname, 'static')));
 }
 
 function templateYaml(templateFilePath, targetFilePath, variables) {
