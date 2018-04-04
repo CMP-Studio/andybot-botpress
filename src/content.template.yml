@@ -7,7 +7,22 @@ welcome: # this is the #welcome bloc referenced in index.js
     typing: 2s
     quick_replies:
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play
-      - <<%=postbacks.BEGIN_ADVENTURE%>> Lets Begin  
+      - <<%=postbacks.BEGIN_ADVENTURE%>> Lets Begin
+
+welcome-back: # this is the #welcome bloc referenced in index.js
+  - typing: true
+    text: Hey {{user.name}}! Good to see you again.
+  - typing: true
+    text: Let's continue the summer adventure.
+    quick_replies:
+      - <<%=postbacks.HOW_TO_PLAY%>> How to Play
+      - <<%=postbacks.BEGIN_ADVENTURE%>> Lets Begin
+
+error:
+  - typing: true
+    text: This is embarassing...looks like something went wrong. Please try again later.
+
+
 how_to_play:
   - typing: true
     text: Glad you asked. Here is some more information on how to play the game
@@ -30,9 +45,87 @@ how_to_play:
             type: "postback"
             title: "Prizes"
             payload: "PRIZES"
+
+activities:
+  - typing: true
+    text: Here are some activities you can take part in
+  - on: facebook
+    template_type: "generic"
+    elements:
+      {{#activities}}
+      - 
+        subtitle: "{{subtitle}}"
+        title: "{{title}}"
+        image_url: "<%=staticUrl%>img/{{image}}"
+        buttons:
+          -
+            type: "postback"
+            title: "Start Activitiy"
+            payload: "START_ACTIVITY:{{activity}}"
+      {{/activities}}
+
+# activities:
+#   - typing: true
+#     text: Here are some activities you can take part in
+#   - on: facebook
+#     template_type: "list"
+#     top_element_style: "large"
+#     elements:
+#       {{#activities}}
+#       - 
+#         subtitle: "{{subtitle}}"
+#         title: "{{title}}"
+#         image_url: "<%=staticUrl%>img/{{image}}"
+#         buttons:
+#           -
+#             type: "postback"
+#             title: "Start Activitiy"
+#             payload: "START_ACTIVITY:{{activity}}"
+#       {{/activities}}
+#     buttons:
+#       -
+#         title: "View More"
+#         type: "postback"
+#         payload: "MORE_ACTIVITIES"
+
+
+trivia-time:
+  - on: facebook
+    template_type: "generic"
+    elements:
+      - 
+        subtitle: "You started the {{name}} trivia set. There are {{numQuestions}} questions in this set."
+        title: "It's trivia time!"
+        image_url: "<%=staticUrl%>img/andy-trivia-time.png"
+
+trivia-followup:
+  - text: "{{feedback}} {{text}}"
+    typing: 2s
+
+trivia-question:
+  - text: "Question {{questionNumber}}"
+    typing: 1s
+  - on: facebook
+    image: "<%=staticUrl%>img/{{question.image}}"
+  - on: facebook
+    template_type: "button"
+    text: "{{question.text}}"
+    buttons:
+      {{#choices}}
+      -
+        type: "postback"
+        title: "{{.}}"
+        payload: "SELECT:{{@index}}"
+      {{/choices}}
+
+trivia-complete:
+  - typing: true
+    text: Thats it! You did amazing.
+
+
 prizes:
   - |
-    Glad you asked! By participating in Summer Adventure, you have a chance to win
+    By participating in Summer Adventure, you have a chance to win
 
       - Free museum memberships
       - Gifts from the museum shop
@@ -45,3 +138,9 @@ goodbye:
   - text: You are leaving because of reason {{reason}}
     typing: true
   - Hope to see you back again soon! # if no other properties, you can just send a strings
+
+askStopConvo:
+  - template_type: button
+    text: You have another activity in progress. You must first end the previous activity.
+    buttons:
+      - <STOP_CONVO> End Activity

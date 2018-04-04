@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "botpress": "1.x",
     "botpress-audience": "^1.0.2",
     "botpress-broadcast": "^2.0.11",
@@ -28,6 +29,7 @@
   "scripts": {
     "start": "forever app.js",
     "dev": "NODE_ENV=development node app.js",
+    "debug": "NODE_ENV=development node --inspect app.js",
     "tunnel": "pagekite.py 3000 bots.pagekite.me",
     "test": "mocha --recursive tests --exit",
     "deploy-static": "s3-deploy './static/**' --cwd './' --region us-east-2 --bucket andybot --deleteRemoved",
