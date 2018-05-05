@@ -20,5 +20,5 @@ composerInputDisabled: true
 chatExtensionHomeUrl: "<%=chatExtensionHomeUrl%>"
 chatExtensionInTest: true
 chatExtensionShowShareButton: true
-
-enabled: true
+webhookSubscriptionFields: ["messages"]
+enabled: false

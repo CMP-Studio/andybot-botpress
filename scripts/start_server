@@ -1,3 +1,17 @@
 #!/bin/bash
+
+## We need to set up the server with the correct environment settings
+## and private configuration variables
+
+# ID=$(curl "http://169.254.169.254/latest/meta-data/instance-id")
+# INSTANCE_TAGS=$(aws --region us-east-2 ec2 describe-tags --filters Name=resource-id,Values=$ID Name=key,Values=Environment)
+# ENVIRONMENT=echo $INSTANCE_TAGS | python -c "import sys, json; data = json.load(sys.stdin)['Tags']; match = next(d for d in data if d['Key'] == 'Environment'); print match['Value']"
+# if ["$ENVIRONMENT" = "bots-WebApp"]
+# then
+#     export NODE_ENV='development'
+# else
+#     export NODE_ENV='production'
+# fi
+
 cd /home/ec2-user/node-website
 sudo PORT=80 npm run start  >/dev/null 2>&1 &

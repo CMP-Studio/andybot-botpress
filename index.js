@@ -1,104 +1,160 @@
 const postbacks = require('./src/postbacks');
 const andybot = require('./src/andybot');
+
+// const config = require('./src/config.js');
+
 const activities = require('./src/activities.json');
-const config = require('./src/config.js');
-const _ = require('lodash');
+
+const TriviaHandler = require('./src/trivia');
+const PollHandler = require('./src/poll');
+const utils = require('./utils');
+
+const activityHandlers = {
+	trivia: TriviaHandler,
+	poll: PollHandler
+};
+
+
 module.exports = function (bp) {
 
+
+	bp.fallbackHandler = function (event, next) {
+		console.log(event.raw);
+		if (event.type === 'postback' || event.type === 'message' || event.type === 'referral') {
+
+			let referral;
+			if (utils.isNonNull(event.raw.referral)) {
+				referral = event.raw.referral;
+			} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
+				referral = event.raw.postback.referral;
+			}
+			if (utils.isNonNull(referral) && referral.ref === '5099658e') {
+				event.reply('#checkin-stamp', { image: 'andy-checkin-AAM.png', text: 'Congratulations! You unlocked the AAM Conference stamp.' });
+				// return;
+			} else if (utils.isNonNull(referral) && referral.ref === '30f65153') {
+				const convo = bp.convo.create(event);
+				activityHandlers['poll'](convo, event, 'poll-brillo');
+				return;
+			} else {
+				event.reply('#unknown-selection');
+			}
+
+		}
+	};
 	// Listens for a first message (this is a Regex)
 	// GET_STARTED is the first message you get on Facebook Messenger
 	bp.hear(/GET_STARTED/i, async (event, next) => {
-    try {
-      const pageId = event.user.id;
-      const exists = await andybot.userExists(pageId);
-      if (exists === false) {
-        const user = await andybot.createUser(pageId, event.user.first_name);
-        event.reply('#welcome');
-      } else {
-        const user = await andybot.getUser(pageId);
-        event.reply('#welcome-back', { user });
-      }
-    } catch (err){
-      console.log(err);
-      event.reply('#error');
-    }
-	})
 
-	bp.hear(new RegExp(postbacks.HOW_TO_PLAY), (event, next) => {
+		// Get Started may have an associated event.
+		let referral;
+		if (utils.isNonNull(event.raw.referral)) {
+			referral = event.raw.referral;
+		} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
+			referral = event.raw.postback.referral;
+		}
+
+		if (utils.isNonNull(referral) && referral.ref === '5099658e') {
+			// 1. Allow checkin functionality
+			// 1.5 Make sure you can't scan more than once.
+			// 
+
+			// 2. Allow activity trigger scan
+			event.reply('#checkin-stamp', { image: 'andy-checkin-AAM.png', text: 'Welcome to the American Alliance of Musums conference. You just got a new stamp!' });
+		}
+
+
+		await new Promise((resolve, reject) => setTimeout(resolve, 2000));
+
+		try {
+			// const pageId = event.user.id;
+			// const exists = await andybot.userExists(pageId);
+			// if (exists === false) {
+				event.reply('#welcome');
+				// console.log(event.user);
+				// andybot.createUser(pageId, event.user.first_name);
+			// } else {
+				// const user = await andybot.getUser(pageId);
+				// event.reply('#welcome-back', { user });
+			// }
+
+
+
+
+		} catch (err){
+			console.error(err);
+			event.reply('#error');
+		}
+	});
+
+	bp.hear(postbacks.HOW_TO_PLAY, (event, next) => {
 		event.reply('#how_to_play');
-  })
-  
-  bp.hear(new RegExp(postbacks.BEGIN_ADVENTURE), (event, next) => {
-    event.reply('#activities', { activities: activities.manifest } );
-  })
+	});
 
-  bp.hear('STOP_CONVO', (event, next) => {
-    const convo = bp.convo.find(event)
-    if (convo) {
-      convo.stop('aborted')
-    }
-  })
+	/**
+	 * Activities are a session with the user that completes a well defined
+	 * task such as answering a trivia set or poll, or following clues on
+	 * a scavenger hunt.
+	 */
+	bp.hear(new RegExp(`${postbacks.BEGIN_ADVENTURE}`), (event, next) => {
+		event.reply('#activities', { activities: activities.manifest } );
+	});
 
-  bp.hear('STOP_CONVO', (event, next) => {
-    const convo = bp.convo.find(event)
-    if (convo) {
-      convo.stop('aborted')
-    }
-  })
-  
-  bp.hear(/START_ACTIVITY:/, (event, next) => {
-    const activityName = event.raw.postback.payload.split(':')[1];
-    if (bp.convo.find(event)) {
-      return event.reply('#askStopConvo', { object: 'trivia' })
-    }
-    const convo = bp.convo.create(event);
-    const activity = activities[activityName];
-    const activityTitle = _.find(activities.manifest, (e) => e.activity === activityName).title;
-    event.reply("#trivia-time", { name: activityTitle, numQuestions: activity.length });
-    // Sets postbacks as an acceptable answer type
-    convo.messageTypes = ['postback', 'quick_reply']; 
-    for (var i = 0; i < activity.length; i++) {
-      const followUp = activities[activityName][i].followup;
-      const isLastQuestion = i === activity.length - 1;
-      const options = [ ...activity[i].incorrect, activity[i].answer ];
-      const choices = _.shuffle(options);
-      const correctAnswer = activity[i].answer;
-      convo.threads['default'].addQuestion(
-        '#trivia-question',
-        {
-          question: activity[i],
-          questionNumber: i + 1,
-          choices
-        },
-        [
-          {
-            default: true, 
-            callback: response => {
-              const answer = response.raw.postback.title;
-              let feedback;
-              if (correctAnswer === answer) {
-                feedback = 'Correct!'
-              } else {
-                feedback = 'The answer is ' + correctAnswer + '.';
-              }
-              console.log(response);
-              convo.say("#trivia-followup", { text: followUp, feedback })
-              if (isLastQuestion === false) {
-                convo.next()
-              } else {
-                convo.say("#trivia-complete", { score: 100 });
-                convo.stop('aborted');
-              }
-            }
-          }
-        ]
-      );
-    }    
-    convo.activate();
-  })
+	/** Finds the current convo for the user and ends it. A convo is used
+	 * to represent a persisted, active session of input-output between the
+	 * bot and user. Used to enable activities such as trivia, polls etc.
+	 */
+
+	//  bp.hear('STOP_CONVO', (event, next) => {
+	// 	const convo = bp.convo.find(event)
+	// 	if (convo) {
+	// 		convo.stop('aborted');
+	// 	}
+	// 	event.reply("Your previous activity was ended.");
+	// });
+
+	bp.hear('STOP_CONVO', (event, next) => {
+		const convo = bp.convo.find(event);
+		if (convo) {
+			convo.stop('aborted');
+			event.reply("#activity_ended");
+		}
+	});
+	
+	bp.hear(/START_ACTIVITY:/, (event, next) => {
+		const activityName = event.raw.postback.payload.split(':')[1];		
+		const activityType = getActivityType(activityName);
+		if (isValidActivityType(activityType) === false) {
+			event.reply('#error');
+		}
+
+		if (bp.convo.find(event)) {
+			return event.reply('#askStopConvo', { object: 'trivia' });
+		}
+
+		const convo = bp.convo.create(event);
+		try {
+			activityHandlers[activityType](convo, event, activityName);
+			console.log(`${activityName} started`);
+		} catch (err) {
+			// console.err(err);
+		}
+	});
 
 
 	bp.hear(new RegExp(postbacks.PRIZES), (event, next) => {
 		event.reply('#prizes');
-  })
-}
+	});
+};
+
+const isValidActivityType = function (activityType) {
+	const validActivityTypes = ['poll', 'trivia', 'scavengerhunt'];
+	return validActivityTypes.indexOf(activityType);
+};
+
+const getActivityType = function (activityId) {
+	if (activityId.indexOf('-') < 0) {
+		throw new Error('Invalid activity name');
+	}
+	const split = activityId.split('-');
+	return split[0];
+};

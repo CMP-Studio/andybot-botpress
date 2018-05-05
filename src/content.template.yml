@@ -1,22 +1,28 @@
 welcome: # this is the #welcome bloc referenced in index.js
   - on: facebook
-    image: <%=staticUrl%>img/andy-hello.jpg
+    image: <%=staticUrl%>img/andy-hello.png
   - typing: true
     text: I'm AndyBot! Pleased to meet you!
-  - text: Lets get started on an amazing summer adventure.
+  - text: Let's get started on an amazing summer adventure.
     typing: 2s
     quick_replies:
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play
-      - <<%=postbacks.BEGIN_ADVENTURE%>> Lets Begin
+      - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Begin
+
+checkin-stamp:
+  - on: facebook
+    image: <%=staticUrl%>img/{{image}}
+  - typing: true
+    text: "{{text}}"
 
 welcome-back: # this is the #welcome bloc referenced in index.js
   - typing: true
     text: Hey {{user.name}}! Good to see you again.
   - typing: true
-    text: Let's continue the summer adventure.
+    text: Let's continue our summer adventure.
     quick_replies:
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play
-      - <<%=postbacks.BEGIN_ADVENTURE%>> Lets Begin
+      - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Go
 
 error:
   - typing: true
@@ -31,16 +37,16 @@ how_to_play:
     elements:
       -
         title: "How to Play"
-        image_url: "<%=staticUrl%>img/how-to-play.png"
+        image_url: "<%=staticUrl%>img/andy-how-to-play.png"
         buttons:
           -
             type: "web_url"
-            title: "Watch Video"
-            url: "https://www.youtube.com/watch?v=7OihGFRY6c8?autoplay=1"
+            title: "Getting Started"
+            url: "http://carnegiebot.s3-website.us-east-2.amazonaws.com/"
           -
             type: "web_url"
-            url: "http://members.carnegiemuseums.org/site/PageServer?pagename=Summer_Adventure_2017"
-            title: "View Website"
+            url: "http://carnegiemuseums.org/about-us/"
+            title: "About CMP"
           -
             type: "postback"
             title: "Prizes"
@@ -48,7 +54,7 @@ how_to_play:
 
 activities:
   - typing: true
-    text: Here are some activities you can take part in
+    text: "Here are some activities you can take part in"
   - on: facebook
     template_type: "generic"
     elements:
@@ -64,6 +70,29 @@ activities:
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
+
+more-activities:
+  - typing: true
+    text: "That was awesome. Keep the adventure going with more activities."
+  - on: facebook
+    template_type: "generic"
+    elements:
+      {{#activities}}
+      - 
+        subtitle: "{{subtitle}}"
+        title: "{{title}}"
+        image_url: "<%=staticUrl%>img/{{image}}"
+        buttons:
+          -
+            type: "postback"
+            title: "Start Activitiy"
+            payload: "START_ACTIVITY:{{activity}}"
+      {{/activities}}
+
+
+unknown-selection:
+  - typing: 1s
+    text: "I'm not quite sure what you meant by that. Try using the quick replies or menu options below."
 # activities:
 #   - typing: true
 #     text: Here are some activities you can take part in
@@ -88,19 +117,70 @@ activities:
 #         type: "postback"
 #         payload: "MORE_ACTIVITIES"
 
+poll-time:
+  - on: facebook
+    template_type: "generic"
+    elements:
+      - 
+        title: "You started the {{name}}"
+        image_url: "<%=staticUrl%>img/andy-what-you-think.png?time=1234"
+        subtitle: "This activity takes about {{numQuestions}} minute(s) to complete."
+        buttons:
+          -
+            type: "postback"
+            title: "End Poll"
+            payload: "STOP_CONVO"
+
+
+poll-question:
+  - text: "Question {{questionNumber}} - {{question}}"
+    typing: 1s
+  - on: facebook
+    template_type: "generic"
+    elements:
+      {{#choices}}
+      -
+        title: "Option {{choiceNumber}}"
+        subtitle: "{{text}}"
+        image_url: "<%=staticUrl%>img/{{image}}?invalidate=1"
+        buttons:
+          -
+            type: "postback"
+            title: "Select {{text}}"
+            payload: "SELECT:{{choiceIndex}}"
+      {{/choices}}
+
+poll-followup:
+  - text: "{{feedback}} {{text}}"
+    typing: 1s
+
+poll-complete:
+  - typing: true
+    text: You're done! Thanks for completing the poll.
+
 
 trivia-time:
   - on: facebook
     template_type: "generic"
     elements:
       - 
-        subtitle: "You started the {{name}} trivia set. There are {{numQuestions}} questions in this set."
+        subtitle: "You started the {{name}} trivia set. This activity takes {{numQuestions}} minutes."
         title: "It's trivia time!"
         image_url: "<%=staticUrl%>img/andy-trivia-time.png"
+        buttons:
+          -
+            type: "postback"
+            title: "End Trivia"
+            payload: "STOP_CONVO"
 
 trivia-followup:
   - text: "{{feedback}} {{text}}"
-    typing: 2s
+    typing: 1s
+
+activity_ended:
+  - text: "Your previous activity has been ended"
+    typing: 1s
+
 
 trivia-question:
   - text: "Question {{questionNumber}}"
@@ -118,9 +198,24 @@ trivia-question:
         payload: "SELECT:{{@index}}"
       {{/choices}}
 
+
 trivia-complete:
   - typing: true
     text: Thats it! You did amazing.
+
+
+achievement-unlocked:
+  - typing: true
+    text: You earned {{reward}} points and unlocked new achievements!!
+  - on: facebook
+    template_type: "generic"
+    elements:
+      {{#achievements}}
+      - 
+        subtitle: "{{description}}"
+        title: "{{displayName}}"
+        image_url: "<%=staticUrl%>img/{{image}}"
+      {{/achievements}}
 
 
 prizes:
