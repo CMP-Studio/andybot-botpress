@@ -11,126 +11,281 @@
             "floor": 1
         },
         {
-            "activity": "trivia-architecture",
-            "image": "trivia-architecture-3.png",
-            "title": "Hall of Architecture Trivia",
-            "subtitle": "The Hall of Architecture can transport you across time and space. What will you learn?",
-            "museum": "CMOA",
-            "lat": 40.4433539658363,
-            "lng": -79.9506084404754,
+            "activity": "poll-brillo",
+            "image": "poll-brillo-carousel.png?time=1234",
+            "title": "Ordinary Art Poll",
+            "subtitle": "Think like Warhol and see who agrees!",
+            "location": "Warhol",
             "floor": 1
+        },
+        {
+            "activity": "trivia-birds",
+            "image": "trivia-birds-carousel.png",
+            "title": "Bird Identification Trivia",
+            "subtitle": "Can you identify these 5 birds?",
+            "location": "Powdermill",
+            "floor": 1
+        },
+        {
+            "activity": "trivia-dinos",
+            "image": "trivia-dinos-carousel.png",
+            "title": "Dinosaurs In Their Time Trivia",
+            "subtitle": "How well do you know your dinos?",
+            "location": "CMNH",
+            "floor": 1
+        },
+        {
+            "activity": "trivia-design",
+            "image": "trivia-design-carousel.png",
+            "title": "Decorative Arts and Design Trivia",
+            "subtitle": "Test your knowledge of design with this trivia set.",
+            "location": "CMOA",
+            "floor": 2
+        },
+        {
+            "activity": "trivia-impressionism",
+            "image": "trivia-impressionism-carousel.png",
+            "title": "Impressionism Trivia",
+            "subtitle": "Learn about one of the most influential movements in art.",
+            "location": "CMOA",
+            "floor": 2
         }
     ],
-    "trivia-architecture": [
+
+    "trivia-impressionism": [
         {
-            "text": "The Hall of Architecture contains casts of many famous buildings from all around the world. What material are these copies made of?",
-            "image": "trivia-architecture-1.png",
+            "text": "When and where did the art movement known as Impressionism originate?",
+            "image": "trivia-impressionism-1.png",
             "difficulty": 1,
-            "answer": "Plaster",
+            "answer": "1870s, Paris",
             "incorrect": [
-                "Porcelain",
-                "Concrete"
+                "1960s, London",
+                "1920s, New York City"
             ],
-            "followup": "Plaster casting allowed masterpieces of sculpture and architecture to be brought to Pittsburgh, for everyone to experience at full scale."
+            "followup": "Impressionism revolutionized attitudes about painting methods, subject matter, and the art market."
         },
         {
-            "text": "This intricate cast comes from the doors on the Cathedral of St. Pierre in France. What are the original doors made of?",
-            "image": "trivia-architecture-2.png",
-            "difficulty": 2,
-            "answer": "Oak",
-            "incorrect": [
-                "Bronze",
-                "Steel"
-            ],
-            "followup": "Many of the plaster sculptures in the collection have been painted to give a warm, antique appearance that resembles the original building materials."
-        },
-        {
-            "text": "The Hall of Architecture is modeled after which one of the seven wonders of the ancient world?",
-            "image": "trivia-architecture-3.png",
-            "difficulty": 3,
-            "answer": "Mausoleum at Halicarnassus",
-            "incorrect": [
-                "Lighthouse of Alexandria",
-                "Temple of Artemis"
-            ],
-            "followup": "Look up and you’ll see a column and capital fragment cast from the mausoleum. The Hall of Architecture was designed in 1907 by Pittsburgh architects Frank Alden and Alfred Harlow."
-        },
-        {
-            "text": "Around 1895, which museum rejected Carnegie Museums’ request to produce casts from its molds?",
-            "image": "trivia-architecture-4.png",
-            "difficulty": 3,
-            "answer": "The Metropolitan Museum of Art, New York",
-            "incorrect": [
-                "Musée National des Monuments Français, Paris",
-                "The Victoria and Albert Museum, London"
-            ],
-            "followup": "The Met director’s stiffly-worded rejection “defined what Carnegie Museums’ architectural collection would not be.”"
-        },
-        {
-            "text": "Andrew Carnegie wanted the walls in the Hall of Architecture painted purple, because it is a color associated with royalty.",
-            "image": "trivia-architecture-5.png",
-            "difficulty": 2,
+            "text": "Impressionists never painted the same subject twice.",
+            "image": "trivia-impressionism-6.png",
+            "difficulty": 1,
             "answer": "False ",
             "incorrect": [
                 "True"
             ],
-            "followup": "The walls were painted purple in 2013, as a part of the installation by artist Gabriel Sierra for the 2013 Carnegie International."
+            "followup": "Impressionists often returned to the same subject repeatedly in order to study and capture the fleeting and constantly changing effects of light, weather, and social life."
         },
         {
-            "text": "Approximately how many packing cases were required to move the pieces of this cast of the French Benedictine Abbey Church of St. Gilles from France to Pittsburgh?",
-            "image": "trivia-architecture-6.png",
-            "difficulty": 2,
-            "answer": 200,
+            "text": "Impressionist Pierre-Auguste Renoir was included in how many Carnegie Internationals? ",
+            "image": "trivia-impressionism-7.png",
+            "difficulty": 3,
+            "answer": 7,
             "incorrect": [
-                "20",
-                "2000"
+                "3",
+                "5"
             ],
-            "followup": "This cast was made in its entirety for Carnegie Museums and it is now the largest cast in the world. Cast and delivered in pieces, it had to be reassembled in the space, taking more than 18 months to complete."
+            "followup": "The Carnegie International is the longest-running survey of global contemporary art in North America. Many Impressionists were represented in the early years of the Carnegie International."
         },
         {
-            "text": "This replica of the Parthenon is built to what scale of the original in Athens?",
-            "image": "trivia-architecture-7.png",
+            "text": "What is the name for the painting technique of using small dots of bright, often contrasting colors, pictured here?",
+            "image": "trivia-impressionism-9.png",
             "difficulty": 2,
-            "answer": "1\/20th",
+            "answer": "Pointillism",
             "incorrect": [
-                "1\/50th",
-                "1\/100th"
+                "Sgraffito",
+                "Dry Brush"
             ],
-            "followup": "The Parthenon was built by the ancient Greeks to honor the goddess Athena. In the 2400+ years since its construction, it has endured substantial damage, losing its roof, sculptures, and many columns."
+            "followup": "These marks were thought to vibrate or blend in the viewer’s eye to create a more subtle perception. "
         },
         {
-            "text": "This is a bust of which Greek goddess?",
-            "image": "trivia-architecture-8.png",
+            "text": "Which painter created this work of art titled Wheat Fields after the Rain (The Plain of Auvers)?",
+            "image": "trivia-impressionism-8.png",
             "difficulty": 1,
-            "answer": "Athena",
+            "answer": "Vincent van Gogh",
             "incorrect": [
-                "Aphrodite",
-                "Artemis"
+                "Edgar Degas",
+                "Claude Monet"
             ],
-            "followup": "Athena is often depicted with a snake. She is an important goddess of many things including wisdom, courage, justice, warfare, mathematics, strength, strategy, and the arts. You can find many more figures appearing with snakes throughout the Hall of Architecture."
-        },
-        {
-            "text": "The famous Porch of the Maidens has 6 draped female figures as columns. How many maidens are in its cast in the Hall of Architecture?",
-            "image": "trivia-architecture-9.png",
-            "difficulty": 1,
-            "answer": 4,
-            "incorrect": [
-                "2",
-                "6"
-            ],
-            "followup": "The Porch of the Maidens comes from the Acropolis of Athens, an citadel which contains the remains of several ancient buildings. "
-        },
-        {
-            "text": "The collection of architectural casts at Carnegie Museum of Art is the largest in the world.",
-            "image": "trivia-architecture-10.png",
-            "difficulty": 2,
-            "answer": "False ",
-            "incorrect": [
-                "True"
-            ],
-            "followup": "This collection is the third largest in the world, but the largest in the Americas. While most other collections have been either dispersed or destroyed, Carnegie Museum of Art’s collection has endured as an exhibition of world-class significance."
+            "followup": "This is one of the very last paintings Vincent van Gogh ever made, painted just days before his death."
         }
     ],
+    "trivia-design": [
+        {
+            "text": "Deriving forms and decorative motifs from nature is known as ____________.",
+            "image": "trivia-design-1.png",
+            "difficulty": 1,
+            "answer": "Naturalism",
+            "incorrect": [
+                "Functionalism",
+                "Minimalism"
+            ],
+            "followup": "Designers at the turn of the 20th century emphasized utility and beauty of form in the face of modern industrial production."
+        },
+        {
+            "text": "The Rococo style in decorative arts evolved from the formal, grandiose _________ style.",
+            "image": "trivia-design-3.png",
+            "difficulty": 3,
+            "answer": "Baroque",
+            "incorrect": [
+                "Neoclassical",
+                "Gothic"
+            ],
+            "followup": "The Rococo style is characterized by asymmetrical compositions of sensuous S- and C-shaped curves and the use of naturalistic motifs, such as rocks, shells, and foliage."
+        },
+        {
+            "text": "The swelling, curved lower section of this furniture is described as ____________, a term derived from a French word that means “to bulge”.",
+            "image": "trivia-design-4.png",
+            "difficulty": 2,
+            "answer": "Bombé",
+            "incorrect": [
+                "Bulbes",
+                "Boule"
+            ],
+            "followup": "The time-consuming, labor-intensive process required to produce curved elements added to the cost of objects."
+        },
+        {
+            "text": "What is the name for the process of returning objects to their original historic form?",
+            "image": "trivia-design-8.png",
+            "difficulty": 1,
+            "answer": "Restoration",
+            "incorrect": [
+                "Conservation",
+                "Elongation"
+            ],
+            "followup": "The materials used in a restoration are scientifically tested for their stability and reversibility."
+        },
+        {
+            "text": "Carnegie Museum of Art has an especially notable collection of which decorative item?",
+            "image": "trivia-design-10.png",
+            "difficulty": 1,
+            "answer": "Chairs",
+            "incorrect": [
+                "Area rugs",
+                "Mirrors"
+            ],
+            "followup": "For centuries, artists have been stretching the boundaries of the chair form. The chairs displayed at the museum celebrate the diversity, beauty, and innovation of chair design from the late 17th century to the present. "
+        }
+    ],
+    "trivia-dinos": [
+        {
+            "text": "What kind of dinosaur is “Dippy,” who appears in Carnegie Museum of Natural History’s logo?",
+            "image": "trivia-dinos-10.png",
+            "difficulty": 1,
+            "answer": "Diplodocus",
+            "incorrect": [
+                "Brachiosaurus",
+                "Velociraptor"
+            ],
+            "followup": "In 1901, paleontologists realized they had discovered a new species of dinosaur and named it Diplodocus carnegii to recognize Andrew Carnegie's support."
+        },
+        {
+            "text": "Which is the correct order for these three periods of the Mesozoic Era?",
+            "image": "trivia-dinos-3.png",
+            "difficulty": 3,
+            "answer": "Triassic, Jurassic, Cretaceous",
+            "incorrect": [
+                "Cretaceous, Jurassic, Triassic",
+                "Jurassic, Cretaceous, Triassic"
+            ]
+        },
+        {
+            "text": "Which of the following dinosaurs was a carnivore?",
+            "image": "trivia-dinos-6.png",
+            "difficulty": 2,
+            "answer": "Allosaurus",
+            "incorrect": [
+                "Camptosaurus",
+                "Triceratops"
+            ],
+            "followup": "Most carnivorous dinosaurs had sharp, pointed, blade-like teeth which were serrated like steak knives for cutting through meat."
+        },
+        {
+            "text": "Tyrannosaurus rex laid eggs. ",
+            "image": "trivia-dinos-7.png",
+            "difficulty": 1,
+            "answer": "True ",
+            "incorrect": [
+                "False"
+            ],
+            "followup": "Like other reptiles, dinosaurs laid eggs."
+        },
+        {
+            "text": "Horned dinosaurs are known as ____________.",
+            "image": "trivia-dinos-8.png",
+            "difficulty": 2,
+            "answer": "Ceratopsids",
+            "incorrect": [
+                "Pterosaurs",
+                "Ornithopods"
+            ],
+            "followup": "The horns of these dinosaurs were made of a material that does not typically fossilize. This is comparable to today’s rhinos, which have horns composed of keratin."
+        },
+        {
+            "text": "Where did Carnegie paleontologist Earl Douglass discover the first dinosaur fossils for the museum?",
+            "image": "trivia-dinos-9.png",
+            "difficulty": 2,
+            "answer": "Utah",
+            "incorrect": [
+                "Arizona",
+                "Pennsylvania"
+            ],
+            "followup": "Over 350 tons of spectacular fossil material were unearthed at Carnegie Quarry--the greatest deposit of Jurassic dinosaur bones ever discovered."
+        }
+    ],
+
+    "trivia-birds": [
+        {
+            "image": "trivia-birds-bluebird.png",
+            "difficulty": 2,
+            "answer": "Bluebird",
+            "text": "What kind of bird is this?",
+            "incorrect": [
+                "Blue Jay",
+                "Mourning Dove"
+            ]
+        },
+        {
+            "image": "trivia-birds-woodpecker.png",
+            "difficulty": 1,
+            "answer": "Red-bellied Woodpecker",
+            "text": "What kind of bird is this?",
+            "incorrect": [
+                "Wood Thrush",
+                "Ovenbird"
+            ]
+        },
+        {
+            "image": "trivia-birds-hummingbird.png",
+            "difficulty": 1,
+            "answer": "Ruby-throated Hummingbird",
+            "text": "What kind of bird is this?",
+            "incorrect": [
+                "Red-headed Woodpecker",
+                "Scarlet Tanager"
+            ]
+        },
+        {
+            "image": "trivia-birds-northernsawwhetowl.png",
+            "difficulty": 3,
+            "answer": "Northern Saw-whet Owls",
+            "text": "What kind of bird is this?",
+            "incorrect": [
+                "Barn Owls",
+                "Eastern Screech Owls"
+            ]
+        },
+        {
+            "image": "trivia-birds-rustyblackbird.png",
+            "difficulty": 3,
+            "answer": "Rusty Blackbird",
+            "text": "What kind of bird is this?",
+            "incorrect": [
+                "Wood Thrush",
+                "Brown Creeper"
+            ],
+            "followup": "Powdermill Nature Reserve is Carnegie Museum of Natural History’s environmental research facility in Rector, PA. These photos were taken by scientists at Powdermill Avian Research Center. To see more great photos, follow Powdermill on Facebook!"
+        }
+    ],
+
     "trivia-mineralsgems": [
         {
             "text": "The presence of which element can cause a mineral to appear blue or green?",
@@ -155,28 +310,6 @@
             "followup": "Other forms of luster include pearly, dull, waxy, earthy, and silky."
         },
         {
-            "text": "What is the most common mineral in the crust of the earth?",
-            "image": "trivia-mineralsgems-3.png",
-            "difficulty": 2,
-            "answer": "Quartz",
-            "incorrect": [
-                "Calcite",
-                "Pyrite"
-            ],
-            "followup": "Together, quartz and other silicates form over 90% of the Earth’s crust."
-        },
-        {
-            "text": "Which is the most powerful agent for breaking rocks down to sand and silt-sized particles?",
-            "image": "trivia-mineralsgems-4.png",
-            "difficulty": 1,
-            "answer": "Water",
-            "incorrect": [
-                "Wind",
-                "Ice"
-            ],
-            "followup": "Sand, pebbles, and boulders are carried along by fast-moving water and grind themselves and any rocks the water flows over."
-        },
-        {
             "text": "Basalt is which of the three main types of rock?",
             "image": "trivia-mineralsgems-5.png",
             "difficulty": 1,
@@ -196,7 +329,7 @@
                 "Rockology",
                 "Metology"
             ],
-            "followup": "Rocks are naturally occuring assemblages of two or more minerals. Rocks constitute an essential part of the Earth’s crust. "
+            "followup": "Rocks are naturally occuring assemblages of two or more minerals. Rocks constitute an essential part of the Earth’s crust."
         },
         {
             "text": "Which instrument is used to detect radiation in minerals like uraninite?",
@@ -210,16 +343,6 @@
             "followup": "A geiger counter is a useful tool for prospectors searching for uranium ore in Earth’s core."
         },
         {
-            "text": "Ancient philosophers studied and categorized minerals.",
-            "image": "trivia-mineralsgems-8.png",
-            "difficulty": 1,
-            "answer": "True ",
-            "incorrect": [
-                "False"
-            ],
-            "followup": "Mineralogy was the first of the natural sciences to be established systematically. Philosophers such as Pliny in 77 A.D grouped minerals by crystal shape, color, hardness, and composition."
-        },
-        {
             "text": "Gemstone quality is judged by the 4 C’s. Which of the following is NOT a C used to judge gem quality?",
             "image": "trivia-mineralsgems-9.png",
             "difficulty": 1,
@@ -229,29 +352,81 @@
                 "Color"
             ],
             "followup": "The 4 C’s are cut, clarity, color, and carat."
+        }
+    ],
+    "trivia-architecture": [
+        {
+            "text": "The Hall of Architecture contains casts of many famous buildings. What material are these copies made of?",
+            "image": "trivia-architecture-1.png",
+            "difficulty": 1,
+            "answer": "Plaster",
+            "incorrect": [
+                "Porcelain",
+                "Concrete"
+            ],
+            "followup": "Plaster casting allowed masterpieces of sculpture and architecture to be brought to Pittsburgh, for everyone to experience at full scale."
         },
         {
-            "text": "Pittsburgh is abundant in minerals that can be cut and polished into gems.",
-            "image": "trivia-mineralsgems-10.png",
+            "text": "This intricate cast comes from the doors on the Cathedral of St. Pierre in France. What are the original doors made of?",
+            "image": "trivia-architecture-2.png",
+            "difficulty": 2,
+            "answer": "Oak",
+            "incorrect": [
+                "Bronze",
+                "Steel"
+            ],
+            "followup": "Many of the plaster sculptures in the collection have been painted to give a warm, antique appearance that resembles the original building materials."
+        },
+        {
+            "text": "Andrew Carnegie wanted the walls in the Hall of Architecture painted purple, because it is a color associated with royalty.",
+            "image": "trivia-architecture-5.png",
             "difficulty": 2,
             "answer": "False ",
             "incorrect": [
                 "True"
             ],
-            "followup": "Unfortunately, this is false. Mineral crystals of a clarity considered to be of gem quality occur very rarely in PA. However, Carnegie Museum of Natural History has a notable collection."
+            "followup": "The walls were painted purple in 2013, as a part of the installation by artist Gabriel Sierra for the 2013 Carnegie International."
+        },
+        {
+            "text": "Approximately how many packing cases were required to move the pieces of this cast of the French Benedictine Abbey Church of St. Gilles from France to Pittsburgh?",
+            "image": "trivia-architecture-6.png",
+            "difficulty": 2,
+            "answer": 200,
+            "incorrect": [
+                "20",
+                "2000"
+            ],
+            "followup": "This cast was made in its entirety for Carnegie Museums and it is now the largest cast in the world. Cast and delivered in pieces, it had to be reassembled in the space, taking more than 18 months to complete."
+        },
+        {
+            "text": "The collection of architectural casts at Carnegie Museum of Art is the largest in the world.",
+            "image": "trivia-architecture-10.png",
+            "difficulty": 2,
+            "answer": "False ",
+            "incorrect": [
+                "True"
+            ],
+            "followup": "This collection is the third largest in the world, but the largest in the Americas. While most other collections have been either dispersed or destroyed, Carnegie Museum of Art’s collection has endured as an exhibition of world-class significance."
         }
     ],
-    "poll-warhol": [
+    "poll-brillo": [
         {
-            "text": "foo",
+            "question": "Which one of these ordinary household items inspires you to make art?",
             "choices": [
-                "campbells",
-                "brillo"
+                "Fruit",
+                "Lamp",
+                "Box",
+                "Can",
+                "Chair"
             ],
             "images": [
-                "campbells.png",
-                "foo.png"
-            ]
+                "poll-brillo-fruit.png",
+                "poll-brillo-lamp.png",
+                "poll-brillo-box.png",
+                "poll-brillo-can.png",
+                "poll-brillo-chair.png"
+            ],
+            "followup": "In the mid-1960s Andy Warhol caused controversy with his “Brillo Box“ sculptures. In reference to his boxes, Warhol later said that he “wanted something ordinary,” and it was this mundane, commercial subject matter that infuriated the critics."
         }
     ]
 }

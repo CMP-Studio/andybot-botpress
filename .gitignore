@@ -51,3 +51,4 @@ jspm_packages
 
 content.yml
 botpress-messenger.config.yml
+/.env

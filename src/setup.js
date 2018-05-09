@@ -14,40 +14,40 @@ const botpressContentFileName = 'content.yml';
 
 
 const messages = require('./messages');
-const botfile = require('../botfile');
+// const botfile = require('../botfile');
 
 // Creates botpress-messenger.config.yml
 async function setup() {
-    const config = await require('./config');
+	const config = await require('./config');
 
-    // Setup messenger configuration YML
-    const menuYMLText = YAML.stringify(menu).replace('---\n', '');
-    const messengerConfigVars = Object.assign({}, config, {
-        greetingMessage: messages.greeting,
-        menu: menuYMLText
-    });
-    templateYaml(
-        path.join(__dirname, templateFileName),
-        path.join(__dirname, '..', botpressMessengerConfigName),
-        messengerConfigVars
-    );
-    
-    // Setup content YML
-    templateYaml(
-        path.join(__dirname, contentTemplateFileName),
-        path.join(__dirname, '..', botpressContentFileName),
-        {
-            postbacks: postbacks,
-            staticUrl: config.staticUrl
-        }
-    );
+	// Setup messenger configuration YML
+	const menuYMLText = YAML.stringify(menu).replace('---\n', '');
+	const messengerConfigVars = Object.assign({}, config, {
+		greetingMessage: messages.greeting,
+		menu: menuYMLText
+	});
+	templateYaml(
+		path.join(__dirname, templateFileName),
+		path.join(__dirname, '..', botpressMessengerConfigName),
+		messengerConfigVars
+	);
+	
+	// Setup content YML
+	templateYaml(
+		path.join(__dirname, contentTemplateFileName),
+		path.join(__dirname, '..', botpressContentFileName),
+		{
+			postbacks: postbacks,
+			staticUrl: config.staticUrl
+		}
+	);
 }
 
 function templateYaml(templateFilePath, targetFilePath, variables) {
-    const templateFileContents = fs.readFileSync(templateFilePath);
-    const ymlTemplate = _.template(templateFileContents);
-    const str = ymlTemplate(variables);
-    fs.writeFileSync(targetFilePath, str);
+	const templateFileContents = fs.readFileSync(templateFilePath);
+	const ymlTemplate = _.template(templateFileContents);
+	const str = ymlTemplate(variables);
+	fs.writeFileSync(targetFilePath, str);
 }
 
 module.exports = setup;
