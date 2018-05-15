@@ -61,5 +61,14 @@ module.exports = {
 				{ headers: { 'Content-Type': 'application/json'} });
 			return rsp.data; 
 		}
+	},
+
+	scan: {
+		scanCode: async function(fb_page_id, ref) {
+			const rsp = await axios.post(`${config.apiEndpoint}/scan/scanCode`, 
+			{ page_id: fb_page_id, ref },
+			{ headers: { 'Content-Type': 'application/json'} });
+			return rsp.data; 		
+		}
 	}
 };

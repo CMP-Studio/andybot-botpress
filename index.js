@@ -13,31 +13,53 @@ const activityHandlers = {
 	trivia: TriviaHandler,
 	poll: PollHandler
 };
+const _ = require('lodash');
 
 
 module.exports = function (bp) {
 
 
-	bp.fallbackHandler = function (event, next) {
-		console.log(event.raw);
+	bp.fallbackHandler = async function (event, next) {
 		if (event.type === 'postback' || event.type === 'message' || event.type === 'referral') {
-
 			let referral;
 			if (utils.isNonNull(event.raw.referral)) {
 				referral = event.raw.referral;
 			} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
 				referral = event.raw.postback.referral;
 			}
-			if (utils.isNonNull(referral) && referral.ref === '5099658e') {
-				event.reply('#checkin-stamp', { image: 'andy-checkin-AAM.png', text: 'Congratulations! You unlocked the AAM Conference stamp.' });
-				// return;
-			} else if (utils.isNonNull(referral) && referral.ref === '30f65153') {
-				const convo = bp.convo.create(event);
-				activityHandlers['poll'](convo, event, 'poll-brillo');
-				return;
-			} else {
-				event.reply('#unknown-selection');
+			console.log(referral);
+			const scanResponse = await andybot.scan.scanCode(event.user.id, referral.ref);
+
+			if (utils.isNonNull(scanResponse.stamp)){
+				if (scanResponse.stamp.error && scanResponse.stamp.error === "DailyLimitReached") {
+					event.reply("#daily_scan_limit_reached");
+					return;
+				} else {
+
+					console.log('Avaliable', activities.stamps)
+					console.log('Searching for ', scanResponse.code.ref)
+
+					const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
+					const image = stampObj.splash_image;
+					event.reply("#stamp_unlock", { image, text: "You unlocked a stamp!"});
+					return;
+				}
 			}
+			// console.log("We have a scanresponse");
+			// console.log(scanResponse);
+			// const decodedRef = await 
+
+			// // Handle scan code...
+			// if (utils.isNonNull(referral) && referral.ref === '5099658e') {
+			// 	event.reply('#checkin-stamp', { image: 'andy-checkin-AAM.png', text: 'Congratulations! You unlocked the AAM Conference stamp.' });
+			// 	// return;
+			// } else if (utils.isNonNull(referral) && referral.ref === '30f65153') {
+			// 	const convo = bp.convo.create(event);
+			// 	activityHandlers['poll'](convo, event, 'poll-brillo');
+			// 	return;
+			// } else {
+			// 	event.reply('#unknown-selection');
+			// }
 
 		}
 	};
@@ -45,38 +67,41 @@ module.exports = function (bp) {
 	// GET_STARTED is the first message you get on Facebook Messenger
 	bp.hear(/GET_STARTED/i, async (event, next) => {
 
-		// Get Started may have an associated event.
-		let referral;
-		if (utils.isNonNull(event.raw.referral)) {
-			referral = event.raw.referral;
-		} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
-			referral = event.raw.postback.referral;
-		}
-
-		if (utils.isNonNull(referral) && referral.ref === '5099658e') {
-			// 1. Allow checkin functionality
-			// 1.5 Make sure you can't scan more than once.
-			// 
-
-			// 2. Allow activity trigger scan
-			event.reply('#checkin-stamp', { image: 'andy-checkin-AAM.png', text: 'Welcome to the American Alliance of Musums conference. You just got a new stamp!' });
-		}
 
 
-		await new Promise((resolve, reject) => setTimeout(resolve, 2000));
+
+		// if (utils.isNonNull(referral) && referral.ref === '5099658e') {
+		// 	// 1. Allow checkin functionality
+		// 	// 1.5 Make sure you can't scan more than once.
+		// 	// 
+
+		// 	// 2. Allow activity trigger scan
+		// 	event.reply('#checkin-stamp', { image: 'andy-checkin-AAM.png', text: 'Welcome to the American Alliance of Musums conference. You just got a new stamp!' });
+		// }
+
+
+		// await new Promise((resolve, reject) => setTimeout(resolve, 2000));
 
 		try {
-			// const pageId = event.user.id;
-			// const exists = await andybot.userExists(pageId);
-			// if (exists === false) {
+			const pageId = event.user.id;
+			const exists = await andybot.userExists(pageId);
+			if (exists === false) {
 				event.reply('#welcome');
-				// console.log(event.user);
-				// andybot.createUser(pageId, event.user.first_name);
-			// } else {
-				// const user = await andybot.getUser(pageId);
-				// event.reply('#welcome-back', { user });
-			// }
+				andybot.createUser(pageId, event.user.first_name);
+			} else {
+				const user = await andybot.getUser(pageId);
+				event.reply('#welcome-back', { user });
+			}
 
+			// Get Started may have an associated event.
+			// let referral;
+			// if (utils.isNonNull(event.raw.referral)) {
+			// 	referral = event.raw.referral;
+			// } else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
+			// 	referral = event.raw.postback.referral;
+			// }
+			//			
+			// handle referral
 
 
 
@@ -104,19 +129,11 @@ module.exports = function (bp) {
 	 * bot and user. Used to enable activities such as trivia, polls etc.
 	 */
 
-	//  bp.hear('STOP_CONVO', (event, next) => {
-	// 	const convo = bp.convo.find(event)
-	// 	if (convo) {
-	// 		convo.stop('aborted');
-	// 	}
-	// 	event.reply("Your previous activity was ended.");
-	// });
-
-	bp.hear('STOP_CONVO', (event, next) => {
+	 bp.hear('STOP_CONVO', (event, next) => {
 		const convo = bp.convo.find(event);
 		if (convo) {
 			convo.stop('aborted');
-			event.reply("#activity_ended");
+			event.reply('#activity_ended');
 		}
 	});
 	
@@ -136,7 +153,7 @@ module.exports = function (bp) {
 			activityHandlers[activityType](convo, event, activityName);
 			console.log(`${activityName} started`);
 		} catch (err) {
-			// console.err(err);
+			console.err(err);
 		}
 	});
 

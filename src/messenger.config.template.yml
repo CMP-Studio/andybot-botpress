@@ -14,10 +14,10 @@ persistentMenu: true
 persistentMenuItems:
 <%=menu%>
 
-trustedDomains: ["<%=trustedDomain%>"]
+trustedDomains: ["https://dev.andybot.org"]
 autoRespondGetStarted: false
 composerInputDisabled: true
-chatExtensionHomeUrl: "<%=chatExtensionHomeUrl%>"
+chatExtensionHomeUrl: "https://dev.andybot.org"
 chatExtensionInTest: true
 chatExtensionShowShareButton: true
 webhookSubscriptionFields: ["messages"]

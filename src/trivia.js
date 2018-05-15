@@ -43,7 +43,7 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 				convo.next();
 			} else {
 				// Submit trivia scores
-				// await andybot.trivia.submitScore(userPageId, activityName, correctAnswers, numQuestions);
+				await andybot.trivia.submitScore(userPageId, activityName, correctAnswers, numQuestions);
 
 				const scoreText = getScoreText(correctAnswers, activity.length);
 				convo.say('#trivia-complete', { scoreText: scoreText });
@@ -70,20 +70,20 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 					});
 				}
 
-				// const achievement = await andybot.achievement.progress(userPageId);
-				// if (utils.isNonNull(achievement.new) && achievement.new.length > 0) {
-				// 	// Send achievement unlocked message
-				// 	const totalReward = _.reduce(_.map(({tiers, progress}) => tiers[progress].reward), (x, y) => x + y, 0);
-				// 	const unlocked = _.map(achievement.new, (ach) => ({
-				// 		image: ach.splash_image,
-				// 		displayName: ach.tiers[ach.progress].displayName,
-				// 		description: ach.tiers[ach.progress].description, 
-				// 	}));
-				// 	convo.say('#achievement-unlocked', {
-				// 		achievements: unlocked,
-				// 		reward: totalReward
-				// 	});
-				// }
+				const achievement = await andybot.achievement.progress(userPageId);
+				if (utils.isNonNull(achievement.new) && achievement.new.length > 0) {
+					// Send achievement unlocked message
+					const totalReward = _.reduce(_.map(({tiers, progress}) => tiers[progress].reward), (x, y) => x + y, 0);
+					const unlocked = _.map(achievement.new, (ach) => ({
+						image: ach.splash_image,
+						displayName: ach.tiers[ach.progress].displayName,
+						description: ach.tiers[ach.progress].description, 
+					}));
+					convo.say('#achievement-unlocked', {
+						achievements: unlocked,
+						reward: totalReward
+					});
+				}
 
 				convo.say('#more-activities', { activities: _.filter(activities.manifest, (a)=>  a.activity !== activityName) });
 				convo.stop('aborted');

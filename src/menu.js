@@ -10,8 +10,9 @@ module.exports =  [
     {
         type: "web_url",
         title: "🎫 My Adventure",
-        url: "dev.andybot.org/me",
-        webview_height_ratio: "full"
+        url: "https://dev.andybot.org/me",
+        webview_height_ratio: "full",
+        messenger_extensions: true
     },
 
     // {
