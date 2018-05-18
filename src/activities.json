@@ -428,5 +428,161 @@
             ],
             "followup": "In the mid-1960s Andy Warhol caused controversy with his “Brillo Box“ sculptures. In reference to his boxes, Warhol later said that he “wanted something ordinary,” and it was this mundane, commercial subject matter that infuriated the critics."
         }
+    ],
+
+    "stamps": [
+        {
+            "stamp_id": "stamp-checkin-oakland",
+            "name": "Check-in at Oakland",
+            "events": [],
+            "messenger_code": "stamp-checkin-oakland",
+            "image": "stamp-checkin-oakland.png",
+            "splash_image": "andy-stamp-checkinoakland.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-checkin-csc",
+            "name": "Check-in at Science Center",
+            "events": [],
+            "messenger_code": "stamp-checkin-csc",
+            "image": "stamp-checkin-csc.png",
+            "splash_image": "andy-stamp-checkincsc.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-checkin-warhol",
+            "name": "Check-in at Warhol",
+            "events": [],
+            "messenger_code": "stamp-checkin-warhol",
+            "image": "stamp-checkin-warhol.png",
+            "splash_image": "andy-stamp-checkinwarhol.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-checkin-powdermill",
+            "name": "Check-in at Powdermill",
+            "events": [],
+            "messenger_code": "stamp-checkin-powdermill",
+            "image": "stamp-checkin-powdermill.png",
+            "splash_image": "andy-stamp-checkin-powdermill.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-wentdigital",
+            "name": "Went Digital",
+            "events": [],
+            "image": "stamp-wentdigital.png",
+            "splash_image": "andy-stamp-wentdigital.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-grandopening",
+            "name": "PPG Grand Opening and Art of The Brick",
+            "events": [
+                "event-grandopening"
+            ],
+            "image": "stamp-event-grandopening.png",
+            "splash_image": "andy-stamp-ppg.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-starfestival",
+            "name": "Star Festival",
+            "events": [
+                "event-starfestival"
+            ],
+            "image": "stamp-event-starfestival.png",
+            "splash_image": "andy-stamp-starfestival.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-fashion",
+            "name": "Evening of Fashion",
+            "events": [
+                "event-fashion"
+            ],
+            "image": "stamp-event-fashion.png",
+            "splash_image": "andy-stamp-fashion.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-icecream",
+            "name": "Ice Cream Social",
+            "events": [
+                "event-icecream"
+            ],
+            "image": "stamp-event-icecream.png",
+            "splash_image": "andy-stamp-icecream.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-birthday",
+            "name": "Andy's Birthday",
+            "events": [
+                "event-birthday"
+            ],
+            "image": "stamp-event-birthday.png",
+            "splash_image": "andy-stamp-birthday.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-pollinatorfestival",
+            "name": "Pollinator Festival",
+            "events": [
+                "event-pollinatorfestival"
+            ],
+            "image": "stamp-event-pollinatorfestival.png",
+            "splash_image": "andy-stamp-pollinatorfestival.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-membertours",
+            "name": "Member Tours",
+            "events": [
+                "event-cmoamembertour-secretlanguage",
+                "event-cmoamembertour-publicart",
+                "event-cmoamembertour-contemporary"
+            ],
+            "image": "stamp-event-membertours.png",
+            "splash_image": "andy-stamp-membertours.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-event-sciencesaturdays",
+            "name": "Super Science Saturdays",
+            "events": [
+                "event-sciencesaturday-jurassic",
+                "event-sciencesaturday-scientist",
+                "event-sciencesaturday-meowfest"
+            ],
+            "image": "stamp-event-sciencesaturdays.png",
+            "splash_image": "andy-stamp-sciencesaturdays.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-event-adults",
+            "name": "Evenings For Adults",
+            "events": [
+                "event-thirdthursday-girlfx",
+                "event-thirdthursday-contemporary",
+                "event-thirdthursday-intimate",
+                "event-afterdark-harrypotter",
+                "event-goodfridays"
+            ],
+            "image": "stamp-event-adults.png",
+            "splash_image": "andy-stamp-adults.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-event-trivianight",
+            "name": "End-of-Summer Trivia Night",
+            "events": [
+                "event-trivianight"
+            ],
+            "image": "stamp-event-trivianight.png",
+            "splash_image": "andy-stamp-trivianight.png",
+            "multiple": "false "
+        }
     ]
+
 }

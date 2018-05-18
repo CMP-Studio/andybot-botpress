@@ -239,3 +239,15 @@ askStopConvo:
     text: You have another activity in progress. You must first end the previous activity.
     buttons:
       - <STOP_CONVO> End Activity
+
+
+
+daily_scan_limit_reached:
+  - text: You have reached the scan limit for this location. Try again tomorrow.
+    typing: 2s
+
+stamp_unlock:
+  - on: facebook
+    image: <%=staticUrl%>img/{{image}}
+  - typing: true
+    text: "{{text}}"
