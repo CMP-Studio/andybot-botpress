@@ -29,18 +29,35 @@ module.exports = async function PollHandler(convo, event, activityName) {
 			} catch (err) {
 				event.reply('Not sure what you meant there.');
 			}
-			// try {
-			// 	// await andybot.poll.submitResponse(userPageId, activityName, questionIndex, answer);
-			// } catch (err) {
-			// 	console.log(err.message);
-			// }
-			const percentages = ['25', '15', '13', '23', '23'];
-			convo.say('#poll-followup', { text: followUp, feedback: `${percentages[answer]}% of people agree with you.` });
+
+			let responseSubmitted;
+			try {
+				responseSubmitted = await andybot.poll.submitResponse(userPageId, activityName, questionIndex, answer);
+				console.log("Poll response submitted", responseSubmitted);
+			} catch (err) {
+				console.log("Poll response error");
+				console.log(err.message);
+			}
+			const userResponses = await andybot.poll.getResponsesForQuestion(activityName, questionIndex);
+
+			const totalAnswers = _.sum(userResponses);
+			let followUpStatement;
+			const minPollAnswerLimit = 1;
+			if (totalAnswers < minPollAnswerLimit) {
+				followUpStatement = `You are one of the first ${minPollAnswerLimit} people to answer this question!`;
+			} else {
+				const agreedWithMe = userResponses[answer];
+				const agreedWithMePercentage = Math.ceil((agreedWithMe / (totalAnswers * 1.0)) * 100);
+				followUpStatement = `${agreedWithMePercentage}% of people agree with you.`;
+			}
+
+			convo.say('#poll-followup', { text: followUp, feedback:  followUpStatement });
 
 			if (isLastQuestion === false) {
 				convo.next();
 			} else {
-				// convo.say('#poll-complete');
+				convo.say('#poll-complete');
+
 				// const achievement = await andybot.achievement.progress(userPageId);
 				// if (utils.isNonNull(achievement.new) && achievement.new.length > 0) {
 				// 	// Send achievement unlocked message
@@ -55,8 +72,8 @@ module.exports = async function PollHandler(convo, event, activityName) {
 				// 		reward: totalReward
 				// 	});
 				// }
-
-				convo.say('#more-activities', { activities: _.filter(activities.manifest, (a)=>  a.activity !== activityName) });
+				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
+				convo.say('#more-activities', { activities: avaliableActivities.slice(0, 10) });
 				convo.stop('aborted');
 			}
 		};

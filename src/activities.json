@@ -4,19 +4,49 @@
             "activity": "trivia-mineralsgems",
             "image": "trivia-mineralsgems-carousel.png",
             "title": "Minerals and Gems Trivia",
-            "subtitle": "How much do you think you know about these fascinating objects?",
-            "museum": "CMNH",
-            "lat": 40.4432724078813,
-            "lng": -79.950002261238,
+            "subtitle": "What do you know about these fascinating objects?",
+            "location": "CMNH",
             "floor": 1
         },
         {
-            "activity": "poll-brillo",
-            "image": "poll-brillo-carousel.png?time=1234",
-            "title": "Ordinary Art Poll",
-            "subtitle": "Think like Warhol and see who agrees!",
-            "location": "Warhol",
+            "activity": "trivia-dinos",
+            "image": "trivia-dinos-carousel.png",
+            "title": "Dinosaurs In Their Time Trivia",
+            "subtitle": "6 questions.",
+            "location": "CMNH",
             "floor": 1
+        },
+        {
+            "activity": "trivia-wearenature",
+            "image": "trivia-wearenature-carousel.png",
+            "title": "We Are Nature Trivia",
+            "subtitle": "6 questions.",
+            "location": "CMNH",
+            "floor": 3
+        },
+        {
+            "activity": "trivia-architecture",
+            "image": "trivia-architecture-carousel.png",
+            "title": "Hall of Architecture Trivia",
+            "subtitle": "5 questions.",
+            "location": "CMOA",
+            "floor": 1
+        },
+        {
+            "activity": "trivia-design",
+            "image": "trivia-design-carousel.png",
+            "title": "Decorative Arts and Design Trivia",
+            "subtitle": "5 questions.",
+            "location": "CMOA",
+            "floor": 2
+        },
+        {
+            "activity": "trivia-impressionism",
+            "image": "trivia-impressionism-carousel.png",
+            "title": "Impressionism Trivia",
+            "subtitle": "5 questions.",
+            "location": "CMOA",
+            "floor": 2
         },
         {
             "activity": "trivia-birds",
@@ -27,31 +57,1178 @@
             "floor": 1
         },
         {
-            "activity": "trivia-dinos",
-            "image": "trivia-dinos-carousel.png",
-            "title": "Dinosaurs In Their Time Trivia",
-            "subtitle": "How well do you know your dinos?",
-            "location": "CMNH",
+            "activity": "trivia-flowers",
+            "image": "trivia-flowers-carousel.png",
+            "title": "Flower Identification Trivia",
+            "subtitle": "Can you identify these 5 flowers?",
+            "location": "Powdermill",
             "floor": 1
         },
         {
-            "activity": "trivia-design",
-            "image": "trivia-design-carousel.png",
-            "title": "Decorative Arts and Design Trivia",
-            "subtitle": "Test your knowledge of design with this trivia set.",
-            "location": "CMOA",
-            "floor": 2
+            "activity": "trivia-warholearly",
+            "image": "trivia-warhol-carousel.png",
+            "title": "Warhol′s Early Life Trivia",
+            "subtitle": "5 questions.",
+            "location": "Warhol",
+            "floor": 7
         },
         {
-            "activity": "trivia-impressionism",
-            "image": "trivia-impressionism-carousel.png",
-            "title": "Impressionism Trivia",
-            "subtitle": "Learn about one of the most influential movements in art.",
-            "location": "CMOA",
-            "floor": 2
+            "activity": "trivia-warholart",
+            "image": "trivia-warhol-carousel.png",
+            "title": "Warhol Art and Influences Trivia",
+            "subtitle": "6 questions.",
+            "location": "Warhol",
+            "floor": 6
+        },
+        {
+            "activity": "trivia-robots",
+            "image": "trivia-robots-carousel.png",
+            "title": "roboworld® Trivia",
+            "subtitle": "6 questions.",
+            "location": "CSC"
+        },
+        {
+            "activity": "trivia-sports",
+            "image": "trivia-sports-carousel.png",
+            "title": "SportsWorks® Science Trivia",
+            "subtitle": "5 questions.",
+            "location": "CSC"
+        },
+        {
+            "activity": "trivia-railroad",
+            "image": "trivia-railroad-carousel.png",
+            "title": "Miniature Railroad and Village® Trivia",
+            "subtitle": "6 questions.",
+            "location": "CSC"
+        },
+        {
+            "activity": "trivia-foodart",
+            "image": "trivia-foodart-carousel.png",
+            "title": "Food Art Trivia",
+            "subtitle": "Inspired by food-related facts and objects found at the Carnegie Museums."
+        },
+        {
+            "activity": "trivia-foodscience",
+            "image": "trivia-foodscience-carousel.png",
+            "title": "Food Science Trivia",
+            "subtitle": "Inspired by food-related facts and objects found at the Carnegie Museums."
+        },
+        {
+            "activity": "poll-brillo",
+            "image": "poll-brillo-carousel.png",
+            "title": "Ordinary Art Poll",
+            "subtitle": "Think like Warhol and see who agrees!",
+            "location": "Warhol",
+            "floor": 1
         }
     ],
-
+    "faq": [
+        {
+            "question": "What is a Chatbot?"
+        },
+        {
+            "question": "How do I scan a code? "
+        },
+        {
+            "question": "Can you tell me a joke?"
+        },
+        {
+            "question": "Who are you? "
+        },
+        {
+            "question": "What is Summer Adventure?"
+        },
+        {
+            "question": "Where are the Carnegie Museums?"
+        },
+        {
+            "question": "How do I play? "
+        },
+        {
+            "question": "What can you do?"
+        },
+        {
+            "question": "What do you do? "
+        },
+        {
+            "question": "Where is the Trivia?"
+        },
+        {
+            "question": "Where are the polls?"
+        }
+    ],
+    "schedule": [
+        {
+            "id": "event-grandopening",
+            "stamp_id": "stamp-event-grandopening",
+            "event": "Grand Opening of PPG Science Pavilion™ and The Art of the Brick",
+            "image": "event-carousel-grandopening.png",
+            "location": "CSC",
+            "description": "Kick off Summer Adventure with the highly-anticipated opening of the PPG Science Pavilion. A limited number of free tickets to The Art of the Brick will be available for members as well as activities celebrating the brand-new learning spaces!",
+            "url": "http://www.carnegiesciencecenter.org/",
+            "when": "June 16, 11am–5pm"
+        },
+        {
+            "id": "event-starfestival",
+            "stamp_id": "stamp-event-starfestival",
+            "event": "Star Festival",
+            "image": "event-carousel-starfestival.png",
+            "location": "CMOA",
+            "description": "Celebrate CMOA’s Japanese print exhibition, Hiroshige’s Tôkaidô Road, with this Japanese Tanabata Festival for all ages! Add your wishes to our outdoor bamboo garden, see and make amazing prints, sample foods, and listen to traditional music.",
+            "url": "https://cmoa.org/calendar/",
+            "when": "July 7, 12:30–4:30 pm"
+        },
+        {
+            "id": "event-fashion",
+            "stamp_id": "stamp-event-fashion",
+            "event": "Evening of Fashion",
+            "image": "event-carousel-fashion.png",
+            "location": "Warhol",
+            "description": "In conjunction with the exhibition Adman: Warhol Before Pop, The Warhol and Eons Fashion Antique host a night of cocktails, music, and 1950s fashion at Window Dressing: An Evening of Fashion. Live models showcasing items from Richard Parsakian’s archive will bring to life works from Adman. The cash bar will feature craft drinks inspired by Andy Warhol’s mother, Julia Warhola.",
+            "details": "Register at www.warhol.org.",
+            "url": "https://www.warhol.org/event/window-dressing-evening-fashion-eons-archives/",
+            "when": "July 13, 7–10pm"
+        },
+        {
+            "id": "event-icecream",
+            "stamp_id": "stamp-event-icecream",
+            "event": "Ice Cream Social",
+            "image": "event-carousel-icecream.png",
+            "location": "CMNH",
+            "description": "Experience Carnegie paleontologist Matt Lamanna’s arctic trek in Expedition Antarctica and enjoy a sweet treat afterward!",
+            "url": "https://carnegiemnh.org/",
+            "when": "July 15, 3–5pm"
+        },
+        {
+            "id": "event-birthday",
+            "stamp_id": "stamp-event-birthday",
+            "event": "Andy′s Birthday",
+            "image": "event-carousel-birthday.png",
+            "location": "Warhol",
+            "description": "Celebrate the Andy Warhol’s 90th birthday with family-friendly activities throughout the museum. Join us for special gallery activities, hands-on artmaking, and a behind-the-scenes look at The Warhol’s extensive and unusual archives.",
+            "url": "https://www.warhol.org/event/andys-birthday/",
+            "when": "August 4, 10am–5pm"
+        },
+        {
+            "id": "event-pollinatorfestival",
+            "stamp_id": "stamp-event-pollinatorfestival",
+            "event": "Pollinator Festival",
+            "image": "event-carousel-pollinatorfestival.png",
+            "location": "Powdermill",
+            "description": "The second annual Powdermill Pollinator Festival is free and open to the public, and will include food, garden tours, and sales of honey and bee products, as well as a large plant sale which will highlight native plants that attract pollinators.",
+            "details": "This event takes place at Powdermill Nature Reserve in Rector, PA",
+            "url": "https://carnegiemnh.org/visitor/powdermill-nature-reserve/",
+            "when": "August 11, 10am–3pm"
+        },
+        {
+            "id": "event-trivianight",
+            "stamp_id": "stamp-event-trivianight",
+            "event": "Trivia Night",
+            "image": "event-carousel-trivianight.png",
+            "location": "CMNH",
+            "description": "End your summer adventure with a bang! Spend an evening testing the knowledge you acquired from your time at the museums this summer. Bring your stamped Summer Adventure Map for the chance to win prizes. Each stamp is another chance to win gift certificates, membership renewal, Carnegie Cash, and more in the drawing.",
+            "url": "https://carnegiemnh.org/",
+            "when": "August 25, 6–8pm"
+        },
+        {
+            "id": "event-cmoamembertour-secretlanguage",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: The Secret Language of Art",
+            "image": "event-carousel-cmoamembertours.png",
+            "location": "CMOA",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "https://cmoa.org/visit/tours/member-tours/",
+            "when": "June 10, 2–3pm"
+        },
+        {
+            "id": "event-cmoamembertour-publicart",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Fresh Air, Public Art",
+            "image": "event-carousel-cmoamembertours.png",
+            "location": "CMOA",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "https://cmoa.org/visit/tours/member-tours/",
+            "when": "July 15, 2–3pm"
+        },
+        {
+            "id": "event-cmoamembertour-contemporary",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Contemporary Galleries (+ Carry on the Conversation)",
+            "image": "event-carousel-cmoamembertours.png",
+            "location": "CMOA",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "https://cmoa.org/visit/tours/member-tours/",
+            "when": "August 12, 2–3pm"
+        },
+        {
+            "id": "event-cmnhmembertour-gemsminerals",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Gems and Minerals",
+            "image": "event-carousel-cmnhmembertours.png",
+            "location": "CMNH",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "https://carnegiemnh.org/",
+            "when": "June 9, 2–3pm"
+        },
+        {
+            "id": "event-cmnhmembertour-safari",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Natural History Safari",
+            "image": "event-carousel-cmnhmembertours.png",
+            "location": "CMNH",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "https://carnegiemnh.org/",
+            "when": "July 14, 2–3pm"
+        },
+        {
+            "id": "event-cmnhmembertour-egypt",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Ancient Egypt",
+            "image": "event-carousel-cmnhmembertours.png",
+            "location": "CMNH",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "https://carnegiemnh.org/",
+            "when": "August 11, 2–3pm"
+        },
+        {
+            "id": "event-warholmembertour-adman",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Adman: Warhol Before Pop ",
+            "image": "event-carousel-warholmembertours.png",
+            "location": "Warhol",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "https://www.warhol.org/event/member-tour-adman-warhol-before-pop/",
+            "when": "June 30, 2–3pm"
+        },
+        {
+            "id": "event-thirdthursday-girlfx",
+            "stamp_id": "stamp-event-adults",
+            "event": "Third Thursday: girlFx",
+            "image": "event-carousel-thirdthursday.png",
+            "location": "CMOA",
+            "description": "Party in the Sculpture Court with girlFx.",
+            "details": "$10 advance/$15 door (10% member discount)",
+            "url": "https://cmoa.org/event/third-thursday-girlfx/",
+            "when": "June 21, 8–11pm"
+        },
+        {
+            "id": "event-thirdthursday-contemporary",
+            "stamp_id": "stamp-event-adults",
+            "event": "Third Thursday: Crossroads",
+            "image": "event-carousel-thirdthursday.png",
+            "location": "CMOA",
+            "description": "Celebrate the opening of Crossroads, the new installation of our postwar contemporary collection.",
+            "details": "$10 advance/$15 door (10% member discount)",
+            "url": "https://cmoa.org/event/third-thursday-crossroads/",
+            "when": "July 19,  8–11pm"
+        },
+        {
+            "id": "event-thirdthursday-intimate",
+            "stamp_id": "stamp-event-adults",
+            "event": "Third Thursday: Intimate Subjects",
+            "image": "event-carousel-thirdthursday.png",
+            "location": "CMOA",
+            "description": "City of Play and slowdanger present an evening of interactions and immersive adventures.",
+            "details": "$10 advance/$15 door (10% member discount)",
+            "url": "https://cmoa.org/event/third-thursday-intimate-subjects-2/",
+            "when": "August 16, 8–11pm"
+        },
+        {
+            "id": "event-afterdark-harrypotter",
+            "stamp_id": "stamp-event-adults",
+            "event": "After Dark: Harry Potter",
+            "image": "event-carousel-afterdark.png",
+            "location": "CMNH",
+            "description": "Grab a friend, get a drink at the cash bar, and enjoy a night out!",
+            "details": "$1 advance/$20 door (10% member discount)",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/after-dark/",
+            "when": "July 27, 6–10pm"
+        },
+        {
+            "id": "event-goodfridays",
+            "stamp_id": "stamp-event-adults",
+            "event": "Good Fridays",
+            "image": "event-carousel-goodfridays.png",
+            "location": "Warhol",
+            "description": "Grab a friend, get a drink at the cash bar, and enjoy a night out!",
+            "details": "For a more social experience, we are open until 10 p.m. and offer half-price museum admission and a cash bar beginning at 5 p.m.",
+            "url": "https://www.warhol.org/event/good-fridays/",
+            "when": "Every Friday, 5–10pm"
+        },
+        {
+            "id": "event-sciencesaturday-jurassic",
+            "stamp_id": "stamp-event-sciencesaturdays",
+            "event": "Super Science Saturday: Jurassic Day",
+            "image": "event-carousel-sciencesaturday.png",
+            "location": "CMNH",
+            "description": "Visitors can explore a topic in-depth through hands-on activities, experiments, demonstrations, discussions with museum experts, family-friendly activities, and more.",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/super-science-saturdays/",
+            "when": "June 16, 12–4pm"
+        },
+        {
+            "id": "event-sciencesaturday-scientist",
+            "stamp_id": "stamp-event-sciencesaturdays",
+            "event": "Super Science Saturday: Scientist Takeover",
+            "image": "event-carousel-sciencesaturday.png",
+            "location": "CMNH",
+            "description": "Visitors can explore a topic in-depth through hands-on activities, experiments, demonstrations, discussions with museum experts, family-friendly activities, and more.",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/super-science-saturdays/",
+            "when": "July 21, 12–4pm"
+        },
+        {
+            "id": "event-sciencesaturday-meowfest",
+            "stamp_id": "stamp-event-sciencesaturdays",
+            "event": "Super Science Saturday: Meowfest",
+            "image": "event-carousel-sciencesaturday.png",
+            "location": "CMNH",
+            "description": "Visitors can explore a topic in-depth through hands-on activities, experiments, demonstrations, discussions with museum experts, family-friendly activities, and more.",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/super-science-saturdays/",
+            "when": "August 18, 12–4pm"
+        },
+        {
+            "id": "event-dandyandy",
+            "event": "Dandy Andy: Warhol′s Queer History",
+            "image": "event-carousel-dandyandy.png",
+            "location": "Warhol",
+            "description": "This tour traces Warhol’s romantic relationships and queer identity against the backdrop of the historical gay rights movement in the United States.",
+            "details": "Tours meet on the seventh floor.",
+            "url": "https://www.warhol.org/event/dandy-andy-warhols-queer-history/",
+            "when": "Last Saturday of each month, Saturdays and Sunday in June"
+        },
+        {
+            "id": "event-gallerytalks",
+            "event": "Gallery Talks",
+            "image": "event-carousel-gallerytalks.png",
+            "location": "Warhol",
+            "description": "Gallery talks led by museum staff have a thematic focus around a series of Warhol artworks or one of Warhol’s artistic processes. These 30-minute talks provide time for visitors to present insights and ask questions. ",
+            "details": "Tours meet on the museum′s seventh floor.",
+            "url": "https://www.warhol.org/event/daily-gallery-talks/",
+            "when": "Daily"
+        },
+        {
+            "id": "event-factory",
+            "event": "The Factory",
+            "image": "event-carousel-factory.png",
+            "location": "Warhol",
+            "description": "Visitors of all ages and abilities are invited to try some of Andy Warhol’s signature art-making techniques in our underground studio.",
+            "url": "https://www.warhol.org/event/the-factory/",
+            "when": "Tuesday–Friday, 1:30–5pm; Saturday–Sunday, 12–5pm"
+        },
+        {
+            "id": "event-silkscreen",
+            "event": "Photographic Silkscreen Demonstration",
+            "image": "event-carousel-silkscreen.png",
+            "location": "Warhol",
+            "description": "The museum’s artist educators demonstrate Warhol’s silkscreen printing process from beginning to end.",
+            "details": "See it at The Warhol entrance space.",
+            "url": "https://www.warhol.org/event/photographic-silkscreen-demonstration/",
+            "when": "Daily at 1pm"
+        },
+        {
+            "id": "event-halfpint",
+            "event": "Half-Pint Prints",
+            "image": "event-carousel-halfpint.png",
+            "location": "Warhol",
+            "description": "Families work with The Warhol’s artist educators to create silkscreen prints during this drop-in silkscreen printing activity for children ages 1 to 4 years old.",
+            "details": "In our underground studio, The Factory",
+            "url": "https://www.warhol.org/event/half-pint-prints-10/",
+            "when": "August 15, 10am–12pm"
+        },
+        {
+            "id": "event-lasershow",
+            "event": "Bhul Planetarium Laser Show",
+            "image": "event-carousel-lasershow.png",
+            "location": "CSC",
+            "description": "Dazzling lights and rockin′ beats merge for a spectacular sight and sound experience. Catch daily matinees or evening laser shows!",
+            "details": "Check the calendar for today’s show schedule.",
+            "url": "http://www.carnegiesciencecenter.org/calendar/"
+        },
+        {
+            "id": "event-liveshow",
+            "event": "Live Show",
+            "image": "event-carousel-liveshow.png",
+            "location": "CSC",
+            "description": "Shows are included with general admission for visitors to the Science Center.",
+            "details": "Check the calendar for today’s show schedule.",
+            "url": "http://www.carnegiesciencecenter.org/calendar/"
+        },
+        {
+            "id": "event-dailytour",
+            "event": "Tours Truly: Free Daily Collection Tour",
+            "image": "event-carousel-dailytour.png",
+            "location": "CMOA",
+            "description": "Learn about the works in CMOA’s collection from our trained docents. Every tour is unique!",
+            "details": "Tours meet in the lobby.",
+            "url": "https://cmoa.org/calendar/category/tours/",
+            "when": "Daily at 1:30pm"
+        },
+        {
+            "id": "event-yoga",
+            "event": "Thursday Yoga at CMOA",
+            "image": "event-carousel-yoga.png",
+            "location": "CMOA",
+            "description": "Join a crew of fellow humans for a weekly, rejuvenating yoga session set in Pittsburgh’s most beautiful spaces!",
+            "details": "All classes are drop-in; no online pre-registration is available.",
+            "url": "https://cmoa.org/event/thursday-yoga-cmoa/"
+        },
+        {
+            "id": "event-liveanimals",
+            "event": "Live Animal Encounter",
+            "image": "event-carousel-liveanimals.png",
+            "location": "CMNH",
+            "description": "Meet the live animals that call Carnegie Museum of Natural History home at Live Animal Encounters.",
+            "details": "In Earth Theatre, $2 per person.",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/live-animal-encounters/"
+        }
+    ],
+    "stamps": [
+        {
+            "stamp_id": "stamp-checkin-oakland",
+            "name": "Check-in at Oakland",
+            "events": [],
+            "messenger_code": "stamp-checkin-oakland",
+            "image": "stamp-checkin-oakland.png",
+            "splash_image": "andy-stamp-checkinoakland.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-checkin-csc",
+            "name": "Check-in at Science Center",
+            "events": [],
+            "messenger_code": "stamp-checkin-csc",
+            "image": "stamp-checkin-csc.png",
+            "splash_image": "andy-stamp-checkincsc.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-checkin-warhol",
+            "name": "Check-in at Warhol",
+            "events": [],
+            "messenger_code": "stamp-checkin-warhol",
+            "image": "stamp-checkin-warhol.png",
+            "splash_image": "andy-stamp-checkinwarhol.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-checkin-powdermill",
+            "name": "Check-in at Powdermill",
+            "events": [],
+            "messenger_code": "stamp-checkin-powdermill",
+            "image": "stamp-checkin-powdermill.png",
+            "splash_image": "andy-stamp-checkin-powdermill.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-wentdigital",
+            "name": "Went Digital",
+            "events": [],
+            "image": "stamp-wentdigital.png",
+            "splash_image": "andy-stamp-wentdigital.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-grandopening",
+            "name": "PPG Grand Opening and Art of The Brick",
+            "events": [
+                "event-grandopening"
+            ],
+            "messenger_code": "stamp-event-grandopening",
+            "image": "stamp-event-grandopening.png",
+            "splash_image": "andy-stamp-ppg.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-starfestival",
+            "name": "Star Festival",
+            "events": [
+                "event-starfestival"
+            ],
+            "messenger_code": "stamp-event-starfestival",
+            "image": "stamp-event-starfestival.png",
+            "splash_image": "andy-stamp-starfestival.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-fashion",
+            "name": "Evening of Fashion",
+            "events": [
+                "event-fashion"
+            ],
+            "messenger_code": "stamp-event-fashion",
+            "image": "stamp-event-fashion.png",
+            "splash_image": "andy-stamp-fashion.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-icecream",
+            "name": "Ice Cream Social",
+            "events": [
+                "event-icecream"
+            ],
+            "messenger_code": "stamp-event-icecream",
+            "image": "stamp-event-icecream.png",
+            "splash_image": "andy-stamp-icecream.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-birthday",
+            "name": "Andy′s Birthday",
+            "events": [
+                "event-birthday"
+            ],
+            "messenger_code": "stamp-event-birthday",
+            "image": "stamp-event-birthday.png",
+            "splash_image": "andy-stamp-birthday.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-pollinatorfestival",
+            "name": "Pollinator Festival",
+            "events": [
+                "event-pollinatorfestival"
+            ],
+            "messenger_code": "stamp-event-pollinatorfestival",
+            "image": "stamp-event-pollinatorfestival.png",
+            "splash_image": "andy-stamp-pollinatorfestival.png",
+            "multiple": "false "
+        },
+        {
+            "stamp_id": "stamp-event-membertours",
+            "name": "Member Tours",
+            "events": [
+                "event-cmoamembertour-secretlanguage",
+                "event-cmoamembertour-publicart",
+                "event-cmoamembertour-contemporary"
+            ],
+            "messenger_code": "stamp-event-membertours",
+            "image": "stamp-event-membertours.png",
+            "splash_image": "andy-stamp-membertours.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-event-sciencesaturdays",
+            "name": "Super Science Saturdays",
+            "events": [
+                "event-sciencesaturday-jurassic",
+                "event-sciencesaturday-scientist",
+                "event-sciencesaturday-meowfest"
+            ],
+            "messenger_code": "stamp-event-sciencesaturdays",
+            "image": "stamp-event-sciencesaturdays.png",
+            "splash_image": "andy-stamp-sciencesaturdays.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-event-adults",
+            "name": "Evenings For Adults",
+            "events": [
+                "event-thirdthursday-girlfx",
+                "event-thirdthursday-contemporary",
+                "event-thirdthursday-intimate",
+                "event-afterdark-harrypotter",
+                "event-goodfridays"
+            ],
+            "messenger_code": "stamp-event-adults",
+            "image": "stamp-event-adults.png",
+            "splash_image": "andy-stamp-adults.png",
+            "multiple": "true "
+        },
+        {
+            "stamp_id": "stamp-event-trivianight",
+            "name": "End-of-Summer Trivia Night",
+            "events": [
+                "event-trivianight"
+            ],
+            "messenger_code": "stamp-event-trivianight",
+            "image": "stamp-event-trivianight.png",
+            "splash_image": "andy-stamp-trivianight.png",
+            "multiple": "false "
+        }
+    ],
+    "trivia-railroad": [
+        {
+            "text": "The Miniature Railroad and Village® was displayed for the first time ever in ____ by its creator Charles Bowdish.",
+            "image": "trivia-railroad-1.png",
+            "difficulty": 1,
+            "answer": 1919,
+            "incorrect": [
+                "1960",
+                "1990"
+            ],
+            "followup": "After 1919, the display grew until it occupied most of the second floor of the Bowdish home."
+        },
+        {
+            "text": "Where else did the Miniature Railroad and Village® live before moving to Carnegie Science Center?",
+            "image": "trivia-railroad-5.png",
+            "difficulty": 2,
+            "answer": "Buhl Planetarium",
+            "incorrect": [
+                "Frick Art and Historical Center",
+                "Contemporary Craft"
+            ],
+            "followup": "The Miniature Railroad and Village® was moved to the Science Center in 1992."
+        },
+        {
+            "text": "An earlier name for Mt. Washington in Pittsburgh, PA was _______. ",
+            "image": "trivia-railroad-2.png",
+            "difficulty": 2,
+            "answer": "Coal Hill",
+            "incorrect": [
+                "Fort Duquesne",
+                "High Point"
+            ],
+            "followup": "The leading coal producers in the United States mined the seam."
+        },
+        {
+            "text": "What is the name of this house, designed by renowned architect Frank Lloyd Wright?",
+            "image": "trivia-railroad-3.png",
+            "difficulty": 1,
+            "answer": "Fallingwater",
+            "incorrect": [
+                "Kentuck Knob",
+                "Wingspread"
+            ],
+            "followup": "Fallingwater is located southeast of Pittsburgh, just over an hour away. "
+        },
+        {
+            "text": "The spectators in the model of Forbes Field are made out of ________?",
+            "image": "trivia-railroad-4.png",
+            "difficulty": 1,
+            "answer": "Q-tips",
+            "incorrect": [
+                "Wood chips",
+                "Peas"
+            ],
+            "followup": "The real Forbes Field took only four months to build out of steel and concrete, but the model took over a year to complete."
+        },
+        {
+            "text": "What is the scale of this exhibit?",
+            "image": "trivia-railroad-carousel.png",
+            "difficulty": 2,
+            "answer": "¼ in = 1 ft",
+            "incorrect": [
+                "½ in = 1 ft",
+                "1 in = 1 ft"
+            ],
+            "followup": "The Miniature Railroad and Village® is built by the \"O\" Scale, which is commonly used for toy trains and rail transport modelling. "
+        }
+    ],
+    "trivia-sports": [
+        {
+            "text": "Which of the following materials is used to make athletic tracks?",
+            "image": "trivia-sports-1.png",
+            "difficulty": 2,
+            "answer": "Plant oil",
+            "incorrect": [
+                "Marine sponges",
+                "Graphite"
+            ],
+            "followup": "Enzymes can transform plant oils into a gel that will harden into a track that you can run on!"
+        },
+        {
+            "text": "_________ is a muscle′s ability to keep up a repeated force.",
+            "image": "trivia-sports-2.png",
+            "difficulty": 1,
+            "answer": "Endurance",
+            "incorrect": [
+                "Strength",
+                "Flexibility"
+            ],
+            "followup": "Many athletes train for both strength and endurance."
+        },
+        {
+            "text": "A good hockey goalie has a reaction time that is ____ faster than an average person’s.",
+            "image": "trivia-sports-3.png",
+            "difficulty": 2,
+            "answer": 0.25,
+            "incorrect": [
+                "10%",
+                "50%"
+            ],
+            "followup": "An average person has a reaction time of about .2 seconds. A hockey goalie is faster at .15 seconds-- those milliseconds count!"
+        },
+        {
+            "text": "Participating in sports helps keep your heart healthy. How many chambers are in a mammal’s heart?",
+            "image": "trivia-sports-4.png",
+            "difficulty": 1,
+            "answer": 4,
+            "incorrect": [
+                "1",
+                "2"
+            ],
+            "followup": "Birds also have four chambers in their hearts."
+        },
+        {
+            "text": "Isaac Newton’s Second Law of Motion: Force = Mass x ________?",
+            "image": "trivia-sports-5.png",
+            "difficulty": 1,
+            "answer": "Acceleration",
+            "incorrect": [
+                "Velocity",
+                "Kinetic Energy"
+            ],
+            "followup": "When you swing a bat, it accelerates to maximum speed. That acceleration depends on the force you apply to the bat and the mass of the bat."
+        }
+    ],
+    "trivia-robots": [
+        {
+            "text": "What year was the term “robot” invented?",
+            "image": "trivia-robots-5.png",
+            "difficulty": 2,
+            "answer": 1920,
+            "incorrect": [
+                "1953",
+                "1998"
+            ],
+            "followup": "It was used in a play entitled R.U.R. by the Czech writer Karel Čapek."
+        },
+        {
+            "text": "The device at the end of a robotic arm is called a(n) __________.",
+            "image": "trivia-robots-1.png",
+            "difficulty": 3,
+            "answer": "End effector",
+            "incorrect": [
+                "Robot hand",
+                "Automator"
+            ],
+            "followup": "The form and function of an end effector can vary, depending on the purpose of the robot."
+        },
+        {
+            "text": "What kind of sensors do robots use to detect their distance from an object?",
+            "image": "trivia-robots-2.png",
+            "difficulty": 3,
+            "answer": "Proximity sensors",
+            "incorrect": [
+                "Accelerometers",
+                "Potentiometers"
+            ],
+            "followup": "These sonic range finders bounce sound off an object and measure the time it takes the sound to return to the sensor."
+        },
+        {
+            "text": "The first robot to be used in industry was used by which automobile company?",
+            "image": "trivia-robots-3.png",
+            "difficulty": 3,
+            "answer": "General Motors",
+            "incorrect": [
+                "Ford",
+                "Chevrolet"
+            ],
+            "followup": "In 1961, it was Devol and Engelberger’s UNIMATE."
+        },
+        {
+            "text": "What is the name of this robot, who was introduced in the class sci-fi film “Metropolis”?",
+            "image": "trivia-robots-4.png",
+            "difficulty": 1,
+            "answer": "Maria",
+            "incorrect": [
+                "Gort",
+                "Robby"
+            ],
+            "followup": "Maria was one of the first robotic icons of science fiction!"
+        },
+        {
+            "text": "What was a robot like Hoops, the basketball robot, originally used for?",
+            "image": "trivia-robots-6.png",
+            "difficulty": 2,
+            "answer": "Welding automobiles ",
+            "incorrect": [
+                "Tightening toothpaste caps",
+                "Washing windows"
+            ],
+            "followup": "Hoops nails free-throws with 98% accuracy and has been fascinating Science Center visitors for years."
+        }
+    ],
+    "trivia-foodart": [
+        {
+            "text": "Andy Warhol made many artworks around food. Which of the following foods did Andy Warhol claim to eat every day for 20 years?",
+            "image": "trivia-foodart-1.png",
+            "difficulty": 2,
+            "answer": "Campbell’s Soup",
+            "incorrect": [
+                "Bananas",
+                "Cake"
+            ],
+            "followup": "Andy marveled that the soup always tasted the same, whether consumed by prince or pauper."
+        },
+        {
+            "text": "This machine was designed to make which beverage?",
+            "image": "trivia-foodart-2.png",
+            "difficulty": 1,
+            "answer": "Tea",
+            "incorrect": [
+                "Orange juice",
+                "Fizzy drinks"
+            ],
+            "followup": "In the early 17th century, the vessels used for serving tea became more inventive. "
+        },
+        {
+            "text": "A model of which Pittsburgh restaurant was added to the Miniature Railroad and Village® at Carnegie Science Center in 2017?",
+            "image": "trivia-foodart-3.png",
+            "difficulty": 2,
+            "answer": "Primanti Brothers",
+            "incorrect": [
+                "Pamela’s Diner",
+                "The Original Oyster House"
+            ],
+            "followup": "Updates are made to the Miniature Railroad and Village® each fall, just in time for the holidays!"
+        },
+        {
+            "text": "Pictured here is a painting by Albert Francis King. He used a technique known as trompe l’oeil, which means ____________.",
+            "image": "trivia-foodart-4.png",
+            "difficulty": 1,
+            "answer": "Fool the eye",
+            "incorrect": [
+                "Dark background",
+                "Still life with food"
+            ],
+            "followup": "Trompe l’oeil painters often selected household objects as subjects."
+        },
+        {
+            "text": "Which type of clay is this plate made from?",
+            "image": "trivia-foodart-5.png",
+            "difficulty": 2,
+            "answer": "Porcelain",
+            "incorrect": [
+                "Earthenware",
+                "Stoneware"
+            ],
+            "followup": "These are the three main types of clay, often used to make tableware and dishes. "
+        }
+    ],
+    "trivia-foodscience": [
+        {
+            "text": "The digestive system begins in the __________.",
+            "image": "trivia-foodscience-1.png",
+            "difficulty": 1,
+            "answer": "Mouth",
+            "incorrect": [
+                "Stomach",
+                "Intestines"
+            ],
+            "followup": "Saliva is important for digestion; humans make about a liter of it each day."
+        },
+        {
+            "text": "Stegosaurus had a brain that was the size of  _______________.",
+            "image": "trivia-foodscience-2.png",
+            "difficulty": 2,
+            "answer": "An orange",
+            "incorrect": [
+                "A grape",
+                "A watermelon"
+            ],
+            "followup": "Compared to the size of its body (which is comparable to an elephant’s), Stegosaurus had a tiny brain."
+        },
+        {
+            "text": "Most of food’s flavor comes from our sense of _______.",
+            "image": "trivia-foodscience-3.png",
+            "difficulty": 2,
+            "answer": "Smell",
+            "incorrect": [
+                "Taste",
+                "Touch"
+            ],
+            "followup": "We can identify about 10,000 scents but only five basic tastes: sour, sweet, bitter, salty, and umami."
+        },
+        {
+            "text": "The first cooked meal in space was ________.",
+            "image": "trivia-foodscience-4.png",
+            "difficulty": 3,
+            "answer": "Mesquite grilled tuna ",
+            "incorrect": [
+                "Cheese and onion pizza",
+                "White turkey chili"
+            ],
+            "followup": "It was cooked in a lemon garlic ginger marinade and eaten from a bag."
+        },
+        {
+            "text": "The growth in popularity of which superfood has had a negative effect on monarch butterfly populations?",
+            "image": "trivia-foodscience-5.png",
+            "difficulty": 3,
+            "answer": "Avocado",
+            "incorrect": [
+                "Greek Yogurt",
+                "Salmon"
+            ],
+            "followup": "Avocado farmers are clearing land, removing a vital buffer of trees that helps stabilize the climate of the butterflies’ winter retreat. "
+        }
+    ],
+    "trivia-warholearly": [
+        {
+            "text": "Andy Warhol’s parents were from modern-day",
+            "difficulty": 3,
+            "answer": "Slovakia",
+            "incorrect": [
+                "Poland",
+                "Hungary"
+            ],
+            "followup": "Andrej and Julia Warhola were Carpatho-Rusyns who immigrated from what is now eastern Slovakia in the 1920s."
+        },
+        {
+            "text": "As a child, Andy Warhol had a rare illness that often kept him bed-ridden. What was it?",
+            "difficulty": 3,
+            "answer": "St. Vitus′ dance",
+            "incorrect": [
+                "Mononucleosis",
+                "Scarlet fever"
+            ],
+            "followup": "The disease caused involuntary movement, but being bed-ridden was a formative time for Warhol: He would listen to the radio, draw, and collect pictures of movie stars."
+        },
+        {
+            "text": "Warhol attended college at Carnegie Tech (now Carnegie Mellon University). How did he afford it?",
+            "difficulty": 3,
+            "answer": "Savings bonds",
+            "incorrect": [
+                "Academic scholarship",
+                "Working part-time"
+            ],
+            "followup": "Warhol’s father Andrej recognized his son’s talent early and saved bonds for his education."
+        },
+        {
+            "text": "Warhol’s first job was ________.",
+            "difficulty": 2,
+            "answer": "Window dressing",
+            "incorrect": [
+                "Dishwashing",
+                "Studio assistant"
+            ],
+            "followup": "Warhol designed the windows of Joseph Horne’s in downtown Pittsburgh."
+        },
+        {
+            "text": "Warhol began his career in New York as a _______.",
+            "difficulty": 1,
+            "answer": "Commercial illustrator",
+            "incorrect": [
+                "Salesman",
+                "Photographer"
+            ],
+            "followup": "His first commercial work appeared in a 1949 issue of Glamour magazine, in which he illustrated a story called “What is Success?”"
+        }
+    ],
+    "trivia-warholart": [
+        {
+            "text": "Warhol said: “I always notice ___________.”",
+            "difficulty": 2,
+            "answer": "Flowers",
+            "incorrect": [
+                "Celebrities",
+                "Fashion"
+            ],
+            "followup": "Warhol’s love for flowers was reflected in his countless Flowers prints."
+        },
+        {
+            "text": "Warhol’s artistic process took off with this technique.",
+            "difficulty": 1,
+            "answer": "Blotted line",
+            "incorrect": [
+                "Drypoint",
+                "Lithography"
+            ],
+            "followup": "This time-saving technique combined drawing with printmaking and allowed Warhol to recreate images quickly, thus outpacing his competition."
+        },
+        {
+            "text": "Warhol started experimenting with film in the early 1960s . What is his longest film?",
+            "difficulty": 3,
+            "answer": "Empire",
+            "incorrect": [
+                "Chelsea Girls",
+                "Sleep"
+            ],
+            "followup": "The film Empire, showing the Empire State Building, clocks in at 8 hours and 5 minutes."
+        },
+        {
+            "text": "Who is the subject of the longest print at The Andy Warhol Museums?",
+            "difficulty": 1,
+            "answer": "Elvis",
+            "incorrect": [
+                "Marilyn Monroe",
+                "Mick Jagger"
+            ],
+            "followup": "Warhol made 11 prints of Elvis Presley on a single canvas, intending to cut it into strips and sell each print separately."
+        },
+        {
+            "text": "Warhol loved to collect things. His most famous collection is ______.",
+            "difficulty": 1,
+            "answer": "Time Capsules",
+            "incorrect": [
+                "Fiestaware",
+                "Stuffed animals"
+            ],
+            "followup": "Warhol filled 610 cardboard Time Capsules with memorabilia from daily life: receipts, telegrams, medicine, and even a pizza!"
+        },
+        {
+            "text": "Warhol’s famous studio is called _____.",
+            "difficulty": 1,
+            "answer": "The Factory",
+            "incorrect": [
+                "Studio 54",
+                "The Stage"
+            ],
+            "followup": "In the Factory, the walls were painted silver and celebrities streamed in and out."
+        }
+    ],
+    "trivia-wearenature": [
+        {
+            "text": "What is the name of the newly proposed geological time period, defined by humans’ effect on the environment?",
+            "image": "trivia-wearenature-1.png",
+            "difficulty": 3,
+            "answer": "The Anthropocene",
+            "incorrect": [
+                "The Holocene",
+                "The Paleocene"
+            ],
+            "followup": "This is the first time in recorded history that humans are impacting the earth as strongly as natural forces like asteroids, volcanic eruptions, or ice age global cooling."
+        },
+        {
+            "text": "What is the name of this animal, which has been documented in every county in Pennsylvania? ",
+            "image": "trivia-wearenature-2.png",
+            "difficulty": 2,
+            "answer": "Coyote",
+            "incorrect": [
+                "Gray Wolf",
+                "Gray Fox"
+            ],
+            "followup": "Coyotes can live almost anywhere that humans do but are so secretive that we rarely see them."
+        },
+        {
+            "text": "Which non-native species is flourishing in Everglades National Park in Florida?",
+            "image": "trivia-wearenature-6.png",
+            "difficulty": 3,
+            "answer": "Burmese Python",
+            "incorrect": [
+                "Zebra Mussel",
+                "Snakehead Fish"
+            ],
+            "followup": "Through humans releasing pets into the wild, Burmese pythons were brought to the Everglades. With no natural predators, they pose a threat to the balance of the ecosystem, already causing the disappearance of some small mammals in the Everglades."
+        },
+        {
+            "text": "River otters no longer live in Pennsylvania waterways due to pollution, habitat destruction, and overhunting.",
+            "image": "trivia-wearenature-7.png",
+            "difficulty": 2,
+            "answer": "False ",
+            "incorrect": [
+                "True"
+            ],
+            "followup": "They almost disappeared from PA in the early 20th century. Following decades of work to clean our rivers, otters were reintroduced in 1982. Thanks to legal protection and improved habitat quality, their population has grown."
+        },
+        {
+            "text": "Worldwide, humans buy one million plastic bottles every __________.",
+            "image": "trivia-wearenature-8.png",
+            "difficulty": 2,
+            "answer": "Minute",
+            "incorrect": [
+                "Hour",
+                "Day"
+            ],
+            "followup": "Of those bottles, 91% are thrown in the trash—many of them finding their way into the oceans."
+        },
+        {
+            "text": "Which of these critically endangered species is the most illegally trafficked animal in the world?",
+            "image": "trivia-wearenature-9.png",
+            "difficulty": 3,
+            "answer": "Pangolin",
+            "incorrect": [
+                "Sumatran Tiger",
+                "Hawksbill Turtle"
+            ],
+            "followup": "Pangolin populations have suffered from illegal trafficking due to unfounded beliefs that their ground-up scales can cure diseases."
+        }
+    ],
+    "trivia-flowers": [
+        {
+            "image": "trivia-flowers-marshviolet.png",
+            "difficulty": 1,
+            "answer": "Violet",
+            "incorrect": [
+                "Foxglove",
+                "Lilac"
+            ]
+        },
+        {
+            "image": "trivia-flowers-hibiscus.png",
+            "difficulty": 1,
+            "answer": "Hibiscus",
+            "incorrect": [
+                "Water Lily",
+                "Hydrangea"
+            ]
+        },
+        {
+            "image": "trivia-flowers-coltsfoot.png",
+            "difficulty": 2,
+            "answer": "Coltsfoot",
+            "incorrect": [
+                "Dandelion",
+                "Daisy"
+            ]
+        },
+        {
+            "image": "trivia-flowers-troutlily.png",
+            "difficulty": 2,
+            "answer": "Trout Lily",
+            "incorrect": [
+                "Marigold",
+                "Sunflower"
+            ]
+        },
+        {
+            "image": "trivia-flowers-newengladaster.png",
+            "difficulty": 3,
+            "answer": "Aster",
+            "incorrect": [
+                "Hollyhock",
+                "Geranium"
+            ],
+            "followup": "Powdermill Nature Reserve is Carnegie Museum of Natural History’s environmental research facility in Rector, PA. To see more great photos, follow Powdermill on Facebook!"
+        }
+    ],
+    "trivia-birds": [
+        {
+            "image": "trivia-birds-bluebird.png",
+            "difficulty": 2,
+            "answer": "Bluebird",
+            "incorrect": [
+                "Blue Jay",
+                "Mourning Dove"
+            ]
+        },
+        {
+            "image": "trivia-birds-woodpecker.png",
+            "difficulty": 1,
+            "answer": "Red-bellied Woodpecker",
+            "incorrect": [
+                "Wood Thrush",
+                "Ovenbird"
+            ]
+        },
+        {
+            "image": "trivia-birds-hummingbird.png",
+            "difficulty": 1,
+            "answer": "Ruby-throated Hummingbird",
+            "incorrect": [
+                "Red-headed Woodpecker",
+                "Scarlet Tanager"
+            ]
+        },
+        {
+            "image": "trivia-birds-northernsawwhetowl.png",
+            "difficulty": 3,
+            "answer": "Northern Saw-whet Owls",
+            "incorrect": [
+                "Barn Owls",
+                "Eastern Screech Owls"
+            ]
+        },
+        {
+            "image": "trivia-birds-rustyblackbird.png",
+            "difficulty": 3,
+            "answer": "Rusty Blackbird",
+            "incorrect": [
+                "Wood Thrush",
+                "Brown Creeper"
+            ],
+            "followup": "Powdermill Nature Reserve is Carnegie Museum of Natural History’s environmental research facility in Rector, PA. These photos were taken by scientists at Powdermill Avian Research Center. To see more great photos, follow Powdermill on Facebook!"
+        }
+    ],
     "trivia-impressionism": [
         {
             "text": "When and where did the art movement known as Impressionism originate?",
@@ -175,7 +1352,7 @@
                 "Brachiosaurus",
                 "Velociraptor"
             ],
-            "followup": "In 1901, paleontologists realized they had discovered a new species of dinosaur and named it Diplodocus carnegii to recognize Andrew Carnegie's support."
+            "followup": "In 1901, paleontologists realized they had discovered a new species of dinosaur and named it Diplodocus carnegii to recognize Andrew Carnegie′s support."
         },
         {
             "text": "Which is the correct order for these three periods of the Mesozoic Era?",
@@ -231,61 +1408,6 @@
             "followup": "Over 350 tons of spectacular fossil material were unearthed at Carnegie Quarry--the greatest deposit of Jurassic dinosaur bones ever discovered."
         }
     ],
-
-    "trivia-birds": [
-        {
-            "image": "trivia-birds-bluebird.png",
-            "difficulty": 2,
-            "answer": "Bluebird",
-            "text": "What kind of bird is this?",
-            "incorrect": [
-                "Blue Jay",
-                "Mourning Dove"
-            ]
-        },
-        {
-            "image": "trivia-birds-woodpecker.png",
-            "difficulty": 1,
-            "answer": "Red-bellied Woodpecker",
-            "text": "What kind of bird is this?",
-            "incorrect": [
-                "Wood Thrush",
-                "Ovenbird"
-            ]
-        },
-        {
-            "image": "trivia-birds-hummingbird.png",
-            "difficulty": 1,
-            "answer": "Ruby-throated Hummingbird",
-            "text": "What kind of bird is this?",
-            "incorrect": [
-                "Red-headed Woodpecker",
-                "Scarlet Tanager"
-            ]
-        },
-        {
-            "image": "trivia-birds-northernsawwhetowl.png",
-            "difficulty": 3,
-            "answer": "Northern Saw-whet Owls",
-            "text": "What kind of bird is this?",
-            "incorrect": [
-                "Barn Owls",
-                "Eastern Screech Owls"
-            ]
-        },
-        {
-            "image": "trivia-birds-rustyblackbird.png",
-            "difficulty": 3,
-            "answer": "Rusty Blackbird",
-            "text": "What kind of bird is this?",
-            "incorrect": [
-                "Wood Thrush",
-                "Brown Creeper"
-            ],
-            "followup": "Powdermill Nature Reserve is Carnegie Museum of Natural History’s environmental research facility in Rector, PA. These photos were taken by scientists at Powdermill Avian Research Center. To see more great photos, follow Powdermill on Facebook!"
-        }
-    ],
-
     "trivia-mineralsgems": [
         {
             "text": "The presence of which element can cause a mineral to appear blue or green?",
@@ -400,7 +1522,7 @@
         },
         {
             "text": "The collection of architectural casts at Carnegie Museum of Art is the largest in the world.",
-            "image": "trivia-architecture-10.png",
+            "image": "trivia-architecture-carousel.png",
             "difficulty": 2,
             "answer": "False ",
             "incorrect": [
@@ -413,11 +1535,11 @@
         {
             "question": "Which one of these ordinary household items inspires you to make art?",
             "choices": [
-                "Fruit",
-                "Lamp",
-                "Box",
-                "Can",
-                "Chair"
+                "fruit",
+                "lamp",
+                "box",
+                "can",
+                "chair"
             ],
             "images": [
                 "poll-brillo-fruit.png",
@@ -426,163 +1548,240 @@
                 "poll-brillo-can.png",
                 "poll-brillo-chair.png"
             ],
-            "followup": "In the mid-1960s Andy Warhol caused controversy with his “Brillo Box“ sculptures. In reference to his boxes, Warhol later said that he “wanted something ordinary,” and it was this mundane, commercial subject matter that infuriated the critics."
+            "followup": "In the mid-1960s Andy Warhol′s caused controversy with his \"Brillo Box\" sculptures. In reference to his boxes, Warhol later said that he “wanted something ordinary,” and it was this mundane, commercial subject matter that infuriated the critics."
         }
     ],
-
-    "stamps": [
+    "scan": [
         {
-            "stamp_id": "stamp-checkin-oakland",
-            "name": "Check-in at Oakland",
-            "events": [],
             "messenger_code": "stamp-checkin-oakland",
-            "image": "stamp-checkin-oakland.png",
-            "splash_image": "andy-stamp-checkinoakland.png",
-            "multiple": "true "
+            "location": "CMNH",
+            "type": "checkin"
         },
         {
-            "stamp_id": "stamp-checkin-csc",
-            "name": "Check-in at Science Center",
-            "events": [],
             "messenger_code": "stamp-checkin-csc",
-            "image": "stamp-checkin-csc.png",
-            "splash_image": "andy-stamp-checkincsc.png",
-            "multiple": "true "
+            "location": "CSC",
+            "type": "checkin"
         },
         {
-            "stamp_id": "stamp-checkin-warhol",
-            "name": "Check-in at Warhol",
-            "events": [],
             "messenger_code": "stamp-checkin-warhol",
-            "image": "stamp-checkin-warhol.png",
-            "splash_image": "andy-stamp-checkinwarhol.png",
-            "multiple": "true "
+            "location": "Warhol",
+            "type": "checkin"
         },
         {
-            "stamp_id": "stamp-checkin-powdermill",
-            "name": "Check-in at Powdermill",
-            "events": [],
             "messenger_code": "stamp-checkin-powdermill",
-            "image": "stamp-checkin-powdermill.png",
-            "splash_image": "andy-stamp-checkin-powdermill.png",
-            "multiple": "true "
+            "location": "Powdermill",
+            "type": "checkin"
         },
         {
-            "stamp_id": "stamp-wentdigital",
-            "name": "Went Digital",
-            "events": [],
-            "image": "stamp-wentdigital.png",
-            "splash_image": "andy-stamp-wentdigital.png",
-            "multiple": "false "
+            "messenger_code": "stamp-event-grandopening",
+            "location": "CMNH",
+            "type": "event"
         },
         {
-            "stamp_id": "stamp-event-grandopening",
-            "name": "PPG Grand Opening and Art of The Brick",
-            "events": [
-                "event-grandopening"
+            "messenger_code": "stamp-event-starfestival",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "stamp-event-fashion",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "stamp-event-icecream",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "stamp-event-birthday",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "stamp-event-pollinatorfestival",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "stamp-event-membertours",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "stamp-event-sciencesaturdays",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "stamp-event-adults",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "stamp-event-trivianight",
+            "location": "CMNH",
+            "type": "event"
+        },
+        {
+            "messenger_code": "trivia-mineralsgems",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "trivia-mineralsgems"
+            ]
+        },
+        {
+            "messenger_code": "trivia-dinos",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "trivia-dinos"
+            ]
+        },
+        {
+            "messenger_code": "trivia-wearenature",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "trivia-wearenature"
+            ]
+        },
+        {
+            "messenger_code": "trivia-flowers",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "trivia-flowers"
+            ]
+        },
+        {
+            "messenger_code": "trivia-architecture",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "trivia-architecture"
+            ]
+        },
+        {
+            "messenger_code": "trivia-design",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "trivia-design"
+            ]
+        },
+        {
+            "messenger_code": "giftshop-cmnh",
+            "location": "CMNH",
+            "type": "reward"
+        },
+        {
+            "messenger_code": "giftshop-cmoa",
+            "location": "CMNH",
+            "type": "reward"
+        },
+        {
+            "messenger_code": "giftshop-csc",
+            "location": "CSC",
+            "type": "reward"
+        },
+        {
+            "messenger_code": "giftshop-warhol",
+            "location": "Warhol",
+            "type": "reward"
+        },
+        {
+            "messenger_code": "paper-map",
+            "location": "Offsite",
+            "type": "welcome"
+        },
+        {
+            "messenger_code": "lunch-cmnh",
+            "location": "CMNH",
+            "type": "welcome",
+            "trigger": [
+                "trivia-foodscience",
+                "trivia-foodart"
             ],
-            "image": "stamp-event-grandopening.png",
-            "splash_image": "andy-stamp-ppg.png",
-            "multiple": "false "
+            "followup": "Thanks for inviting me to lunch. Want to sprinkle some trivia on that?"
         },
         {
-            "stamp_id": "stamp-event-starfestival",
-            "name": "Star Festival",
-            "events": [
-                "event-starfestival"
-            ],
-            "image": "stamp-event-starfestival.png",
-            "splash_image": "andy-stamp-starfestival.png",
-            "multiple": "false "
+            "messenger_code": "parking-cmnh",
+            "location": "CMNH",
+            "type": "welcome",
+            "followup": "Thanks for the ride! Want to try out some trivia?"
         },
         {
-            "stamp_id": "stamp-event-fashion",
-            "name": "Evening of Fashion",
-            "events": [
-                "event-fashion"
-            ],
-            "image": "stamp-event-fashion.png",
-            "splash_image": "andy-stamp-fashion.png",
-            "multiple": "false "
+            "messenger_code": "scavengerhunt-1",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 1
         },
         {
-            "stamp_id": "stamp-event-icecream",
-            "name": "Ice Cream Social",
-            "events": [
-                "event-icecream"
-            ],
-            "image": "stamp-event-icecream.png",
-            "splash_image": "andy-stamp-icecream.png",
-            "multiple": "false "
+            "messenger_code": "scavengerhunt-2",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 2
         },
         {
-            "stamp_id": "stamp-event-birthday",
-            "name": "Andy's Birthday",
-            "events": [
-                "event-birthday"
-            ],
-            "image": "stamp-event-birthday.png",
-            "splash_image": "andy-stamp-birthday.png",
-            "multiple": "false "
+            "messenger_code": "scavengerhunt-3",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 3
         },
         {
-            "stamp_id": "stamp-event-pollinatorfestival",
-            "name": "Pollinator Festival",
-            "events": [
-                "event-pollinatorfestival"
-            ],
-            "image": "stamp-event-pollinatorfestival.png",
-            "splash_image": "andy-stamp-pollinatorfestival.png",
-            "multiple": "false "
+            "messenger_code": "scavengerhunt-4",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 4
         },
         {
-            "stamp_id": "stamp-event-membertours",
-            "name": "Member Tours",
-            "events": [
-                "event-cmoamembertour-secretlanguage",
-                "event-cmoamembertour-publicart",
-                "event-cmoamembertour-contemporary"
-            ],
-            "image": "stamp-event-membertours.png",
-            "splash_image": "andy-stamp-membertours.png",
-            "multiple": "true "
+            "messenger_code": "scavengerhunt-5",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 5
         },
         {
-            "stamp_id": "stamp-event-sciencesaturdays",
-            "name": "Super Science Saturdays",
-            "events": [
-                "event-sciencesaturday-jurassic",
-                "event-sciencesaturday-scientist",
-                "event-sciencesaturday-meowfest"
-            ],
-            "image": "stamp-event-sciencesaturdays.png",
-            "splash_image": "andy-stamp-sciencesaturdays.png",
-            "multiple": "true "
+            "messenger_code": "scavengerhunt-6",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 6
         },
         {
-            "stamp_id": "stamp-event-adults",
-            "name": "Evenings For Adults",
-            "events": [
-                "event-thirdthursday-girlfx",
-                "event-thirdthursday-contemporary",
-                "event-thirdthursday-intimate",
-                "event-afterdark-harrypotter",
-                "event-goodfridays"
-            ],
-            "image": "stamp-event-adults.png",
-            "splash_image": "andy-stamp-adults.png",
-            "multiple": "true "
+            "messenger_code": "scavengerhunt-7",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 7
         },
         {
-            "stamp_id": "stamp-event-trivianight",
-            "name": "End-of-Summer Trivia Night",
-            "events": [
-                "event-trivianight"
-            ],
-            "image": "stamp-event-trivianight.png",
-            "splash_image": "andy-stamp-trivianight.png",
-            "multiple": "false "
+            "messenger_code": "scavengerhunt-8",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 8
+        },
+        {
+            "messenger_code": "scavengerhunt-9",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 9
+        },
+        {
+            "messenger_code": "scavengerhunt-10",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 10
+        },
+        {
+            "messenger_code": "scavengerhunt-11",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 10
+        },
+        {
+            "messenger_code": "scavengerhunt-0",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 0
         }
     ]
-
 }

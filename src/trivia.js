@@ -20,7 +20,7 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 	event.reply('#trivia-time', { name: activityTitle, numQuestions: activity.length });
 	let correctAnswers = 0;
 	// Sets postbacks as an acceptable answer type
-	convo.messageTypes = ['postback', 'quick_reply']; 
+	convo.messageTypes = ['postback', 'quick_reply', 'referral']; 
 	const numQuestions = activity.length;
 	for (var i = 0; i < numQuestions; i++) {
 		const followUp = activities[activityName][i].followup;
@@ -30,6 +30,30 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 		const correctAnswer = activity[i].answer;
 
 		const responseCallback = async (response) => {
+
+			// Possible scan between activity session -__-
+			let referral;
+			if (utils.isNonNull(response.raw.referral)) {
+				referral = response.raw.referral;
+				const scanResponse = await andybot.scan.scanCode(event.user.id, referral.ref);
+				if (utils.isNonNull(scanResponse.stamp)){
+					if (scanResponse.stamp.error && scanResponse.stamp.error === "DailyLimitReached") {
+						convo.say("#daily_scan_limit_reached");
+						convo.repeat();
+						return;
+					} else {
+	
+						const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
+						const image = stampObj.splash_image;
+						convo.say("#stamp_unlock", { image, text: "You unlocked a stamp!"});
+						convo.repeat();
+						return;
+					}
+				}
+			}
+
+
+
 			const answer = response.raw.postback.title;
 			let feedback;
 			if (correctAnswer === answer) {
@@ -38,7 +62,13 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 			} else {
 				feedback = 'The answer is ' + correctAnswer + '.';
 			}
-			convo.say('#trivia-followup', { text: followUp, feedback });
+
+			if (utils.isNonNull(followUp)) {
+				convo.say('#trivia-followup', { text: followUp, feedback });
+			} else {
+				convo.say('#trivia-followup-short', { feedback });
+			}
+			
 			if (isLastQuestion === false) {
 				convo.next();
 			} else {
@@ -47,28 +77,6 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 
 				const scoreText = getScoreText(correctAnswers, activity.length);
 				convo.say('#trivia-complete', { scoreText: scoreText });
-				
-				if (correctAnswer >= 9) {
-					convo.say('#achievement-unlocked', {
-						achievements: [{
-							id: "smart-cookie",
-							displayName: "Smart Cookie",
-							description: "Do you think you have what it takes to ace every trivia set?",
-							image: "achievement-smart-cookie.png",
-							splash_image: "andy-smart-cookie.png",
-							maxProgress: 1,
-							progress: 1,
-							tiers: {
-								1: {
-									displayName: "Smart Cookie",
-									description: "Get over 90% on a quiz",
-									reward: 10
-								}
-							}
-						}],
-						reward: 10
-					});
-				}
 
 				const achievement = await andybot.achievement.progress(userPageId);
 				if (utils.isNonNull(achievement.new) && achievement.new.length > 0) {
@@ -81,29 +89,64 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 					}));
 					convo.say('#achievement-unlocked', {
 						achievements: unlocked,
-						reward: totalReward
+						reward: achievement.reward
 					});
 				}
 
-				convo.say('#more-activities', { activities: _.filter(activities.manifest, (a)=>  a.activity !== activityName) });
+				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
+				convo.say('#more-activities', { activities: avaliableActivities.slice(0, 10) });
 				convo.stop('aborted');
 			}
 		};
 
-		convo.threads['default'].addQuestion(
-			'#trivia-question',
-			{
-				question: activity[i],
-				questionNumber: i+1,
-				choices
-			},
-			[
+		if (utils.isNonNull(activities[activityName][i].text && 
+			utils.isNonNull(activities[activityName][i].text)) && 
+			utils.isNonNull(activities[activityName][i].image)) {
+			convo.threads['default'].addQuestion(
+				'#trivia-question',
 				{
-					default: true, 
-					callback: responseCallback
-				}
-			]
-		);
+					question: activity[i],
+					questionNumber: i+1,
+					choices
+				},
+				[
+					{
+						default: true, 
+						callback: responseCallback
+					}
+				]
+			);
+		} else if (utils.isNull(activities[activityName][i].image) && utils.isNonNull(activities[activityName][i].text)) {
+			convo.threads['default'].addQuestion(
+				'#trivia-question-no-image',
+				{
+					question: activity[i],
+					questionNumber: i+1,
+					choices
+				},
+				[
+					{
+						default: true, 
+						callback: responseCallback
+					}
+				]
+			);
+		} else if (utils.isNull(activities[activityName][i].image)){
+			convo.threads['default'].addQuestion(
+				'#trivia-question-short',
+				{
+					question: activity[i],
+					questionNumber: i+1,
+					choices
+				},
+				[
+					{
+						default: true, 
+						callback: responseCallback
+					}
+				]
+			);			
+		}
 	}
 	convo.activate();	
 };

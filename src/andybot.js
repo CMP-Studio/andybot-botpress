@@ -24,14 +24,15 @@ module.exports = {
 		return response.data; 
 	},
 
-	activity: {
-		avaliable: async function () {
-			const response = await axios.get(`${config.apiEndpoint}/avaliableActivities`, 
-				{ headers: { 'Content-Type': 'application/json'} }
-			);
-			return response.data;
-		}
+
+	avaliableActivities: async function (page_id) {
+		const response = await axios.post(`${config.apiEndpoint}/avaliableActivities`,
+			{ page_id },
+			{ headers: { 'Content-Type': 'application/json'} }
+		);
+		return response.data;
 	},
+
 
 	trivia: {
 
@@ -60,7 +61,16 @@ module.exports = {
 				{ fb_page_id, activity_id, question_number, answer },
 				{ headers: { 'Content-Type': 'application/json'} });
 			return rsp.data; 
+		},
+
+		getResponsesForQuestion: async function(activity_id, question_number) {
+			const rsp = await axios.post(`${config.apiEndpoint}/poll/getResponsesForQuestion`, 
+				{ activity_id, question_number },
+				{ headers: { 'Content-Type': 'application/json'} });
+			return rsp.data; 
 		}
+
+
 	},
 
 	scan: {
@@ -70,5 +80,15 @@ module.exports = {
 			{ headers: { 'Content-Type': 'application/json'} });
 			return rsp.data; 		
 		}
+	},
+
+	scavengerhunt: {
+		getHint: async function( clue_number ) {
+			const rsp = await axios.post(`${config.apiEndpoint}/scavengerhunt/getHint`, 
+			{ clue_number },
+			{ headers: { 'Content-Type': 'application/json'} });
+			return rsp.data; 			
+		}
 	}
+
 };

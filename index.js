@@ -18,7 +18,6 @@ const _ = require('lodash');
 
 module.exports = function (bp) {
 
-
 	bp.fallbackHandler = async function (event, next) {
 		if (event.type === 'postback' || event.type === 'message' || event.type === 'referral') {
 			let referral;
@@ -27,40 +26,57 @@ module.exports = function (bp) {
 			} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
 				referral = event.raw.postback.referral;
 			}
-			console.log(referral);
-			const scanResponse = await andybot.scan.scanCode(event.user.id, referral.ref);
-
-			if (utils.isNonNull(scanResponse.stamp)){
-				if (scanResponse.stamp.error && scanResponse.stamp.error === "DailyLimitReached") {
-					event.reply("#daily_scan_limit_reached");
+			if (utils.isNonNull(referral)) {
+				const scanResponse = await andybot.scan.scanCode(event.user.id, referral.ref);
+				console.log(scanResponse);
+				
+				// 1. Handle stamp unlock
+				if (utils.isNonNull(scanResponse) && utils.isNonNull(scanResponse.stamp)){
+					if (scanResponse.stamp.error && scanResponse.stamp.error === "DailyLimitReached") {
+						event.reply("#daily_scan_limit_reached");
+						return;
+					} else {
+	
+						const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
+						const image = stampObj.splash_image;
+						event.reply("#stamp_unlock", { image, text: "You unlocked a stamp!"});
+						return;
+					}
+				}
+	
+				// 2. Handle Possible check in to a museum
+				if (scanResponse.scan.type === 'checkin') {
+					const avaliableActivities = await andybot.avaliableActivities(event.user.id);
+					setTimeout(() => {
+						event.reply('#activities', { activities: avaliableActivities.slice(0, 10) });
+					}, 2000);
 					return;
-				} else {
+				} else if (scanResponse.scan.type === 'event') {
+					
+				} else if (scanResponse.scan.type === 'activity') {
+	
+				} else if (scanResponse.scan.type === 'reward') {
+	
+				} else if (scanResponse.scan.type === 'scavengerhunt') {
+					
 
-					console.log('Avaliable', activities.stamps)
-					console.log('Searching for ', scanResponse.code.ref)
+					if (utils.isNonNull(scanResponse.scavengerhunt)){
 
-					const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
-					const image = stampObj.splash_image;
-					event.reply("#stamp_unlock", { image, text: "You unlocked a stamp!"});
-					return;
+						if (scanResponse.scavengerhunt.clueNumber === 0) {
+							event.reply("scavengerhunt-firstclue", scanResponse.scavengerhunt);
+							return
+						}
+
+						if (utils.isNonNull(scanResponse.scavengerhunt.followup)) {
+							event.reply("scavengerhunt-followup-clue", scanResponse.scavengerhunt);
+							return
+						} else {
+							event.reply("scavengerhunt-clue", scanResponse.scavengerhunt);
+							return;	
+						}
+					}
 				}
 			}
-			// console.log("We have a scanresponse");
-			// console.log(scanResponse);
-			// const decodedRef = await 
-
-			// // Handle scan code...
-			// if (utils.isNonNull(referral) && referral.ref === '5099658e') {
-			// 	event.reply('#checkin-stamp', { image: 'andy-checkin-AAM.png', text: 'Congratulations! You unlocked the AAM Conference stamp.' });
-			// 	// return;
-			// } else if (utils.isNonNull(referral) && referral.ref === '30f65153') {
-			// 	const convo = bp.convo.create(event);
-			// 	activityHandlers['poll'](convo, event, 'poll-brillo');
-			// 	return;
-			// } else {
-			// 	event.reply('#unknown-selection');
-			// }
-
 		}
 	};
 	// Listens for a first message (this is a Regex)
@@ -120,8 +136,13 @@ module.exports = function (bp) {
 	 * task such as answering a trivia set or poll, or following clues on
 	 * a scavenger hunt.
 	 */
-	bp.hear(new RegExp(`${postbacks.BEGIN_ADVENTURE}`), (event, next) => {
-		event.reply('#activities', { activities: activities.manifest } );
+	bp.hear(new RegExp(`${postbacks.BEGIN_ADVENTURE}`), async (event, next) => {
+
+
+
+		const avaliableActivities = await andybot.avaliableActivities(event.user.id);
+		console.log(avaliableActivities)
+		event.reply('#activities', { activities: avaliableActivities.slice(0, 10) });
 	});
 
 	/** Finds the current convo for the user and ends it. A convo is used
@@ -155,6 +176,15 @@ module.exports = function (bp) {
 		} catch (err) {
 			console.err(err);
 		}
+	});
+
+	bp.hear(/SCAVENGER_HUNT_HINT:/, async (event, next) => {
+		const clueNumber = event.raw.postback.payload.split(':')[1];		
+		const hintResponse = await andybot.scavengerhunt.getHint(clueNumber);
+		event.reply("#scavengerhunt-hint", { hint: hintResponse.hint });
+		return;
+		// console.log("GET SCAVENGER HUNT HINT", event.raw);
+		// console.log("clueNumber")
 	});
 
 

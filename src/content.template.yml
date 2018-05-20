@@ -177,6 +177,10 @@ trivia-followup:
   - text: "{{feedback}} {{text}}"
     typing: 1s
 
+trivia-followup-short:
+  - text: '{{feedback}}'
+    typing: 1s
+
 activity_ended:
   - text: "Your previous activity has been ended"
     typing: 1s
@@ -197,6 +201,35 @@ trivia-question:
         title: "{{.}}"
         payload: "SELECT:{{@index}}"
       {{/choices}}
+
+trivia-question-short:
+  - on: facebook
+    image: "<%=staticUrl%>img/{{question.image}}"
+  - on: facebook
+    template_type: "button"
+    text: "Question {{questionNumber}}"
+    buttons:
+      {{#choices}}
+      -
+        type: "postback"
+        title: "{{.}}"
+        payload: "SELECT:{{@index}}"
+      {{/choices}}
+
+trivia-question-no-image:
+  - text: "Question {{questionNumber}}"
+    typing: 1s
+  - on: facebook
+    template_type: "button"
+    text: "{{question.text}}"
+    buttons:
+      {{#choices}}
+      -
+        type: "postback"
+        title: "{{.}}"
+        payload: "SELECT:{{@index}}"
+      {{/choices}}
+
 
 
 trivia-complete:
@@ -247,7 +280,55 @@ daily_scan_limit_reached:
     typing: 2s
 
 stamp_unlock:
+
+
   - on: facebook
-    image: <%=staticUrl%>img/{{image}}
-  - typing: true
-    text: "{{text}}"
+    template_type: "generic"
+    elements:
+      -
+        title: "{{text}}"
+        image_url: <%=staticUrl%>img/{{image}}
+        buttons:
+          -
+            type: "web_url"
+            title: "My Stamps"
+            messenger_extensions: true
+            url: "https://dev.andybot.org/me"
+
+
+scavengerhunt-firstclue:
+  - template_type: button
+    text: "You found the first clue in the Scavenger Hunt!\n\n{{clue}}"
+    buttons:
+      -
+        type: "postback"
+        title: "Hint"
+        payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
+            
+
+scavengerhunt-clue:
+  - template_type: button
+    text: "You found clue number {{clueNumber}}!\n\n{{clue}}"
+    buttons:
+      -
+        type: "postback"
+        title: "Hint"
+        payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
+
+scavengerhunt-followup-clue:
+  - template_type: button
+    text: "You found clue number {{clueNumber}}! {{followup}}\n\n{{clue}}"
+    buttons:
+      -
+        type: "postback"
+        title: "Hint"
+        payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
+
+
+scavengerhunt-followup:
+  - typing: 2s
+    text: "{{followup}}"
+
+scavengerhunt-hint:
+  - typing: 2s
+    text: "{{hint}}"
