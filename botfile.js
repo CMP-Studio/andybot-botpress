@@ -1,5 +1,6 @@
+const config = require("./src/config");
+
 module.exports = {
-botUrl: "https://bots.pagekite.me",
   /*
     Where the content is stored
     You can access this property from `bp.dataLocation`
@@ -63,10 +64,10 @@ botUrl: "https://bots.pagekite.me",
   postgres: {
     enabled: true,
     connection: process.env.DATABASE_URL,
-    host: process.env.PG_HOST || 'bots.chcahw88vxf8.us-east-2.rds.amazonaws.com',
-    port: process.env.PG_PORT || 5432,
-    user: process.env.PG_USER || 'studio',
-    password: process.env.PG_PASSWORD || 'studioadmin',
+    host: process.env.PG_HOST,
+    port: process.env.PG_PORT,
+    user: process.env.PG_USER,
+    password: process.env.PG_PASSWORD,
     database: process.env.PG_DB || 'bots',
     ssl: process.env.PG_SSL || false
   },
@@ -83,7 +84,7 @@ botUrl: "https://bots.pagekite.me",
     /*
       By default Botpress will automatically load all the middlewares before starting your bot
       If this is set to false, you should call `bp.middlewares.load` manually
-     */
+    */
     autoLoading: true
   },
 

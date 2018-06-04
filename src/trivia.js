@@ -8,15 +8,18 @@ let activities;
 
 module.exports = async function TriviaHandler(convo, event, activityName) {
 
-	// Fetch the activities avaliable
 	if (utils.isNull(activities)) {
-		// activities = await andybot.activity.avaliable();
 		activities = require('./activities.json');
 	}
 
 	const userPageId = event.user.id;
 	const activity = activities[activityName];
 	const activityTitle = _.find(activities.manifest, (e) => e.activity === activityName).title;
+	if ( utils.isNull(activity)){
+		return 
+		
+	}
+
 	event.reply('#trivia-time', { name: activityTitle, numQuestions: activity.length });
 	let correctAnswers = 0;
 	// Sets postbacks as an acceptable answer type
@@ -99,9 +102,11 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 			}
 		};
 
-		if (utils.isNonNull(activities[activityName][i].text && 
-			utils.isNonNull(activities[activityName][i].text)) && 
-			utils.isNonNull(activities[activityName][i].image)) {
+
+		if (
+			utils.isNonNull(activities[activityName][i].text) && 
+			utils.isNonNull(activities[activityName][i].image)
+		){
 			convo.threads['default'].addQuestion(
 				'#trivia-question',
 				{
@@ -116,7 +121,10 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 					}
 				]
 			);
-		} else if (utils.isNull(activities[activityName][i].image) && utils.isNonNull(activities[activityName][i].text)) {
+		} else if (
+			utils.isNull(activities[activityName][i].image) &&
+			utils.isNonNull(activities[activityName][i].text)
+		) {
 			convo.threads['default'].addQuestion(
 				'#trivia-question-no-image',
 				{
@@ -131,7 +139,7 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 					}
 				]
 			);
-		} else if (utils.isNull(activities[activityName][i].image)){
+		} else if (utils.isNonNull(activities[activityName][i].image)){
 			convo.threads['default'].addQuestion(
 				'#trivia-question-short',
 				{

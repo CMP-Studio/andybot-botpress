@@ -1,3 +1,4 @@
+
 welcome: # this is the #welcome bloc referenced in index.js
   - on: facebook
     image: <%=staticUrl%>img/andy-hello.png
@@ -35,22 +36,35 @@ how_to_play:
   - on: facebook
     template_type: "generic"
     elements:
-      -
-        title: "How to Play"
-        image_url: "<%=staticUrl%>img/andy-how-to-play.png"
-        buttons:
-          -
-            type: "web_url"
-            title: "Getting Started"
-            url: "http://carnegiebot.s3-website.us-east-2.amazonaws.com/"
-          -
-            type: "web_url"
-            url: "http://carnegiemuseums.org/about-us/"
-            title: "About CMP"
-          -
-            type: "postback"
-            title: "Prizes"
-            payload: "PRIZES"
+      {{#howtoplay}}
+      - 
+        subtitle: "{{subtitle}}"
+        title: "{{title}}"
+        image_url: "<%=staticUrl%>img/{{image}}"
+      {{/howtoplay}}
+
+# how_to_play:
+#   - typing: true
+#     text: Glad you asked. Here is some more information on how to play the game
+#   - on: facebook
+#     template_type: "generic"
+#     elements:
+#       -
+#         title: "How to Play"
+#         image_url: "<%=staticUrl%>img/andy-how-to-play.png"
+#         buttons:
+#           -
+#             type: "web_url"
+#             title: "Getting Started"
+#             url: "http://carnegiebot.s3-website.us-east-2.amazonaws.com/"
+#           -
+#             type: "web_url"
+#             url: "http://carnegiemuseums.org/about-us/"
+#             title: "About CMP"
+#           -
+#             type: "postback"
+#             title: "Prizes"
+#             payload: "PRIZES"
 
 activities:
   - typing: true
@@ -70,6 +84,9 @@ activities:
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
+no_activity:
+  - typing: true
+    text: "You don't currently have an activity in progress."
 
 more-activities:
   - typing: true
@@ -231,7 +248,6 @@ trivia-question-no-image:
       {{/choices}}
 
 
-
 trivia-complete:
   - typing: true
     text: Thats it! You did amazing.
@@ -304,7 +320,11 @@ scavengerhunt-firstclue:
         type: "postback"
         title: "Hint"
         payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
-            
+
+scavengerhunt-lastclue:
+  - template_type: button
+    text: "You found the last clue in the Scavenger Hunt!\n\n{{followup}}"
+
 
 scavengerhunt-clue:
   - template_type: button

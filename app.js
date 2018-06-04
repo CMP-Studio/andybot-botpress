@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const path = require('path');
 
 const Botpress = require(path.join(__dirname, 'node_modules/botpress/lib/node.bundle.js')).Botpress();

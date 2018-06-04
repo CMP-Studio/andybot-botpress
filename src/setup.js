@@ -12,11 +12,11 @@ const botpressMessengerConfigName = 'botpress-messenger.config.yml';
 const contentTemplateFileName = 'content.template.yml';
 const botpressContentFileName = 'content.yml';
 
-
-const messages = require('./messages');
+const messages = {
+    greeting: "I'll be your guide to Summer Adventure at the Carnegie Museums of Pittsburgh. I'll help you earn stamps for visiting museums and attending special events. Each stamp increases your chance to win at the End-Of-Summer celebration."
+}
 // const botfile = require('../botfile');
 
-// Creates botpress-messenger.config.yml
 async function setup() {
 	const config = await require('./config');
 
