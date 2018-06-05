@@ -41,87 +41,106 @@
             "activity": "trivia-robots",
             "image": "trivia-robots-carousel.png",
             "title": "Trivia | roboworld®",
-            "subtitle": "I have 6 questions for you. The topic is robots,  ",
-            "location": "CSC",
-            "floor": 3
+            "subtitle": "I have 6 questions for you. The topic is robots.",
+            "location": "CSC"
         },
         {
             "activity": "trivia-warholearly",
             "image": "trivia-warhol-carousel.png",
-            "title": "Trivia | Warhol's Early Life",
+            "title": "Trivia | Warhol’s Early Life",
             "subtitle": "From Pittsburgh to New York: 5 questions about Warhol before he was famous!",
-            "location": "Warhol",
-            "floor": 7
+            "location": "Warhol"
         },
         {
-            "activity": "trivia-foodart",
-            "image": "trivia-foodart-carousel.png",
-            "title": "Trivia | Food Art",
-            "subtitle": "5 questions inspired by food-related facts and objects found at the museums."
+            "activity": "poll-prince",
+            "image": "poll-prince-carousel.png",
+            "title": "Poll | Prince of Swords",
+            "subtitle": "Cast your vote!",
+            "location": "CMOA"
         },
         {
-            "activity": "trivia-mineralsgems",
-            "image": "trivia-mineralsgems-carousel.png",
-            "title": "Trivia | Hillman Hall of Minerals and Gems",
-            "subtitle": "6 questions from one of the most dazzling mineral exhibitions in the country.",
-            "location": "CMNH",
-            "floor": 1
+            "activity": "poll-iceberg",
+            "image": "poll-iceberg-carousel.png",
+            "title": "Poll | The Iceberg",
+            "subtitle": "Tell me what you think!",
+            "location": "CMOA"
         },
         {
-            "activity": "trivia-impressionism",
-            "image": "trivia-impressionism-carousel.png",
-            "title": "Trivia | Impressionism",
-            "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
-            "location": "CMOA",
-            "floor": 2
+            "activity": "poll-lices",
+            "image": "poll-lices-carousel.png",
+            "title": "Poll | Place des Lices",
+            "subtitle": "Consider this lovely painting.",
+            "location": "CMOA"
         },
         {
-            "activity": "trivia-dinos",
-            "image": "trivia-dinos-carousel.png",
-            "title": "Trivia | Dinosaurs In Their Time",
-            "subtitle": "6 questions from Pittsburgh's famous (and most ferocious) collection. ",
-            "location": "CMNH",
-            "floor": 1
-        },
-        {
-            "activity": "trivia-birds",
-            "image": "trivia-birds-carousel.png",
-            "title": "Trivia | Bird Identification",
-            "subtitle": "Can you identify the birds in these 5 photos taken at Powdermill Nature Reserve?",
-            "location": "Powdermill",
-            "floor": 1
-        },
-        {
-            "activity": "trivia-wearenature",
-            "image": "trivia-wearenature-carousel.png",
-            "title": "Trivia | We Are Nature",
-            "subtitle": "Test your nature knowledge with 6 questions from this groundbreaking exhibition.",
-            "location": "CMNH",
-            "floor": 3
-        },
-        {
-            "activity": "trivia-warholart",
-            "image": "trivia-warhol-carousel.png",
-            "title": "Trivia | Warhol Art & Influences",
-            "subtitle": "Think you're an Andy Warhol aficionado? Try these 6 questions.",
-            "location": "Warhol",
-            "floor": 6
-        },
-        {
-            "activity": "trivia-architecture",
-            "image": "trivia-architecture-carousel.png",
-            "title": "Trivia | Hall of Architecture",
-            "subtitle": "Quiz yourself with 5 questions about our architectural masterpieces. ",
-            "location": "CMOA",
-            "floor": 1
+            "activity": "poll-gallery",
+            "image": "poll-gallery-carousel.png",
+            "title": "Poll | Untitled (Gallery)",
+            "subtitle": "Imagine...You with Kerry James Marshall",
+            "location": "CMOA"
         },
         {
             "activity": "poll-brillo",
             "image": "poll-brillo-carousel.png",
             "title": "Poll | Ordinary Art",
             "subtitle": "Think like Warhol and see who agrees!",
-            "location": "Warhol",
-            "floor": 1
+            "location": "Warhol"
+        },
+        {
+            "activity": "trivia-foodart",
+            "image": "trivia-foodart-carousel.png",
+            "title": "Trivia | Food Art",
+            "subtitle": "5 questions inspired by food-related facts and objects found at the museums.",
+            "location": "CMP"
+        },
+        {
+            "activity": "trivia-mineralsgems",
+            "image": "trivia-mineralsgems-carousel.png",
+            "title": "Trivia | Hillman Hall of Minerals and Gems",
+            "subtitle": "6 questions from one of the most dazzling mineral exhibitions in the country.",
+            "location": "CMNH"
+        },
+        {
+            "activity": "trivia-impressionism",
+            "image": "trivia-impressionism-carousel.png",
+            "title": "Trivia | Impressionism",
+            "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
+            "location": "CMOA"
+        },
+        {
+            "activity": "trivia-dinos",
+            "image": "trivia-dinos-carousel.png",
+            "title": "Trivia | Dinosaurs In Their Time",
+            "subtitle": "6 questions from Pittsburgh’s famous (and most ferocious) collection. ",
+            "location": "CMNH"
+        },
+        {
+            "activity": "trivia-birds",
+            "image": "trivia-birds-carousel.png",
+            "title": "Trivia | Bird Identification",
+            "subtitle": "Can you identify the birds in these 5 photos taken at Powdermill Nature Reserve?",
+            "location": "Powdermill"
+        },
+        {
+            "activity": "trivia-wearenature",
+            "image": "trivia-wearenature-carousel.png",
+            "title": "Trivia | We Are Nature",
+            "subtitle": "Test your nature knowledge with 6 questions from this groundbreaking exhibition.",
+            "location": "CMNH"
+        },
+        {
+            "activity": "trivia-warholart",
+            "image": "trivia-warhol-carousel.png",
+            "title": "Trivia | Warhol Art & Influences",
+            "subtitle": "Think you’re an Andy Warhol aficionado? Try these 6 questions.",
+            "location": "Warhol"
+        },
+        {
+            "activity": "trivia-architecture",
+            "image": "trivia-architecture-carousel.png",
+            "title": "Trivia | Hall of Architecture",
+            "subtitle": "Quiz yourself with 5 questions about our architectural masterpieces. ",
+            "location": "CMOA"
         },
         {
             "activity": "trivia-railroad",
@@ -135,22 +154,21 @@
             "image": "trivia-design-carousel.png",
             "title": "Trivia | Decorative Arts and Design",
             "subtitle": "Design is all around you. These 5 questions should be a breeze, right?",
-            "location": "CMOA",
-            "floor": 2
+            "location": "CMOA"
         },
         {
             "activity": "trivia-foodscience",
             "image": "trivia-foodscience-carousel.png",
             "title": "Trivia | Food Science",
-            "subtitle": "5 questions inspired by food-related facts and objects found at the museums."
+            "subtitle": "5 questions inspired by food-related facts and objects found at the museums.",
+            "location": "CMP"
         },
         {
             "activity": "trivia-flowers",
             "image": "trivia-flowers-carousel.png",
             "title": "Trivia | Flower Identification",
             "subtitle": "Can you identify the flowers in these 5 photos from Powdermill Nature Reserve?",
-            "location": "Powdermill",
-            "floor": 1
+            "location": "Powdermill"
         },
         {
             "activity": "trivia-sports",
@@ -158,6 +176,109 @@
             "title": "Trivia | Sport Science",
             "subtitle": "5 questions from the insanely fun SportsWorks® building at the Science Center!",
             "location": "CSC"
+        }
+    ],
+    "poll-gallery": [
+        {
+            "image": "poll-gallery.png",
+            "question": "What question would you ask the artist about this painting if you had the chance?",
+            "choices": [
+                "Who is this person?",
+                "What’s in the frame behind them?",
+                "Where are they?",
+                "Does their hand positioning have meaning?"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ],
+            "followup": "Kerry James Marshall, is a living artist who is best known for portraits such as this one. He draws from the canon and history of art, specifically painting, as references for pose and composition."
+        }
+    ],
+    "poll-lices": [
+        {
+            "image": "poll-lices.png",
+            "question": "Where do you go to find time alone?",
+            "choices": [
+                "Park/Nature",
+                "A Museum",
+                "Body of Water",
+                "For a Walk",
+                "My Room"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ],
+            "followup": "Paul Signac used lots of painted dots to create this image. This technique is called pointillism and is part of the Impressionist movement. Signac and other impressionists were interested in how color could show different times of day and create different moods."
+        }
+    ],
+    "poll-prince": [
+        {
+            "image": "poll-prince.png",
+            "question": "What do you think this figure is looking at on their phone?",
+            "choices": [
+                "Text Message",
+                "Mobile Game",
+                "Social Media",
+                "News",
+                "Summer Adventure"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ],
+            "followup": "This sculpture is the work of Nicole Eisenman, who draws on sources ranging from the iconography of classical myths to popular culture."
+        }
+    ],
+    "poll-iceberg": [
+        {
+            "image": "poll-iceberg.png",
+            "question": "What does this painting make you think of?",
+            "choices": [
+                "Travel and adventure.",
+                "Feeling small.",
+                "Feeling big.",
+                "The wonders of nature.",
+                "The impact humans have on nature."
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ],
+            "followup": "The artist, Frederic Church, first sketched icebergs on a perilous trip to Newfoundland and Labrador in 1859 following the disappearance of a ship and its crew in the far north while searching for the Northwest Passage."
+        }
+    ],
+    "poll-brillo": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "Which one of these ordinary household items inspires you to make art?",
+            "choices": [
+                "Fruit",
+                "A Lamp",
+                "Cardboard Boxes",
+                "A Can",
+                "A Chair"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ],
+            "followup": "In the mid-1960s Andy Warhol's caused controversy with his 'Brillo Box' sculptures. In reference to his boxes, Warhol later said that he 'wanted something ordinary,' and it was this mundane, commercial subject matter that infuriated the critics."
         }
     ],
     "faq": [
@@ -1816,26 +1937,6 @@
                 "True"
             ],
             "followup": "This collection is the third largest in the world, but the largest in the Americas. While most other collections have been either dispersed or destroyed, Carnegie Museum of Art’s collection has endured as an exhibition of world-class significance."
-        }
-    ],
-    "poll-brillo": [
-        {
-            "question": "Which one of these ordinary household items inspires you to make art?",
-            "choices": [
-                "fruit",
-                "lamp",
-                "box",
-                "can",
-                "chair"
-            ],
-            "images": [
-                "poll-brillo-fruit.png",
-                "poll-brillo-lamp.png",
-                "poll-brillo-box.png",
-                "poll-brillo-can.png",
-                "poll-brillo-chair.png"
-            ],
-            "followup": "In the mid-1960s Andy Warhol's caused controversy with his 'Brillo Box' sculptures. In reference to his boxes, Warhol later said that he 'wanted something ordinary,' and it was this mundane, commercial subject matter that infuriated the critics."
         }
     ]
 }

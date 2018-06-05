@@ -76,7 +76,7 @@ activities:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}"
+        image_url: "<%=staticUrl%>img/{{image}}?time=5"
         buttons:
           -
             type: "postback"
@@ -98,7 +98,7 @@ more-activities:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}"
+        image_url: "<%=staticUrl%>img/{{image}}?time=5"
         buttons:
           -
             type: "postback"
@@ -136,45 +136,38 @@ unknown-selection:
 
 poll-time:
   - on: facebook
-    template_type: "generic"
-    elements:
-      - 
-        title: "You started the {{name}}"
-        image_url: "<%=staticUrl%>img/andy-what-you-think.png?time=1234"
-        subtitle: "This activity takes about {{numQuestions}} minute(s) to complete."
-        buttons:
-          -
-            type: "postback"
-            title: "End Poll"
-            payload: "STOP_CONVO"
-
+    image: "<%=staticUrl%>img/{{image}}"
 
 poll-question:
-  - text: "Question {{questionNumber}} - {{question}}"
+  - text: "{{question}}"
     typing: 1s
   - on: facebook
     template_type: "generic"
     elements:
       {{#choices}}
       -
-        title: "Option {{choiceNumber}}"
-        subtitle: "{{text}}"
-        image_url: "<%=staticUrl%>img/{{image}}?invalidate=1"
+        title: "{{text}}"
+        image_url: "<%=staticUrl%>img/{{image}}?invalidate=2"
         buttons:
           -
             type: "postback"
-            title: "Select {{text}}"
-            payload: "SELECT:{{choiceIndex}}"
+            title: "VOTE"
+            payload: "VOTE:{{choiceIndex}}"
       {{/choices}}
 
 poll-followup:
-  - text: "{{feedback}} {{text}}"
-    typing: 1s
+  - typing: 1s
+    text: "{{feedback}}"
+  - typing: true
+    text: "{{text}}"
+
+poll-doubledip: 
+  - typing: 1s
+    text: "Hey there! You already voted in this poll. This vote will not be recorded."
 
 poll-complete:
-  - typing: true
-    text: You're done! Thanks for completing the poll.
-
+  - on: facebook
+    image: "<%=staticUrl%>img/andy-rock-vote.png?time=1234"
 
 trivia-time:
   - on: facebook
