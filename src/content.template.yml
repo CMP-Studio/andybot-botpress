@@ -174,7 +174,7 @@ trivia-time:
     template_type: "generic"
     elements:
       - 
-        subtitle: "You started the {{name}} trivia set. This activity takes {{numQuestions}} minutes."
+        subtitle: "This activity takes about {{numQuestions}} minute(s)."
         title: "It's trivia time!"
         image_url: "<%=staticUrl%>img/andy-trivia-time.png"
         buttons:
@@ -248,7 +248,7 @@ trivia-complete:
 
 achievement-unlocked:
   - typing: true
-    text: You earned {{reward}} points and unlocked new achievements!!
+    text: You earned {{reward}} points and unlocked a new achievement!!
   - on: facebook
     template_type: "generic"
     elements:
