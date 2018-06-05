@@ -42,7 +42,7 @@ const config = {
 		chatExtensionHomeUrl: 'https://carnegiebot.org',
 		hostname: 'c1c3ec81.ngrok.io',
 		staticUrl: 'https://static.andybot.org/static/',
-		apiEndpoint: 'http://localhost:3000',
+		apiEndpoint: 'http://localhost:3001',
 		trustedDomain: 'https://carnegiebot.org'
 	}
 };
