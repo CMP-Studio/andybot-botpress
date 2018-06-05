@@ -192,7 +192,7 @@ trivia-followup-short:
     typing: 1s
 
 activity_ended:
-  - text: "Your previous activity has been ended"
+  - text: "Let’s move on to something else..."
     typing: 1s
 
 
@@ -315,8 +315,8 @@ scavengerhunt-firstclue:
         payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
 
 scavengerhunt-lastclue:
-  - template_type: button
-    text: "You found the last clue in the Scavenger Hunt!\n\n{{followup}}"
+    - text: "Congratulations, you found the last clue in the Scavenger Hunt!\n\n{{followup}}"
+      typing: 1s
 
 
 scavengerhunt-clue:
@@ -329,8 +329,11 @@ scavengerhunt-clue:
         payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
 
 scavengerhunt-followup-clue:
+  - text: "You found clue number {{clueNumber}}! {{followup}}"
+    typing: 1s
   - template_type: button
-    text: "You found clue number {{clueNumber}}! {{followup}}\n\n{{clue}}"
+    typing: 2s
+    text: "Here is your next clue: \n\n{{clue}}"
     buttons:
       -
         type: "postback"
@@ -345,3 +348,7 @@ scavengerhunt-followup:
 scavengerhunt-hint:
   - typing: 2s
     text: "{{hint}}"
+
+text:
+  - typing: true
+    text: "{{text}}"

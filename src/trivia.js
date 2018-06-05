@@ -59,11 +59,11 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 
 			const answer = response.raw.postback.title;
 			let feedback;
-			if (correctAnswer === answer) {
-				feedback = 'Correct!';
+			if ((String(correctAnswer)).toLowerCase() === String(answer).toLowerCase()) {
+				feedback = '👍 Correct!';
 				correctAnswers += 1;
 			} else {
-				feedback = 'The answer is ' + correctAnswer + '.';
+				feedback = '❌ Incorrect. The answer is ' + correctAnswer + '.';
 			}
 
 			if (utils.isNonNull(followUp)) {
