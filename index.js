@@ -134,6 +134,8 @@ module.exports = function (bp) {
 			convo.stop('aborted');
 			if (sendNotification === true) {
 				event.reply('#activity_ended');
+				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
+				event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 10) })
 			}
 		} else {
 			event.reply('#no_activity');
@@ -142,7 +144,7 @@ module.exports = function (bp) {
 
 	async function beginAdventure(event, next) {
 		const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-		event.reply('#activities', { activities: avaliableActivities.slice(0, 9) });
+		event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) });
 	}
 
 	async function handleScan(referral, event) {
@@ -160,15 +162,32 @@ module.exports = function (bp) {
 					return;
 				}
 			}
-
+			console.log("scanbot", scanResponse.scan);
 			// 2. Handle Possible check in to a museum
 			if (scanResponse.scan.type === 'checkin') {
 				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
 				setTimeout(() => {
-					event.reply('#activities', { activities: avaliableActivities.slice(0, 9) });
+					event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) });
 				}, 2000);
 				return;
 			} else if (scanResponse.scan.type === 'activity') {
+				console.log("In activity case");
+				const triggeredActivities = scanResponse.scan.trigger;
+				const avaliableActivities = _.map(triggeredActivities, (activity_id) => _.find(activities.manifest, (o) => o.activity === activity_id));
+				console.log("avaliableactivityes", avaliableActivities);
+
+				if (utils.isNonNull(scanResponse.scan.followup)){
+					console.log("We have a followup", scanResponse.scan.followup);
+					setTimeout(() => {
+						event.reply("#text",  { text: scanResponse.scan.followup });
+					}, 500);
+				}
+
+				setTimeout(() => {
+					event.reply("#activities",  { activities: avaliableActivities });
+				}, 2000);
+				
+				return;
 
 			} else if (scanResponse.scan.type === 'scavengerhunt') {
 

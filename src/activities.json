@@ -870,10 +870,7 @@
         {
             "messenger_code": "stamp-event-adults",
             "location": "CMNH",
-            "type": "event",
-            "trigger": [
-                "poll-something"
-            ]
+            "type": "event"
         },
         {
             "messenger_code": "stamp-event-trivianight",
@@ -929,50 +926,43 @@
             ]
         },
         {
-            "messenger_code": "giftshop-cmnh",
-            "location": "CMNH",
-            "type": "reward"
-        },
-        {
-            "messenger_code": "giftshop-cmoa",
-            "location": "CMNH",
-            "type": "reward"
-        },
-        {
-            "messenger_code": "giftshop-csc",
-            "location": "CSC",
-            "type": "reward"
-        },
-        {
-            "messenger_code": "giftshop-warhol",
-            "location": "Warhol",
-            "type": "reward"
-        },
-        {
             "messenger_code": "paper-map",
             "location": "Offsite",
-            "type": "welcome"
+            "type": "activity"
         },
         {
             "messenger_code": "activities-lunchtime",
             "location": "CMNH",
-            "type": "welcome",
+            "type": "activity",
             "trigger": [
                 "trivia-foodscience",
                 "trivia-foodart"
             ],
-            "followup": "Thanks for inviting me to lunch. Want to sprinkle some trivia on that?"
+            "followup": "🍔 Thanks for inviting me to lunch. Want to sprinkle some trivia on that?"
         },
         {
             "messenger_code": "parking-cmnh",
             "location": "CMNH",
-            "type": "welcome",
-            "followup": "Thanks for the ride! Want to try out some trivia?"
+            "type": "activity",
+            "trigger": [
+                "trivia-dinos",
+                "trivia-mineralsgems",
+                "trivia-wearenature",
+                "trivia-architecture",
+                "trivia-design"
+            ],
+            "followup": "🚗 Thanks for the ride! Want to try out some trivia?"
         },
         {
             "messenger_code": "parking-csc",
             "location": "CSC",
-            "type": "welcome"
+            "type": "activity",
+            "trigger": [
+                "trivia-railroad",
+                "trivia-sports",
+                "trivia-robots"
+            ],
+            "followup": "🚗 Thanks for the ride! Want to try out some trivia?"
         },
         {
             "messenger_code": "scavengerhunt-1",
@@ -1045,12 +1035,6 @@
             "location": "CMNH",
             "type": "scavengerhunt",
             "trigger": 0
-        },
-        {
-            "messenger_code": "scavengerhunt-12",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 12
         }
     ],
     "trivia-railroad": [

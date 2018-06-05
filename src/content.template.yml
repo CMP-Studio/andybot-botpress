@@ -199,7 +199,7 @@ trivia-time:
     template_type: "generic"
     elements:
       - 
-        subtitle: "You started the {{name}} trivia set. This activity takes {{numQuestions}} minutes."
+        subtitle: "This activity takes about {{numQuestions}} minute(s)."
         title: "It's trivia time!"
         image_url: "<%=staticUrl%>img/andy-trivia-time.png"
         buttons:
@@ -217,7 +217,7 @@ trivia-followup-short:
     typing: 1s
 
 activity_ended:
-  - text: "Your previous activity has been ended"
+  - text: "Let’s move on to something else..."
     typing: 1s
 
 
@@ -273,7 +273,7 @@ trivia-complete:
 
 achievement-unlocked:
   - typing: true
-    text: You earned {{reward}} points and unlocked new achievements!!
+    text: You earned {{reward}} points and unlocked a new achievement!!
   - on: facebook
     template_type: "generic"
     elements:
@@ -338,8 +338,8 @@ scavengerhunt-firstclue:
         payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
 
 scavengerhunt-lastclue:
-  - template_type: button
-    text: "You found the last clue in the Scavenger Hunt!\n\n{{followup}}"
+    - text: "Congratulations, you found the last clue in the Scavenger Hunt!\n\n{{followup}}"
+      typing: 1s
 
 
 scavengerhunt-clue:
@@ -352,8 +352,11 @@ scavengerhunt-clue:
         payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
 
 scavengerhunt-followup-clue:
+  - text: "You found clue number {{clueNumber}}! {{followup}}"
+    typing: 1s
   - template_type: button
-    text: "You found clue number {{clueNumber}}! {{followup}}\n\n{{clue}}"
+    typing: 2s
+    text: "Here is your next clue: \n\n{{clue}}"
     buttons:
       -
         type: "postback"
@@ -368,3 +371,7 @@ scavengerhunt-followup:
 scavengerhunt-hint:
   - typing: 2s
     text: "{{hint}}"
+
+text:
+  - typing: true
+    text: "{{text}}"
