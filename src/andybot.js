@@ -33,6 +33,13 @@ module.exports = {
 		return response.data;
 	},
 
+	avaliableEvents: async function (page_id) {
+		const response = await axios.post(`${config.apiEndpoint}/avaliableEvents`,
+			{ page_id },
+			{ headers: { 'Content-Type': 'application/json'} }
+		);
+		return response.data;
+	},
 
 	trivia: {
 

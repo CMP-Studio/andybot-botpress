@@ -116,6 +116,17 @@ module.exports = function (bp) {
 			console.error(err);
 		}
 	}
+
+	async function seeEvents(event) {
+		const avaliableEvents = await andybot.avaliableEvents(event.user.id);
+		console.log(avaliableEvents);
+		event.reply('#events', { events: avaliableEvents.slice(0, 1) });
+	}
+
+	//async function eventInfo(event) {
+	//	const eventName = event.raw.postback.payload.split(':')[1];
+	//	console.log()
+	//}
 	
 	async function stopConvo(event, next, sendNotification){
 		const convo = bp.convo.find(event);
@@ -131,12 +142,10 @@ module.exports = function (bp) {
 
 	async function beginAdventure(event, next) {
 		const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-		event.reply('#activities', { activities: avaliableActivities.slice(0, 10) });
+		event.reply('#activities', { activities: avaliableActivities.slice(0, 9) });
 	}
 
 	async function handleScan(referral, event) {
-
-
 		if (utils.isNonNull(referral)) {
 			const scanResponse = await andybot.scan.scanCode(event.user.id, referral.ref);
 			// 1. Handle stamp unlock
@@ -156,7 +165,7 @@ module.exports = function (bp) {
 			if (scanResponse.scan.type === 'checkin') {
 				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
 				setTimeout(() => {
-					event.reply('#activities', { activities: avaliableActivities.slice(0, 10) });
+					event.reply('#activities', { activities: avaliableActivities.slice(0, 9) });
 				}, 2000);
 				return;
 			} else if (scanResponse.scan.type === 'activity') {
@@ -184,8 +193,6 @@ module.exports = function (bp) {
 				}
 			}
 		}
-
-
 	}
 
 	async function fallBackHandler(event, next) {
@@ -199,9 +206,6 @@ module.exports = function (bp) {
 			}
 
 			await handleScan(referral, event)
-
-
-
 		}
 	}
 
@@ -210,6 +214,10 @@ module.exports = function (bp) {
 	bp.hear(/GET_STARTED/i, getStarted);
 
 	bp.hear(/START_ACTIVITY:/, startActivity);
+
+	bp.hear(/SEE_EVENTS/, seeEvents);
+
+	// bp.hear(/EVENT_INFO:/, eventInfo);
 
 	bp.hear(/SCAVENGER_HUNT_HINT:/, sendScavengerHuntHint);
 

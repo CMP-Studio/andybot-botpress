@@ -72,6 +72,15 @@ activities:
   - on: facebook
     template_type: "generic"
     elements:
+      -
+        subtitle: "Check out museum events and see upcoming stamp opportunities."
+        title: "What's Happening"
+        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
+        buttons:
+          -
+            type: "postback"
+            title: "See Events"
+            payload: "SEE_EVENTS"
       {{#activities}}
       - 
         subtitle: "{{subtitle}}"
@@ -80,9 +89,25 @@ activities:
         buttons:
           -
             type: "postback"
-            title: "Start Activitiy"
+            title: "Start Activity"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
+
+events: 
+  - on: facebook
+    template_type: "generic"
+    elements:
+      {{#events}}
+      - 
+        subtitle: "{{subtitle}}"
+        title: "{{title}}"
+        image_url: "<%=staticUrl%>img/{{image}}?time=5"
+        buttons:
+          -
+            type: "web_url"
+            title: "Event Details"
+            url: "{{link}}"
+      {{/events}}
 
 no_activity:
   - typing: true
@@ -151,7 +176,7 @@ poll-question:
         buttons:
           -
             type: "postback"
-            title: "VOTE"
+            title: "Vote"
             payload: "VOTE:{{choiceIndex}}"
       {{/choices}}
 
@@ -200,7 +225,7 @@ trivia-question:
   - text: "Question {{questionNumber}}"
     typing: 1s
   - on: facebook
-    image: "<%=staticUrl%>img/{{question.image}}"
+    image: "<%=staticUrl%>img/{{question.image}}?time=1"
   - on: facebook
     template_type: "button"
     text: "{{question.text}}"
@@ -289,8 +314,6 @@ daily_scan_limit_reached:
     typing: 2s
 
 stamp_unlock:
-
-
   - on: facebook
     template_type: "generic"
     elements:
