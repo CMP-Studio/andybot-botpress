@@ -1,14 +1,11 @@
 const postbacks = require('./src/postbacks');
 const andybot = require('./src/andybot');
-
-// const config = require('./src/config.js');
-
 const activities = require('./src/activities.json');
 
 const TriviaHandler = require('./src/trivia');
 const PollHandler = require('./src/poll');
 const utils = require('./utils');
-
+const config = require('./src/config');
 const activityHandlers = {
 	trivia: TriviaHandler,
 	poll: PollHandler
@@ -37,18 +34,6 @@ module.exports = function (bp) {
 
 	getStarted = async function (event, next) {
 
-		// if (utils.isNonNull(referral) && referral.ref === '5099658e') {
-		// 	// 1. Allow checkin functionality
-		// 	// 1.5 Make sure you can't scan more than once.
-		// 	// 
-
-		// 	// 2. Allow activity trigger scan
-		// 	event.reply('#checkin-stamp', { image: 'andy-checkin-AAM.png', text: 'Welcome to the American Alliance of Musums conference. You just got a new stamp!' });
-		// }
-
-
-		// await new Promise((resolve, reject) => setTimeout(resolve, 2000));
-
 		try {
 			const pageId = event.user.id;
 			const exists = await andybot.userExists(pageId);
@@ -61,17 +46,16 @@ module.exports = function (bp) {
 			}
 
 			// Get Started may have an associated event.
-			// let referral;
-			// if (utils.isNonNull(event.raw.referral)) {
-			// 	referral = event.raw.referral;
-			// } else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
-			// 	referral = event.raw.postback.referral;
-			// }
-			//			
-			// handle referral
+			let referral;
+			if (utils.isNonNull(event.raw.referral)) {
+				referral = event.raw.referral;
+			} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
+				referral = event.raw.postback.referral;
+			}
 
-
-
+			if (utils.isNonNull(referral)) {
+				await handleScan(referral, event);
+			}
 		} catch (err){
 			console.error(err);
 			event.reply('#error');
@@ -119,15 +103,30 @@ module.exports = function (bp) {
 
 	async function seeEvents(event) {
 		const avaliableEvents = await andybot.avaliableEvents(event.user.id);
-		console.log(avaliableEvents);
-		event.reply('#events', { events: avaliableEvents.slice(0, 1) });
+		const payload = {
+			template_type: "generic",
+			elements: _.map(avaliableEvents.slice(0,10), (ele) => {
+				const imageName = _.find(activities['schedule'], (scheduleObj) => {
+					return scheduleObj.id === ele.eventId
+				}).image;
+				return {
+					title: ele.title,
+					subtitle: ele.subtitle,
+					image_url: `${config.staticUrl}img/${imageName}?time=7`,
+					buttons: [
+						{
+							type: "web_url",
+							url: ele.link,
+							title: "Event Details"
+						}
+					]
+				}
+			})
+		}
+		 
+		bp.messenger.sendTemplate(event.user.id, payload, { typing: 2000 })
 	}
 
-	//async function eventInfo(event) {
-	//	const eventName = event.raw.postback.payload.split(':')[1];
-	//	console.log()
-	//}
-	
 	async function stopConvo(event, next, sendNotification){
 		const convo = bp.convo.find(event);
 		if (convo) {
@@ -150,6 +149,7 @@ module.exports = function (bp) {
 	async function handleScan(referral, event) {
 		if (utils.isNonNull(referral)) {
 			const scanResponse = await andybot.scan.scanCode(event.user.id, referral.ref);
+
 			// 1. Handle stamp unlock
 			if (utils.isNonNull(scanResponse) && utils.isNonNull(scanResponse.stamp)){
 				if (scanResponse.stamp.error && scanResponse.stamp.error === "DailyLimitReached") {
@@ -162,7 +162,7 @@ module.exports = function (bp) {
 					return;
 				}
 			}
-			console.log("scanbot", scanResponse.scan);
+
 			// 2. Handle Possible check in to a museum
 			if (scanResponse.scan.type === 'checkin') {
 				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
@@ -171,13 +171,10 @@ module.exports = function (bp) {
 				}, 2000);
 				return;
 			} else if (scanResponse.scan.type === 'activity') {
-				console.log("In activity case");
 				const triggeredActivities = scanResponse.scan.trigger;
 				const avaliableActivities = _.map(triggeredActivities, (activity_id) => _.find(activities.manifest, (o) => o.activity === activity_id));
-				console.log("avaliableactivityes", avaliableActivities);
 
 				if (utils.isNonNull(scanResponse.scan.followup)){
-					console.log("We have a followup", scanResponse.scan.followup);
 					setTimeout(() => {
 						event.reply("#text",  { text: scanResponse.scan.followup });
 					}, 500);
@@ -216,7 +213,6 @@ module.exports = function (bp) {
 
 	async function fallBackHandler(event, next) {
 		if (event.type === 'postback' || event.type === 'message' || event.type === 'referral') {
-
 			let referral;
 			if (utils.isNonNull(event.raw.referral)) {
 				referral = event.raw.referral;
@@ -235,8 +231,6 @@ module.exports = function (bp) {
 	bp.hear(/START_ACTIVITY:/, startActivity);
 
 	bp.hear(/SEE_EVENTS/, seeEvents);
-
-	// bp.hear(/EVENT_INFO:/, eventInfo);
 
 	bp.hear(/SCAVENGER_HUNT_HINT:/, sendScavengerHuntHint);
 
