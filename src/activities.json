@@ -41,7 +41,7 @@
             "activity": "trivia-robots",
             "image": "trivia-robots-carousel.png",
             "title": "Trivia | roboworld®",
-            "subtitle": "I have 6 questions for you. The topic is robots.",
+            "subtitle": "I have 6 questions for you. The topic is robots. Beep Boop.",
             "location": "CSC"
         },
         {
@@ -55,7 +55,7 @@
             "activity": "poll-prince",
             "image": "poll-prince-carousel.png",
             "title": "Poll | Prince of Swords",
-            "subtitle": "Cast your vote!",
+            "subtitle": "What does a sculpture do to pass the time? Cast your vote!",
             "location": "CMOA"
         },
         {
@@ -69,14 +69,14 @@
             "activity": "poll-lices",
             "image": "poll-lices-carousel.png",
             "title": "Poll | Place des Lices",
-            "subtitle": "Consider this lovely painting.",
+            "subtitle": "Take a moment to consider this lovely painting.",
             "location": "CMOA"
         },
         {
             "activity": "poll-gallery",
             "image": "poll-gallery-carousel.png",
             "title": "Poll | Untitled (Gallery)",
-            "subtitle": "Imagine...You with Kerry James Marshall",
+            "subtitle": "A question about a question!",
             "location": "CMOA"
         },
         {
@@ -131,7 +131,7 @@
         {
             "activity": "trivia-warholart",
             "image": "trivia-warhol-carousel.png",
-            "title": "Trivia | Warhol Art & Influences",
+            "title": "Trivia | Warhol Art and Influences",
             "subtitle": "Think you’re an Andy Warhol aficionado? Try these 6 questions.",
             "location": "Warhol"
         },
@@ -202,7 +202,7 @@
             "image": "poll-lices.png",
             "question": "Where do you go to find time alone?",
             "choices": [
-                "Park/Nature",
+                "Parks or Nature",
                 "A Museum",
                 "Body of Water",
                 "For a Walk",
@@ -263,7 +263,7 @@
     "poll-brillo": [
         {
             "image": "andy-what-you-think.png",
-            "question": "Which one of these ordinary household items inspires you to make art?",
+            "question": "Which one of these ordinary household items could inspire you to make art?",
             "choices": [
                 "Fruit",
                 "A Lamp",
@@ -324,7 +324,7 @@
             "image": "event-carousel-grandopening.png",
             "location": "CSC",
             "description": "Kick off Summer Adventure with the highly-anticipated opening of the PPG Science Pavilion. A limited number of free tickets to The Art of the Brick will be available for members as well as activities celebrating the brand-new learning spaces!",
-            "url": "http://www.carnegiesciencecenter.org/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78976&view=Detail",
             "when": "June 16, 11am–5pm"
         },
         {
@@ -334,7 +334,7 @@
             "image": "event-carousel-starfestival.png",
             "location": "CMOA",
             "description": "Celebrate CMOA’s Japanese print exhibition, Hiroshige’s Tôkaidô Road, with this Japanese Tanabata Festival for all ages! Add your wishes to our outdoor bamboo garden, see and make amazing prints, sample foods, and listen to traditional music.",
-            "url": "https://cmoa.org/calendar/",
+            "url": "https://cmoa.org/event/tanabata-japanese-star-festival/",
             "when": "July 7, 12:30–4:30 pm"
         },
         {
@@ -355,7 +355,7 @@
             "image": "event-carousel-icecream.png",
             "location": "CMNH",
             "description": "Experience Carnegie paleontologist Matt Lamanna’s arctic trek in Expedition Antarctica and enjoy a sweet treat afterward!",
-            "url": "https://carnegiemnh.org/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78939&view=Detail",
             "when": "July 15, 3–5pm"
         },
         {
@@ -386,7 +386,7 @@
             "image": "event-carousel-trivianight.png",
             "location": "CMNH",
             "description": "End your summer adventure with a bang! Spend an evening testing the knowledge you acquired from your time at the museums this summer. Bring your stamped Summer Adventure Map for the chance to win prizes. Each stamp is another chance to win gift certificates, membership renewal, Carnegie Cash, and more in the drawing.",
-            "url": "https://carnegiemnh.org/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78940&view=Detail",
             "when": "August 25, 6–8pm"
         },
         {
@@ -396,7 +396,7 @@
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://cmoa.org/visit/tours/member-tours/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78918&view=Detail",
             "when": "June 10, 2–3pm"
         },
         {
@@ -406,7 +406,7 @@
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://cmoa.org/visit/tours/member-tours/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78920&view=Detail",
             "when": "July 15, 2–3pm"
         },
         {
@@ -416,7 +416,7 @@
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://cmoa.org/visit/tours/member-tours/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78957&view=Detail",
             "when": "August 12, 2–3pm"
         },
         {
@@ -426,7 +426,7 @@
             "image": "event-carousel-cmnhmembertours.png",
             "location": "CMNH",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://carnegiemnh.org/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78916&view=Detail",
             "when": "June 9, 2–3pm"
         },
         {
@@ -436,7 +436,7 @@
             "image": "event-carousel-cmnhmembertours.png",
             "location": "CMNH",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://carnegiemnh.org/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78921&view=Detail",
             "when": "July 14, 2–3pm"
         },
         {
@@ -446,7 +446,7 @@
             "image": "event-carousel-cmnhmembertours.png",
             "location": "CMNH",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://carnegiemnh.org/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78956&view=Detail",
             "when": "August 11, 2–3pm"
         },
         {
@@ -456,7 +456,7 @@
             "image": "event-carousel-warholmembertours.png",
             "location": "Warhol",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://www.warhol.org/event/member-tour-adman-warhol-before-pop/",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78919&view=Detail",
             "when": "June 30, 2–3pm"
         },
         {
@@ -645,7 +645,7 @@
     "stamps": [
         {
             "stamp_id": "stamp-checkin-oakland",
-            "name": "Check-in at Oakland",
+            "name": "Check-in at Oakland ",
             "events": [],
             "messenger_code": "stamp-checkin-oakland",
             "image": "stamp-checkin-oakland.png",
@@ -654,7 +654,7 @@
         },
         {
             "stamp_id": "stamp-checkin-csc",
-            "name": "Check-in at Science Center",
+            "name": "Check-in at the Science Center",
             "events": [],
             "messenger_code": "stamp-checkin-csc",
             "image": "stamp-checkin-csc.png",
@@ -663,7 +663,7 @@
         },
         {
             "stamp_id": "stamp-checkin-warhol",
-            "name": "Check-in at Warhol",
+            "name": "Check-in at the Warhol",
             "events": [],
             "messenger_code": "stamp-checkin-warhol",
             "image": "stamp-checkin-warhol.png",
@@ -672,7 +672,7 @@
         },
         {
             "stamp_id": "stamp-checkin-powdermill",
-            "name": "Check-in at Powdermill",
+            "name": "Check-in at Powdermill ",
             "events": [],
             "messenger_code": "stamp-checkin-powdermill",
             "image": "stamp-checkin-powdermill.png",
