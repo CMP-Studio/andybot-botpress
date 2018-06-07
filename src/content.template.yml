@@ -103,6 +103,15 @@ more-activities:
   - on: facebook
     template_type: "generic"
     elements:
+      -
+        subtitle: "Check out museum events and see upcoming stamp opportunities."
+        title: "What's Happening"
+        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
+        buttons:
+          -
+            type: "postback"
+            title: "See Events"
+            payload: "SEE_EVENTS"
       {{#activities}}
       - 
         subtitle: "{{subtitle}}"
@@ -111,7 +120,7 @@ more-activities:
         buttons:
           -
             type: "postback"
-            title: "Start Activitiy"
+            title: "Start Activity"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
@@ -251,8 +260,10 @@ trivia-question-no-image:
 
 
 trivia-complete:
-  - typing: true
+  - typing: .5s
     text: Thats it! You did amazing.
+  - typing: true
+    text: '{{scoreText}}'
 
 
 achievement-unlocked:
