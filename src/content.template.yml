@@ -218,7 +218,7 @@ trivia-question:
   - text: "Question {{questionNumber}}"
     typing: 1s
   - on: facebook
-    image: "<%=staticUrl%>img/{{question.image}}?time=1"
+    image: "<%=staticUrl%>img/{{question.image}}?well=2"
   - on: facebook
     template_type: "button"
     text: "{{question.text}}"
