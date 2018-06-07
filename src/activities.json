@@ -555,64 +555,6 @@
             "when": "Last Saturday of each month, Saturdays and Sunday in June"
         },
         {
-            "id": "event-gallerytalks",
-            "event": "Gallery Talks",
-            "image": "event-carousel-gallerytalks.png",
-            "location": "Warhol",
-            "description": "Gallery talks led by museum staff have a thematic focus around a series of Warhol artworks or one of Warhol’s artistic processes. These 30-minute talks provide time for visitors to present insights and ask questions. ",
-            "details": "Tours meet on the museum’s seventh floor.",
-            "url": "https://www.warhol.org/event/daily-gallery-talks/",
-            "when": "Daily"
-        },
-        {
-            "id": "event-factory",
-            "event": "The Factory",
-            "image": "event-carousel-factory.png",
-            "location": "Warhol",
-            "description": "Visitors of all ages and abilities are invited to try some of Andy Warhol’s signature art-making techniques in our underground studio.",
-            "url": "https://www.warhol.org/event/the-factory/",
-            "when": "Tuesday–Friday, 1:30–5pm; Saturday–Sunday, 12–5pm"
-        },
-        {
-            "id": "event-silkscreen",
-            "event": "Photographic Silkscreen Demonstration",
-            "image": "event-carousel-silkscreen.png",
-            "location": "Warhol",
-            "description": "The museum’s artist educators demonstrate Warhol’s silkscreen printing process from beginning to end.",
-            "details": "See it at The Warhol entrance space.",
-            "url": "https://www.warhol.org/event/photographic-silkscreen-demonstration/",
-            "when": "Daily at 1pm"
-        },
-        {
-            "id": "event-halfpint",
-            "event": "Half-Pint Prints",
-            "image": "event-carousel-halfpint.png",
-            "location": "Warhol",
-            "description": "Families work with The Warhol’s artist educators to create silkscreen prints during this drop-in silkscreen printing activity for children ages 1 to 4 years old.",
-            "details": "In our underground studio, The Factory",
-            "url": "https://www.warhol.org/event/half-pint-prints-10/",
-            "when": "August 15, 10am–12pm"
-        },
-        {
-            "id": "event-lasershow",
-            "event": "Bhul Planetarium Laser Show",
-            "image": "event-carousel-lasershow.png",
-            "location": "CSC",
-            "description": "Dazzling lights and rockin’ beats merge for a spectacular sight and sound experience. Catch daily matinees or evening laser shows!",
-            "url": "http://www.carnegiesciencecenter.org/calendar/",
-            "when": "Check the calendar for today’s show schedule."
-        },
-        {
-            "id": "event-liveshow",
-            "event": "Live Show",
-            "image": "event-carousel-liveshow.png",
-            "location": "CSC",
-            "description": "Shows are included with general admission for visitors to the Science Center.",
-            "details": "Check the calendar for today’s show schedule.",
-            "url": "http://www.carnegiesciencecenter.org/calendar/",
-            "when": "Check the calendar for today’s show schedule."
-        },
-        {
             "id": "event-dailytour",
             "event": "Tours Truly: Free Daily Collection Tour",
             "image": "event-carousel-dailytour.png",
@@ -623,6 +565,36 @@
             "when": "Daily at 1:30pm"
         },
         {
+            "id": "event-liveanimals",
+            "event": "Live Animal Encounter",
+            "image": "event-carousel-liveanimals.png",
+            "location": "CMNH",
+            "description": "Meet the live animals that call Carnegie Museum of Natural History home at Live Animal Encounters.",
+            "details": "In Earth Theatre, $2 per person.",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/live-animal-encounters/",
+            "when": "Daily at 1:30pm"
+        },
+        {
+            "id": "event-gallerytalks",
+            "event": "Gallery Talks",
+            "image": "event-carousel-gallerytalks.png",
+            "location": "Warhol",
+            "description": "Gallery talks led by museum staff have a thematic focus around a series of Warhol artworks or one of Warhol’s artistic processes. These 30-minute talks provide time for visitors to present insights and ask questions. ",
+            "details": "Tours meet on the museum’s seventh floor.",
+            "url": "https://www.warhol.org/event/daily-gallery-talks/",
+            "when": "Daily"
+        },
+        {
+            "id": "event-liveshow",
+            "event": "Live Shows",
+            "image": "event-carousel-liveshow.png",
+            "location": "CSC",
+            "description": "Shows are included with general admission for visitors to the Science Center.",
+            "details": "Check the calendar for today’s show schedule.",
+            "url": "http://www.carnegiesciencecenter.org/calendar/",
+            "when": "Check the calendar for today’s show schedule"
+        },
+        {
             "id": "event-yoga",
             "event": "Thursday Yoga at CMOA",
             "image": "event-carousel-yoga.png",
@@ -631,15 +603,6 @@
             "details": "All classes are drop-in; no online pre-registration is available.",
             "url": "https://cmoa.org/event/thursday-yoga-cmoa/",
             "when": "All classes are drop-in!"
-        },
-        {
-            "id": "event-liveanimals",
-            "event": "Live Animal Encounter",
-            "image": "event-carousel-liveanimals.png",
-            "location": "CMNH",
-            "description": "Meet the live animals that call Carnegie Museum of Natural History home at Live Animal Encounters.",
-            "details": "In Earth Theatre, $2 per person.",
-            "url": "https://carnegiemnh.org/visitor/things-to-do/live-animal-encounters/"
         }
     ],
     "stamps": [

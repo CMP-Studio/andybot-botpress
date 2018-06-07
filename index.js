@@ -117,7 +117,7 @@ module.exports = function (bp) {
 						{
 							type: "web_url",
 							url: ele.link,
-							title: "Event Details"
+							title: "Details"
 						}
 					]
 				}
