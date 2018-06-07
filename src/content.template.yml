@@ -40,7 +40,7 @@ how_to_play:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}"
+        image_url: "<%=staticUrl%>img/{{image}}?time=1"
       {{/howtoplay}}
 
 # how_to_play:
