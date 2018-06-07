@@ -34,7 +34,6 @@ module.exports = async function PollHandler(convo, event, activityName) {
 			let responseSubmitted;
 			try {
 				responseSubmitted = await andybot.poll.submitResponse(userPageId, activityName, questionIndex, answer);
-				console.log("Poll response submitted", responseSubmitted);
 			} catch (err) {
 				console.log("Poll response error");
 				console.log(err.message);
@@ -51,7 +50,7 @@ module.exports = async function PollHandler(convo, event, activityName) {
 
 				const totalAnswers = _.sum(userResponses);
 				let followUpStatement;
-				const minPollAnswerLimit = 1;
+				const minPollAnswerLimit = 3;
 				if (totalAnswers < minPollAnswerLimit) {
 					followUpStatement = `You are one of the first people to answer this question!`;
 				} else {

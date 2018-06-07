@@ -93,22 +93,6 @@ activities:
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
-events: 
-  - on: facebook
-    template_type: "generic"
-    elements:
-      {{#events}}
-      - 
-        subtitle: "{{subtitle}}"
-        title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=5"
-        buttons:
-          -
-            type: "web_url"
-            title: "Event Details"
-            url: "{{link}}"
-      {{/events}}
-
 no_activity:
   - typing: true
     text: "You don't currently have an activity in progress."
