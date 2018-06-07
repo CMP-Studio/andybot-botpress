@@ -1549,7 +1549,7 @@
         {
             "image": "trivia-birds-woodpecker.png",
             "difficulty": 1,
-            "answer": "Red-bellied Woodpecker",
+            "answer": "Woodpecker",
             "incorrect": [
                 "Wood Thrush",
                 "Ovenbird"
@@ -1558,19 +1558,19 @@
         {
             "image": "trivia-birds-hummingbird.png",
             "difficulty": 1,
-            "answer": "Ruby-throated Hummingbird",
+            "answer": "Hummingbird",
             "incorrect": [
-                "Red-headed Woodpecker",
+                "Woodpecker",
                 "Scarlet Tanager"
             ]
         },
         {
             "image": "trivia-birds-northernsawwhetowl.png",
             "difficulty": 3,
-            "answer": "Northern Saw-whet Owls",
+            "answer": "Saw-whet Owls",
             "incorrect": [
                 "Barn Owls",
-                "Eastern Screech Owls"
+                "Screech Owls"
             ]
         },
         {
