@@ -145,7 +145,7 @@
         {
             "activity": "trivia-railroad",
             "image": "trivia-railroad-carousel.png",
-            "title": "Trivia | Miniature Railroad & Village®",
+            "title": "Trivia | Miniature Railroad and Village®",
             "subtitle": "Mini but marvelous! 6 questions about this Pittsburgh treasure.",
             "location": "CSC"
         },
@@ -278,7 +278,7 @@
                 "poll-4.png",
                 "poll-5.png"
             ],
-            "followup": "In the mid-1960s Andy Warhol's caused controversy with his 'Brillo Box' sculptures. In reference to his boxes, Warhol later said that he 'wanted something ordinary,' and it was this mundane, commercial subject matter that infuriated the critics."
+            "followup": "In the mid-1960s Andy Warhol’s caused controversy with his ’Brillo Box’ sculptures. In reference to his boxes, Warhol later said that he ’wanted something ordinary,’ and it was this mundane, commercial subject matter that infuriated the critics."
         }
     ],
     "faq": [
@@ -318,6 +318,37 @@
     ],
     "schedule": [
         {
+            "id": "event-goodfridays",
+            "stamp_id": "stamp-event-adults",
+            "event": "Good Fridays",
+            "image": "event-carousel-goodfridays.png",
+            "location": "Warhol",
+            "description": "Grab a friend, get a drink at the cash bar, and enjoy a night out!",
+            "details": "For a more social experience, we are open until 10 p.m. and offer half-price museum admission and a cash bar beginning at 5 p.m.",
+            "url": "https://www.warhol.org/event/good-fridays/",
+            "when": "Every Friday, 5–10pm"
+        },
+        {
+            "id": "event-cmnhmembertour-gemsminerals",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Gems and Minerals",
+            "image": "event-carousel-cmnhmembertours.png",
+            "location": "CMNH",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78916&view=Detail",
+            "when": "June 9, 2–3pm"
+        },
+        {
+            "id": "event-cmoamembertour-secretlanguage",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: The Secret Language of Art",
+            "image": "event-carousel-cmoamembertours.png",
+            "location": "CMOA",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78918&view=Detail",
+            "when": "June 10, 2–3pm"
+        },
+        {
             "id": "event-grandopening",
             "stamp_id": "stamp-event-grandopening",
             "event": "Grand Opening of PPG Science Pavilion™ and The Art of the Brick",
@@ -326,6 +357,37 @@
             "description": "Kick off Summer Adventure with the highly-anticipated opening of the PPG Science Pavilion. A limited number of free tickets to The Art of the Brick will be available for members as well as activities celebrating the brand-new learning spaces!",
             "url": "http://members.carnegiemuseums.org/site/Calendar?id=78976&view=Detail",
             "when": "June 16, 11am–5pm"
+        },
+        {
+            "id": "event-sciencesaturday-jurassic",
+            "stamp_id": "stamp-event-sciencesaturdays",
+            "event": "Super Science Saturday: Jurassic Day",
+            "image": "event-carousel-sciencesaturday.png",
+            "location": "CMNH",
+            "description": "Visitors can explore a topic in-depth through hands-on activities, experiments, demonstrations, discussions with museum experts, family-friendly activities, and more.",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/super-science-saturdays/",
+            "when": "June 16, 12–4pm"
+        },
+        {
+            "id": "event-thirdthursday-girlfx",
+            "stamp_id": "stamp-event-adults",
+            "event": "Third Thursday: girlFx",
+            "image": "event-carousel-thirdthursday.png",
+            "location": "CMOA",
+            "description": "Party in the Sculpture Court with girlFx.",
+            "details": "$10 advance/$15 door (10% member discount)",
+            "url": "https://cmoa.org/event/third-thursday-girlfx/",
+            "when": "June 21, 8–11pm"
+        },
+        {
+            "id": "event-warholmembertour-adman",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Adman: Warhol Before Pop ",
+            "image": "event-carousel-warholmembertours.png",
+            "location": "Warhol",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78919&view=Detail",
+            "when": "June 30, 2–3pm"
         },
         {
             "id": "event-starfestival",
@@ -349,6 +411,26 @@
             "when": "July 13, 7–10pm"
         },
         {
+            "id": "event-cmnhmembertour-safari",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Natural History Safari",
+            "image": "event-carousel-cmnhmembertours.png",
+            "location": "CMNH",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78921&view=Detail",
+            "when": "July 14, 2–3pm"
+        },
+        {
+            "id": "event-cmoamembertour-publicart",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Fresh Air, Public Art",
+            "image": "event-carousel-cmoamembertours.png",
+            "location": "CMOA",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78920&view=Detail",
+            "when": "July 15, 2–3pm"
+        },
+        {
             "id": "event-icecream",
             "stamp_id": "stamp-event-icecream",
             "event": "Ice Cream Social",
@@ -359,9 +441,41 @@
             "when": "July 15, 3–5pm"
         },
         {
+            "id": "event-thirdthursday-contemporary",
+            "stamp_id": "stamp-event-adults",
+            "event": "Third Thursday: Crossroads",
+            "image": "event-carousel-thirdthursday.png",
+            "location": "CMOA",
+            "description": "Celebrate the opening of Crossroads, the new installation of our postwar contemporary collection.",
+            "details": "$10 advance/$15 door (10% member discount)",
+            "url": "https://cmoa.org/event/third-thursday-crossroads/",
+            "when": "July 19,  8–11pm"
+        },
+        {
+            "id": "event-sciencesaturday-scientist",
+            "stamp_id": "stamp-event-sciencesaturdays",
+            "event": "Super Science Saturday: Scientist Takeover",
+            "image": "event-carousel-sciencesaturday.png",
+            "location": "CMNH",
+            "description": "Visitors can explore a topic in-depth through hands-on activities, experiments, demonstrations, discussions with museum experts, family-friendly activities, and more.",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/super-science-saturdays/",
+            "when": "July 21, 12–4pm"
+        },
+        {
+            "id": "event-afterdark-harrypotter",
+            "stamp_id": "stamp-event-adults",
+            "event": "After Dark: Harry Potter",
+            "image": "event-carousel-afterdark.png",
+            "location": "CMNH",
+            "description": "Grab a friend, get a drink at the cash bar, and enjoy a night out!",
+            "details": "$1 advance/$20 door (10% member discount)",
+            "url": "https://carnegiemnh.org/visitor/things-to-do/after-dark/",
+            "when": "July 27, 6–10pm"
+        },
+        {
             "id": "event-birthday",
             "stamp_id": "stamp-event-birthday",
-            "event": "Andy's Birthday",
+            "event": "Andy’s Birthday",
             "image": "event-carousel-birthday.png",
             "location": "Warhol",
             "description": "Celebrate the Andy Warhol’s 90th birthday with family-friendly activities throughout the museum. Join us for special gallery activities, hands-on artmaking, and a behind-the-scenes look at The Warhol’s extensive and unusual archives.",
@@ -380,66 +494,6 @@
             "when": "August 11, 10am–3pm"
         },
         {
-            "id": "event-trivianight",
-            "stamp_id": "stamp-event-trivianight",
-            "event": "Trivia Night",
-            "image": "event-carousel-trivianight.png",
-            "location": "CMNH",
-            "description": "End your summer adventure with a bang! Spend an evening testing the knowledge you acquired from your time at the museums this summer. Bring your stamped Summer Adventure Map for the chance to win prizes. Each stamp is another chance to win gift certificates, membership renewal, Carnegie Cash, and more in the drawing.",
-            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78940&view=Detail",
-            "when": "August 25, 6–8pm"
-        },
-        {
-            "id": "event-cmoamembertour-secretlanguage",
-            "stamp_id": "stamp-event-membertours",
-            "event": "Member Tour: The Secret Language of Art",
-            "image": "event-carousel-cmoamembertours.png",
-            "location": "CMOA",
-            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78918&view=Detail",
-            "when": "June 10, 2–3pm"
-        },
-        {
-            "id": "event-cmoamembertour-publicart",
-            "stamp_id": "stamp-event-membertours",
-            "event": "Member Tour: Fresh Air, Public Art",
-            "image": "event-carousel-cmoamembertours.png",
-            "location": "CMOA",
-            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78920&view=Detail",
-            "when": "July 15, 2–3pm"
-        },
-        {
-            "id": "event-cmoamembertour-contemporary",
-            "stamp_id": "stamp-event-membertours",
-            "event": "Member Tour: Contemporary Galleries (+ Carry on the Conversation)",
-            "image": "event-carousel-cmoamembertours.png",
-            "location": "CMOA",
-            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78957&view=Detail",
-            "when": "August 12, 2–3pm"
-        },
-        {
-            "id": "event-cmnhmembertour-gemsminerals",
-            "stamp_id": "stamp-event-membertours",
-            "event": "Member Tour: Gems and Minerals",
-            "image": "event-carousel-cmnhmembertours.png",
-            "location": "CMNH",
-            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78916&view=Detail",
-            "when": "June 9, 2–3pm"
-        },
-        {
-            "id": "event-cmnhmembertour-safari",
-            "stamp_id": "stamp-event-membertours",
-            "event": "Member Tour: Natural History Safari",
-            "image": "event-carousel-cmnhmembertours.png",
-            "location": "CMNH",
-            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78921&view=Detail",
-            "when": "July 14, 2–3pm"
-        },
-        {
             "id": "event-cmnhmembertour-egypt",
             "stamp_id": "stamp-event-membertours",
             "event": "Member Tour: Ancient Egypt",
@@ -450,36 +504,14 @@
             "when": "August 11, 2–3pm"
         },
         {
-            "id": "event-warholmembertour-adman",
+            "id": "event-cmoamembertour-contemporary",
             "stamp_id": "stamp-event-membertours",
-            "event": "Member Tour: Adman: Warhol Before Pop ",
-            "image": "event-carousel-warholmembertours.png",
-            "location": "Warhol",
+            "event": "Member Tour: Contemporary Galleries (+ Carry on the Conversation)",
+            "image": "event-carousel-cmoamembertours.png",
+            "location": "CMOA",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78919&view=Detail",
-            "when": "June 30, 2–3pm"
-        },
-        {
-            "id": "event-thirdthursday-girlfx",
-            "stamp_id": "stamp-event-adults",
-            "event": "Third Thursday: girlFx",
-            "image": "event-carousel-thirdthursday.png",
-            "location": "CMOA",
-            "description": "Party in the Sculpture Court with girlFx.",
-            "details": "$10 advance/$15 door (10% member discount)",
-            "url": "https://cmoa.org/event/third-thursday-girlfx/",
-            "when": "June 21, 8–11pm"
-        },
-        {
-            "id": "event-thirdthursday-contemporary",
-            "stamp_id": "stamp-event-adults",
-            "event": "Third Thursday: Crossroads",
-            "image": "event-carousel-thirdthursday.png",
-            "location": "CMOA",
-            "description": "Celebrate the opening of Crossroads, the new installation of our postwar contemporary collection.",
-            "details": "$10 advance/$15 door (10% member discount)",
-            "url": "https://cmoa.org/event/third-thursday-crossroads/",
-            "when": "July 19,  8–11pm"
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78957&view=Detail",
+            "when": "August 12, 2–3pm"
         },
         {
             "id": "event-thirdthursday-intimate",
@@ -493,48 +525,6 @@
             "when": "August 16, 8–11pm"
         },
         {
-            "id": "event-afterdark-harrypotter",
-            "stamp_id": "stamp-event-adults",
-            "event": "After Dark: Harry Potter",
-            "image": "event-carousel-afterdark.png",
-            "location": "CMNH",
-            "description": "Grab a friend, get a drink at the cash bar, and enjoy a night out!",
-            "details": "$1 advance/$20 door (10% member discount)",
-            "url": "https://carnegiemnh.org/visitor/things-to-do/after-dark/",
-            "when": "July 27, 6–10pm"
-        },
-        {
-            "id": "event-goodfridays",
-            "stamp_id": "stamp-event-adults",
-            "event": "Good Fridays",
-            "image": "event-carousel-goodfridays.png",
-            "location": "Warhol",
-            "description": "Grab a friend, get a drink at the cash bar, and enjoy a night out!",
-            "details": "For a more social experience, we are open until 10 p.m. and offer half-price museum admission and a cash bar beginning at 5 p.m.",
-            "url": "https://www.warhol.org/event/good-fridays/",
-            "when": "Every Friday, 5–10pm"
-        },
-        {
-            "id": "event-sciencesaturday-jurassic",
-            "stamp_id": "stamp-event-sciencesaturdays",
-            "event": "Super Science Saturday: Jurassic Day",
-            "image": "event-carousel-sciencesaturday.png",
-            "location": "CMNH",
-            "description": "Visitors can explore a topic in-depth through hands-on activities, experiments, demonstrations, discussions with museum experts, family-friendly activities, and more.",
-            "url": "https://carnegiemnh.org/visitor/things-to-do/super-science-saturdays/",
-            "when": "June 16, 12–4pm"
-        },
-        {
-            "id": "event-sciencesaturday-scientist",
-            "stamp_id": "stamp-event-sciencesaturdays",
-            "event": "Super Science Saturday: Scientist Takeover",
-            "image": "event-carousel-sciencesaturday.png",
-            "location": "CMNH",
-            "description": "Visitors can explore a topic in-depth through hands-on activities, experiments, demonstrations, discussions with museum experts, family-friendly activities, and more.",
-            "url": "https://carnegiemnh.org/visitor/things-to-do/super-science-saturdays/",
-            "when": "July 21, 12–4pm"
-        },
-        {
             "id": "event-sciencesaturday-meowfest",
             "stamp_id": "stamp-event-sciencesaturdays",
             "event": "Super Science Saturday: Meowfest",
@@ -545,8 +535,18 @@
             "when": "August 18, 12–4pm"
         },
         {
+            "id": "event-trivianight",
+            "stamp_id": "stamp-event-trivianight",
+            "event": "Trivia Night",
+            "image": "event-carousel-trivianight.png",
+            "location": "CMNH",
+            "description": "End your summer adventure with a bang! Spend an evening testing the knowledge you acquired from your time at the museums this summer. Bring your stamped Summer Adventure Map for the chance to win prizes. Each stamp is another chance to win gift certificates, membership renewal, Carnegie Cash, and more in the drawing.",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78940&view=Detail",
+            "when": "August 25, 6–8pm"
+        },
+        {
             "id": "event-dandyandy",
-            "event": "Dandy Andy: Warhol's Queer History",
+            "event": "Dandy Andy: Warhol’s Queer History",
             "image": "event-carousel-dandyandy.png",
             "location": "Warhol",
             "description": "This tour traces Warhol’s romantic relationships and queer identity against the backdrop of the historical gay rights movement in the United States.",
@@ -560,7 +560,7 @@
             "image": "event-carousel-gallerytalks.png",
             "location": "Warhol",
             "description": "Gallery talks led by museum staff have a thematic focus around a series of Warhol artworks or one of Warhol’s artistic processes. These 30-minute talks provide time for visitors to present insights and ask questions. ",
-            "details": "Tours meet on the museum's seventh floor.",
+            "details": "Tours meet on the museum’s seventh floor.",
             "url": "https://www.warhol.org/event/daily-gallery-talks/",
             "when": "Daily"
         },
@@ -598,7 +598,7 @@
             "event": "Bhul Planetarium Laser Show",
             "image": "event-carousel-lasershow.png",
             "location": "CSC",
-            "description": "Dazzling lights and rockin' beats merge for a spectacular sight and sound experience. Catch daily matinees or evening laser shows!",
+            "description": "Dazzling lights and rockin’ beats merge for a spectacular sight and sound experience. Catch daily matinees or evening laser shows!",
             "url": "http://www.carnegiesciencecenter.org/calendar/",
             "when": "Check the calendar for today’s show schedule."
         },
@@ -733,7 +733,7 @@
         },
         {
             "stamp_id": "stamp-event-birthday",
-            "name": "Andy's Birthday",
+            "name": "Andy’s Birthday",
             "events": [
                 "event-birthday"
             ],
@@ -1039,7 +1039,7 @@
     ],
     "trivia-railroad": [
         {
-            "text": "The Miniature Railroad & Village® was displayed for the first time ever in ____ by its creator Charles Bowdish.",
+            "text": "The Miniature Railroad and Village® was displayed for the first time ever in ____ by its creator Charles Bowdish.",
             "image": "trivia-railroad-1.png",
             "difficulty": 1,
             "answer": 1919,
@@ -1050,7 +1050,7 @@
             "followup": "After 1919, the display grew until it occupied most of the second floor of the Bowdish home."
         },
         {
-            "text": "Where else did the Miniature Railroad & Village® live before moving to Carnegie Science Center?",
+            "text": "Where else did the Miniature Railroad and Village® live before moving to Carnegie Science Center?",
             "image": "trivia-railroad-5.png",
             "difficulty": 2,
             "answer": "Buhl Planetarium",
@@ -1058,7 +1058,7 @@
                 "The Frick",
                 "Contemporary Craft"
             ],
-            "followup": "The Miniature Railroad & Village® was moved to the Science Center in 1992."
+            "followup": "The Miniature Railroad and Village® was moved to the Science Center in 1992."
         },
         {
             "text": "An earlier name for Mt. Washington in Pittsburgh, PA was _______. ",
@@ -1102,7 +1102,7 @@
                 "5 in",
                 "1 ft"
             ],
-            "followup": "The Miniature Railroad & Village® is built by the 'O' Scale, where 1 foot is scaled down to 1/4 inch."
+            "followup": "The Miniature Railroad and Village® is built by the ’O’ Scale, where 1 foot is scaled down to 1/4 inch."
         }
     ],
     "trivia-sports": [
@@ -1118,7 +1118,7 @@
             "followup": "Enzymes can transform plant oils into a gel that will harden into a track that you can run on!"
         },
         {
-            "text": "_________ is a muscle's ability to keep up a repeated force.",
+            "text": "_________ is a muscle’s ability to keep up a repeated force.",
             "image": "trivia-sports-2.png",
             "difficulty": 1,
             "answer": "Endurance",
@@ -1186,7 +1186,7 @@
             "followup": "In the early 17th century, the vessels used for serving tea became more inventive. "
         },
         {
-            "text": "A model of which Pittsburgh restaurant was added to the Miniature Railroad & Village® at Carnegie Science Center in 2017?",
+            "text": "A model of which Pittsburgh restaurant was added to the Miniature Railroad and Village® at Carnegie Science Center in 2017?",
             "image": "trivia-foodart-3.png",
             "difficulty": 2,
             "answer": "Primanti Brothers",
@@ -1194,7 +1194,7 @@
                 "Pamela’s Diner",
                 "Burgatory"
             ],
-            "followup": "Updates are made to the Miniature Railroad & Village® each fall, just in time for the holidays!"
+            "followup": "Updates are made to the Miniature Railroad and Village® each fall, just in time for the holidays!"
         },
         {
             "text": "Pictured here is a painting by Albert Francis King. He used a technique known as trompe l’oeil, which means ____________.",
@@ -1358,7 +1358,7 @@
         {
             "text": "As a child, Andy Warhol had a rare illness that often kept him bed-ridden. What was it?",
             "difficulty": 3,
-            "answer": "St. Vitus' dance",
+            "answer": "St. Vitus’ dance",
             "incorrect": [
                 "Mononucleosis",
                 "Scarlet fever"
@@ -1666,7 +1666,7 @@
             "followup": "These marks were thought to vibrate or blend in the viewer’s eye to create a more subtle perception. "
         },
         {
-            "text": "Which painter created this work of art titled 'Wheat Fields after the Rain (The Plain of Auvers)'?",
+            "text": "Which painter created this work of art titled ’Wheat Fields after the Rain (The Plain of Auvers)’?",
             "image": "trivia-impressionism-8.png",
             "difficulty": 1,
             "answer": "Vincent van Gogh",
@@ -1744,7 +1744,7 @@
                 "Brachiosaurus",
                 "Velociraptor"
             ],
-            "followup": "In 1901, paleontologists realized they had discovered a new species of dinosaur and named it Diplodocus carnegii to recognize Andrew Carnegie's support."
+            "followup": "In 1901, paleontologists realized they had discovered a new species of dinosaur and named it Diplodocus carnegii to recognize Andrew Carnegie’s support."
         },
         {
             "text": "What was the first period of the Mesozoic Era?",
