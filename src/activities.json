@@ -45,24 +45,10 @@
             "location": "CSC"
         },
         {
-            "activity": "trivia-warholearly",
-            "image": "trivia-warhol-carousel.png",
-            "title": "Trivia | Warhol’s Early Life",
-            "subtitle": "From Pittsburgh to New York: 5 questions about Warhol before he was famous!",
-            "location": "Warhol"
-        },
-        {
             "activity": "poll-prince",
             "image": "poll-prince-carousel.png",
             "title": "Poll | Prince of Swords",
             "subtitle": "What does a sculpture do to pass the time? Cast your vote!",
-            "location": "CMOA"
-        },
-        {
-            "activity": "poll-iceberg",
-            "image": "poll-iceberg-carousel.png",
-            "title": "Poll | The Iceberg",
-            "subtitle": "Tell me what you think!",
             "location": "CMOA"
         },
         {
@@ -73,11 +59,11 @@
             "location": "CMOA"
         },
         {
-            "activity": "poll-gallery",
-            "image": "poll-gallery-carousel.png",
-            "title": "Poll | Untitled (Gallery)",
-            "subtitle": "A question about a question!",
-            "location": "CMOA"
+            "activity": "trivia-warholearly",
+            "image": "trivia-warhol-carousel.png",
+            "title": "Trivia | Warhol’s Early Life",
+            "subtitle": "From Pittsburgh to New York: 5 questions about Warhol before he was famous!",
+            "location": "Warhol"
         },
         {
             "activity": "poll-brillo",
@@ -101,10 +87,24 @@
             "location": "CMNH"
         },
         {
+            "activity": "poll-gallery",
+            "image": "poll-gallery-carousel.png",
+            "title": "Poll | Untitled (Gallery)",
+            "subtitle": "A question about a question!",
+            "location": "CMOA"
+        },
+        {
             "activity": "trivia-impressionism",
             "image": "trivia-impressionism-carousel.png",
             "title": "Trivia | Impressionism",
             "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
+            "location": "CMOA"
+        },
+        {
+            "activity": "poll-iceberg",
+            "image": "poll-iceberg-carousel.png",
+            "title": "Poll | The Iceberg",
+            "subtitle": "Tell me what you think!",
             "location": "CMOA"
         },
         {
@@ -720,8 +720,12 @@
             "stamp_id": "stamp-event-membertours",
             "name": "Member Tours",
             "events": [
+                "event-cmnhmembertour-gemsminerals",
                 "event-cmoamembertour-secretlanguage",
+                "event-warholmembertour-adman",
                 "event-cmoamembertour-publicart",
+                "event-cmnhmembertour-safari",
+                "event-cmnhmembertour-egypt",
                 "event-cmoamembertour-contemporary"
             ],
             "messenger_code": "stamp-event-membertours",
@@ -1055,17 +1059,6 @@
                 "Peas"
             ],
             "followup": "The real Forbes Field took only four months to build out of steel and concrete, but the model took over a year to complete."
-        },
-        {
-            "text": "An object with an actual length of 10 ft, would be how long in this exhibit?",
-            "image": "trivia-railroad-carousel.png",
-            "difficulty": 2,
-            "answer": "2.5 in",
-            "incorrect": [
-                "5 in",
-                "1 ft"
-            ],
-            "followup": "The Miniature Railroad and Village® is built by the ’O’ Scale, where 1 foot is scaled down to 1/4 inch."
         }
     ],
     "trivia-sports": [
