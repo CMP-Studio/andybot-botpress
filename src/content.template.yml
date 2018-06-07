@@ -89,7 +89,7 @@ activities:
         buttons:
           -
             type: "postback"
-            title: "Start Activity"
+            title: "Select {{type}}"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
@@ -120,7 +120,7 @@ more-activities:
         buttons:
           -
             type: "postback"
-            title: "Start Activity"
+            title: "Select {{type}}"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
