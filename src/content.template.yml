@@ -192,7 +192,7 @@ trivia-time:
     template_type: "generic"
     elements:
       - 
-        subtitle: "This activity takes about {{numQuestions}} minute(s)."
+        subtitle: "Psst...All of the answers can be found at the Carnegie Museums 🤓"
         title: "It's trivia time!"
         image_url: "<%=staticUrl%>img/andy-trivia-time.png"
         buttons:
