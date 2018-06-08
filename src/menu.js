@@ -14,30 +14,8 @@ module.exports =  [
         webview_height_ratio: "full",
         messenger_extensions: true
     },
-
-    // {
-    //     title: "🎫 My Adventure",
-    //     type: "nested",
-    //     call_to_actions: [
-    //         {
-    //             title: "📷 Scan Stamp",
-    //             type: "postback",
-    //             payload: postbacks.SCAN_STAMP
-    //         },
-    //         {
-    //             title: "📈 Check Progress",
-    //             type: "postback",
-    //             payload: postbacks.CHECK_PROGRESS
-    //         },
-    //         {
-    //             title: "🎟️ Upcoming Opportunities",
-    //             type: "postback",
-    //             payload: postbacks.OPPORTUNITIES
-    //         }
-    //     ]
-    // },
     {
-        title: "💁 Help",
+        title: "💁 More Info",
         type: "nested",
         call_to_actions: [
             {
@@ -45,24 +23,21 @@ module.exports =  [
                 type: "postback",
                 payload: postbacks.HOW_TO_PLAY
             },
-            // {
-            //     title: "Museum of Art",
-            //     type: "postback",
-            //     payload: postbacks.ABOUT_CMOA
-            // },
-            // {
-            //     title: "Andy Warhol",
-            //     type: "postback",
-            //     payload: postbacks.ABOUT_WARHOL
-            // },
-            // {
-            //     title: "Membership",
-            //     type: "postback",
-            //     payload: postbacks.ABOUT_MEMBERSHIP
-            // },
             {
                 type: "web_url",
-                title: "CMP Website",
+                title: "Frequently Asked Questions",
+                url: "https://carnegiebot.org/faq/",
+                webview_height_ratio: "full"
+            },
+            {
+                type: "web_url",
+                title: "Art Credits",
+                url: "https://carnegiebot.org/artworkcredits/",
+                webview_height_ratio: "full"
+            },
+            {
+                type: "web_url",
+                title: "Carnegie Museums of Pittsburgh",
                 url: "https://carnegiemuseums.org/",
                 webview_height_ratio: "full"
             }
