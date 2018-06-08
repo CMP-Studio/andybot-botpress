@@ -40,7 +40,7 @@ how_to_play:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}"
+        image_url: "<%=staticUrl%>img/{{image}}?time=1"
       {{/howtoplay}}
 
 # how_to_play:
@@ -89,7 +89,7 @@ activities:
         buttons:
           -
             type: "postback"
-            title: "Start Activity"
+            title: "Select {{type}}"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
@@ -103,6 +103,15 @@ more-activities:
   - on: facebook
     template_type: "generic"
     elements:
+      -
+        subtitle: "Check out museum events and see upcoming stamp opportunities."
+        title: "What's Happening"
+        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
+        buttons:
+          -
+            type: "postback"
+            title: "See Events"
+            payload: "SEE_EVENTS"
       {{#activities}}
       - 
         subtitle: "{{subtitle}}"
@@ -111,7 +120,7 @@ more-activities:
         buttons:
           -
             type: "postback"
-            title: "Start Activitiy"
+            title: "Select {{type}}"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
@@ -183,7 +192,7 @@ trivia-time:
     template_type: "generic"
     elements:
       - 
-        subtitle: "This activity takes about {{numQuestions}} minute(s)."
+        subtitle: "Psst...All of the answers can be found at the Carnegie Museums 🤓"
         title: "It's trivia time!"
         image_url: "<%=staticUrl%>img/andy-trivia-time.png"
         buttons:
@@ -209,7 +218,7 @@ trivia-question:
   - text: "Question {{questionNumber}}"
     typing: 1s
   - on: facebook
-    image: "<%=staticUrl%>img/{{question.image}}?time=1"
+    image: "<%=staticUrl%>img/{{question.image}}?well=2"
   - on: facebook
     template_type: "button"
     text: "{{question.text}}"
@@ -251,8 +260,10 @@ trivia-question-no-image:
 
 
 trivia-complete:
-  - typing: true
+  - typing: .5s
     text: Thats it! You did amazing.
+  - typing: true
+    text: '{{scoreText}}'
 
 
 achievement-unlocked:

@@ -97,7 +97,7 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 				}
 
 				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-				convo.say('#more-activities', { activities: avaliableActivities.slice(0, 10) });
+				convo.say('#more-activities', { activities: avaliableActivities.slice(0, 9) });
 				convo.stop('aborted');
 			}
 		};

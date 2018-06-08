@@ -42,7 +42,7 @@ module.exports = async function PollHandler(convo, event, activityName) {
 			if (responseSubmitted.error === 'AlreadySumbitted') {
 				convo.say('#poll-doubledip');
 				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-				convo.say('#more-activities', { activities: avaliableActivities.slice(0, 10) });
+				convo.say('#more-activities', { activities: avaliableActivities.slice(0, 9) });
 				convo.stop('aborted');
 			} else {
 
@@ -81,7 +81,7 @@ module.exports = async function PollHandler(convo, event, activityName) {
 					// 	});
 					// }
 					const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-					convo.say('#more-activities', { activities: avaliableActivities.slice(0, 10) });
+					convo.say('#more-activities', { activities: avaliableActivities.slice(0, 9) });
 					convo.stop('aborted');
 				}
 			}

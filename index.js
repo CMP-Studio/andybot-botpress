@@ -105,7 +105,7 @@ module.exports = function (bp) {
 		const avaliableEvents = await andybot.avaliableEvents(event.user.id);
 		const payload = {
 			template_type: "generic",
-			elements: _.map(avaliableEvents.slice(0,10), (ele) => {
+			elements: _.map(avaliableEvents.slice(0,9), (ele) => {
 				const imageName = _.find(activities['schedule'], (scheduleObj) => {
 					return scheduleObj.id === ele.eventId
 				}).image;
@@ -117,7 +117,7 @@ module.exports = function (bp) {
 						{
 							type: "web_url",
 							url: ele.link,
-							title: "Event Details"
+							title: "Details"
 						}
 					]
 				}
@@ -134,7 +134,7 @@ module.exports = function (bp) {
 			if (sendNotification === true) {
 				event.reply('#activity_ended');
 				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-				event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 10) })
+				event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) })
 			}
 		} else {
 			event.reply('#no_activity');
