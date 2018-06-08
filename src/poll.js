@@ -15,7 +15,7 @@ module.exports = async function PollHandler(convo, event, activityName) {
 
 	event.reply('#poll-time', { name: activityTitle, numQuestions: activity.length, image: pollImage });
 	// Sets postbacks as an acceptable answer type
-	convo.messageTypes = ['postback', 'quick_reply']; 
+	convo.messageTypes = ['postback', 'quick_reply', 'referral']; 
 	const numQuestions = activity.length;
 	for (var i = 0; i < numQuestions; i++) {
 		const followUp = activities[activityName][i].followup;
