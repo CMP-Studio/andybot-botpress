@@ -92,7 +92,7 @@ module.exports = function (bp) {
 		}
 	
 		if (bp.convo.find(event)) {
-			await stopConvo(event, null, true);
+			await stopConvo(event, null, false);
 		}
 	
 		const convo = bp.convo.create(event);
