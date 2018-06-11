@@ -6,6 +6,8 @@ const utils = require('./utils');
 
 let activities;
 
+const handleScan = require('./scan');
+
 module.exports = async function TriviaHandler(convo, event, activityName) {
 
 	if (utils.isNull(activities)) {
@@ -38,21 +40,8 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 			let referral;
 			if (utils.isNonNull(response.raw.referral)) {
 				referral = response.raw.referral;
-				const scanResponse = await andybot.scan.scanCode(event.user.id, referral.ref);
-				if (utils.isNonNull(scanResponse.stamp)){
-					if (scanResponse.stamp.error && scanResponse.stamp.error === "DailyLimitReached") {
-						convo.say("#daily_scan_limit_reached");
-						convo.repeat();
-						return;
-					} else {
-	
-						const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
-						const image = stampObj.splash_image;
-						convo.say("#stamp_unlock", { image, text: "You unlocked a stamp!"});
-						convo.repeat();
-						return;
-					}
-				}
+				await handleScan(referral, event);
+				return;
 			}
 
 			const answer = response.raw.postback.title;

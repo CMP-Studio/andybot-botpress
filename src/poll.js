@@ -3,7 +3,7 @@ const _ = require('lodash');
 const andybot = require('./andybot');
 
 const utils = require('./utils');
-
+const handleScan = require('./scan');
 let activities = utils.activities();
 
 module.exports = async function PollHandler(convo, event, activityName) {
@@ -15,7 +15,7 @@ module.exports = async function PollHandler(convo, event, activityName) {
 
 	event.reply('#poll-time', { name: activityTitle, numQuestions: activity.length, image: pollImage });
 	// Sets postbacks as an acceptable answer type
-	convo.messageTypes = ['postback', 'quick_reply']; 
+	convo.messageTypes = ['postback', 'quick_reply', 'referral']; 
 	const numQuestions = activity.length;
 	for (var i = 0; i < numQuestions; i++) {
 		const followUp = activities[activityName][i].followup;
@@ -24,6 +24,15 @@ module.exports = async function PollHandler(convo, event, activityName) {
 		const images = activities[activityName][i].images;
 		const questionIndex = i;
 		const responseCallback = async (response) => {
+
+
+			let referral;
+			if (utils.isNonNull(response.raw.referral)) {
+				referral = response.raw.referral;
+				await handleScan(referral, event);
+				return;
+			}
+
 			let answer;
 			try {
 				answer = parseInt(response.raw.postback.payload.split(':')[1], 10);
