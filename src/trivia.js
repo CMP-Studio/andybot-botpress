@@ -55,8 +55,6 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 				}
 			}
 
-
-
 			const answer = response.raw.postback.title;
 			let feedback;
 			if ((String(correctAnswer)).toLowerCase() === String(answer).toLowerCase()) {
@@ -160,5 +158,8 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 };
 
 function getScoreText(correct, total) {
-	return `You scored ${Math.round(((correct*1.0)/total)*100)}%`;
+	if (Math.round(((correct*1.0)/total)*100) > 70) {
+		return `You scored ${Math.round(((correct*1.0)/total)*100)}%`;
+	}
+	return 'Learn the answers this summer at Carnegie Museums of Pittsburgh!';
 }
