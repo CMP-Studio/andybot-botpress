@@ -65,22 +65,16 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 				// Submit trivia scores
 				await andybot.trivia.submitScore(userPageId, activityName, correctAnswers, numQuestions);
 
-				const scoreText = getScoreText(correctAnswers, activity.length);
-				convo.say('#trivia-complete', { scoreText: scoreText });
+				let score = Math.round(((correctAnswers*1.0)/activity.length)*100);
 
-				const achievement = await andybot.achievement.progress(userPageId);
-				if (utils.isNonNull(achievement.new) && achievement.new.length > 0) {
-					// Send achievement unlocked message
-					const totalReward = _.reduce(_.map(({tiers, progress}) => tiers[progress].reward), (x, y) => x + y, 0);
-					const unlocked = _.map(achievement.new, (ach) => ({
-						image: ach.splash_image,
-						displayName: ach.tiers[ach.progress].displayName,
-						description: ach.tiers[ach.progress].description, 
-					}));
-					convo.say('#achievement-unlocked', {
-						achievements: unlocked,
-						reward: achievement.reward
-					});
+				if (isNaN(score)) {
+					convo.say('#trivia-complete');
+				} else if (score === 100) {
+					convo.say('#trivia-complete-smartcookie', { score });
+				} else if (score > 60) {
+					convo.say('#trivia-complete-quizwiz', { score });
+				} else {
+					convo.say('#trivia-complete-quizwiz-low');
 				}
 
 				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
@@ -145,10 +139,3 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 	}
 	convo.activate();	
 };
-
-function getScoreText(correct, total) {
-	if (Math.round(((correct*1.0)/total)*100) > 70) {
-		return `You scored ${Math.round(((correct*1.0)/total)*100)}%`;
-	}
-	return 'Learn the answers this summer at Carnegie Museums of Pittsburgh!';
-}

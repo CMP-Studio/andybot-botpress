@@ -65,7 +65,11 @@ module.exports = async function PollHandler(convo, event, activityName) {
 				} else {
 					const agreedWithMe = userResponses[answer];
 					const agreedWithMePercentage = Math.ceil((agreedWithMe / (totalAnswers * 1.0)) * 100);
-					followUpStatement = `${agreedWithMePercentage}% of people agree with you.`;
+					if (isNaN(agreedWithMePercentage)) {
+						followUpStatement = `You are one of the first people to answer this question!`;
+					} else {
+						followUpStatement = `${agreedWithMePercentage}% of people agree with you.`;
+					}
 				}
 
 				convo.say('#poll-followup', { text: followUp, feedback:  followUpStatement });
