@@ -60,7 +60,7 @@ module.exports = async function handleScan(referral, event) {
 
         } else if (scanResponse.scan.type === 'scavengerhunt') {
             if (utils.isNonNull(scanResponse.scavengerhunt)){
-                let res = scanResponse.scavengerhunt.huntResponse;
+                let res = scanResponse.scavengerhunt;
                 const avaliableActivities = await andybot.avaliableActivities(event.user.id);
                 console.log(scanResponse.scavengerhunt)
                 // First get a frame out of the way --> special case
