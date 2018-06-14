@@ -17,7 +17,7 @@ module.exports = async function handleScan(referral, event) {
             } else {
                 const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
                 const image = stampObj.splash_image;
-                event.reply("#stamp_unlock", { image, text: "You unlocked a stamp!"});
+                event.reply("#stamp_unlock", { image, text: "You unlocked the " + s.name + " stamp!"});
                 return;
             }
         }
@@ -38,7 +38,7 @@ module.exports = async function handleScan(referral, event) {
                 }
 
                 setTimeout(() => {
-                    event.reply("#activities",  { activities: avaliableActivities });
+                    event.reply("#activities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
                 }, 2000);
             }
             return;
@@ -53,30 +53,38 @@ module.exports = async function handleScan(referral, event) {
             }
 
             setTimeout(() => {
-                event.reply("#activities",  { activities: avaliableActivities });
+                event.reply("#activities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
             }, 2000);
             
             return;
 
         } else if (scanResponse.scan.type === 'scavengerhunt') {
-
             if (utils.isNonNull(scanResponse.scavengerhunt)){
-                if (scanResponse.scavengerhunt.clueNumber === 0) {
-                    event.reply("scavengerhunt-firstclue", scanResponse.scavengerhunt);
-                    return
-                }
+                let res = scanResponse.scavengerhunt.huntResponse;
+                const avaliableActivities = await andybot.avaliableActivities(event.user.id);
 
-                if (scanResponse.scavengerhunt.lastClue === true) {
-                    event.reply("scavengerhunt-lastclue", scanResponse.scavengerhunt);
-                    return
-                }
-
-                if (utils.isNonNull(scanResponse.scavengerhunt.followup)) {
-                    event.reply("scavengerhunt-followup-clue", scanResponse.scavengerhunt);
-                    return
+                // First get a frame out of the way --> special case
+                if (scanResponse.scan.trigger === 0) {
+                    if (res.firstScan && utils.isNonNull(res.nextClue)) {
+                        event.reply("scavengerhunt-first-scan-sign", { nextClue: res.nextClue, nextClueNumber: res.nextClueNumber });
+                    } else if (!res.huntComplete && utils.isNonNull(res.nextClue)) {
+                        event.reply("scavengerhunt-scan-sign", { nextClue: res.nextClue, nextClueNumber: res.nextClueNumber });
+                    } else if (res.huntComplete) {
+                        event.reply("scavengerhunt-complete", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
+                    }
+                    return;
                 } else {
-                    event.reply("scavengerhunt-clue", scanResponse.scavengerhunt);
-                    return;	
+                    if (res.firstScan && utils.isNonNull(res.nextClue) && utils.isNonNull(res.foundIt)) {
+                        event.reply("scavengerhunt-first-scan", { foundIt: res.foundIt, nextClue: res.nextClue, nextClueNumber: res.nextClueNumber });
+                    } else if (res.alreadyFound && utils.isNonNull(res.nextClue)) {
+                        event.reply("scavengerhunt-repeat-scan", { nextClue: res.nextClue, nextClueNumber: res.nextClueNumber });
+                    } else if (!res.lastScan && utils.isNonNull(res.nextClue) && utils.isNonNull(res.foundIt)) {
+                        event.reply("scavengerhunt-scan", { foundIt: res.foundIt, nextClue: res.nextClue, nextClueNumber: res.nextClueNumber });
+                    } else if (res.lastScan && utils.isNonNull(res.foundIt)) {
+                        event.reply("scavengerhunt-last-scan", { foundIt: res.foundIt, activities: _.shuffle(avaliableActivities).slice(0, 9) });
+                    } else if (res.huntComplete) {
+                       event.reply("scavengerhunt-complete", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
+                    }
                 }
             }
         }

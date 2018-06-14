@@ -66,7 +66,7 @@ module.exports = async function PollHandler(convo, event, activityName) {
 					const agreedWithMe = userResponses[answer];
 					const agreedWithMePercentage = Math.ceil((agreedWithMe / (totalAnswers * 1.0)) * 100);
 					if (isNaN(agreedWithMePercentage)) {
-						followUpStatement = `You are one of the first people to answer this question!`;
+						followUpStatement = `You're the first person to choose that!`;
 					} else {
 						followUpStatement = `${agreedWithMePercentage}% of people agree with you.`;
 					}

@@ -3,7 +3,7 @@ welcome: # this is the #welcome bloc referenced in index.js
   - on: facebook
     image: <%=staticUrl%>img/andy-hello.png
   - typing: true
-    text: I'm AndyBot! Pleased to meet you!
+    text: I'm Andy CarnegieBot! Pleased to meet you!
   - text: Let's get started on an amazing summer adventure.
     typing: 2s
     quick_replies:
@@ -254,50 +254,133 @@ stamp_unlock:
             messenger_extensions: true
             url: "https://dev.andybot.org/me"
 
-
-scavengerhunt-firstclue:
+scavengerhunt-first-scan-sign:
+  - text: "Welcome to the Good Eye Scavenger Hunt! I have 11 clues for you to solve. Each clue leads to a Carnegie Museum of Natural History object. Scan the object's code to collect it and recieve your next clue!"
+    typing: 2s
+  - on: facebook
+    image: "<%=staticUrl%>img/andy-ready-search.png?time=0"
   - template_type: button
-    text: "You found the first clue in the Scavenger Hunt!\n\n{{clue}}"
+    text: "OK, here's your first clue!\n\n{{nextClue}}"
     buttons:
       -
         type: "postback"
         title: "Hint"
-        payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
+        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
 
-scavengerhunt-lastclue:
-    - text: "Congratulations, you found the last clue in the Scavenger Hunt!\n\n{{followup}}"
-      typing: 1s
-
-
-scavengerhunt-clue:
+scavengerhunt-scan-sign:
+  - text: "This is a sign for the Good Eye Scavenger Hunt, but it's not an object that needs finding! Keep on searching..."
+    typing: 2s
   - template_type: button
-    text: "You found clue number {{clueNumber}}!\n\n{{clue}}"
+    text: "Here's a clue:\n\n{{nextClue}}"
     buttons:
       -
         type: "postback"
         title: "Hint"
-        payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
+        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
 
-scavengerhunt-followup-clue:
-  - text: "You found clue number {{clueNumber}}! {{followup}}"
+scavengerhunt-first-scan:
+  - text: "Welcome to the Good Eye Scavenger Hunt! I have 11 clues for you to solve. Each clue leads to a Carnegie Museum of Natural History object. Scan the object's code to collect it and recieve your next clue!"
+    typing: 2s
+  - on: facebook
+    image: "<%=staticUrl%>img/andy-ready-search.png?time=0"
+  - text: "Nice Work! {foundIt}"
+    typing: 1s
+  - template_type: button
+    text: "OK, here's your next clue!\n\n{{nextClue}}"
+    buttons:
+      -
+        type: "postback"
+        title: "Hint"
+        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
+
+scavengerhunt-scan:
+  - text: "Nice Work! {foundIt}"
+    typing: 1s
+  - template_type: button
+    text: "OK, here's your next clue!\n\n{{nextClue}}"
+    buttons:
+      -
+        type: "postback"
+        title: "Hint"
+        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
+
+scavengerhunt-repeat-scan: 
+  - text: "You already found this object!"
     typing: 1s
   - template_type: button
     typing: 2s
-    text: "Here is your next clue: \n\n{{clue}}"
+    text: "Here is your next clue: \n\n{{nextClue}}"
     buttons:
       -
         type: "postback"
         title: "Hint"
-        payload: "SCAVENGER_HUNT_HINT:{{clueNumber}}"
-
-
-scavengerhunt-followup:
-  - typing: 2s
-    text: "{{followup}}"
+        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
 
 scavengerhunt-hint:
   - typing: 2s
     text: "{{hint}}"
+
+scavengerhunt-last-scan:
+  - text: "{foundIt}"
+    typing: 1s
+  - text: "Congratulations, you've found all 11 objects in the Good Eye Scavenger Hunt."
+    typing: 1s
+  - on: facebook
+    image: "<%=staticUrl%>img/andy-good-eye.png?time=0"
+  - typing: 2s
+    text: "Keep the adventure going with more activities."
+  - on: facebook
+    template_type: "generic"
+    elements:
+      -
+        subtitle: "Check out museum events and see upcoming stamp opportunities."
+        title: "What's Happening"
+        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
+        buttons:
+          -
+            type: "postback"
+            title: "See Events"
+            payload: "SEE_EVENTS"
+      {{#activities}}
+      - 
+        subtitle: "{{subtitle}}"
+        title: "{{title}}"
+        image_url: "<%=staticUrl%>img/{{image}}?time=5"
+        buttons:
+          -
+            type: "postback"
+            title: "Select {{type}}"
+            payload: "START_ACTIVITY:{{activity}}"
+      {{/activities}}
+
+scavengerhunt-complete:
+  - text: "You've already finished the Good Eye Scavenger Hunt!"
+    typing: 1s
+  - typing: true
+    text: "Keep the adventure going with more activities."
+  - on: facebook
+    template_type: "generic"
+    elements:
+      -
+        subtitle: "Check out museum events and see upcoming stamp opportunities."
+        title: "What's Happening"
+        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
+        buttons:
+          -
+            type: "postback"
+            title: "See Events"
+            payloa d: "SEE_EVENTS"
+      {{#activities}}
+      - 
+        subtitle: "{{subtitle}}"
+        title: "{{title}}"
+        image_url: "<%=staticUrl%>img/{{image}}?time=5"
+        buttons:
+          -
+            type: "postback"
+            title: "Select {{type}}"
+            payload: "START_ACTIVITY:{{activity}}"
+      {{/activities}}
 
 text:
   - typing: true

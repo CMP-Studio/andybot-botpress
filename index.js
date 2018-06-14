@@ -65,6 +65,9 @@ module.exports = function (bp) {
 	}
 
 	async function howToPlay(event, next){
+ 		if (bp.convo.find(event)) {
+			await stopConvo(event, null, false);
+		}
 
 		const howtoplay = activities['howtoplay'];
 
@@ -72,10 +75,6 @@ module.exports = function (bp) {
 		return;
 	}
 
-	async function prizes(event, next) {
-		event.reply('#prizes');
-		return;
-	}
 
 	async function sendScavengerHuntHint(event, next) {
 		const clueNumber = event.raw.postback.payload.split(':')[1];		
@@ -104,6 +103,10 @@ module.exports = function (bp) {
 	}
 
 	async function seeEvents(event) {
+		if (bp.convo.find(event)) {
+			await stopConvo(event, null, false);
+		}
+
 		const avaliableEvents = await andybot.avaliableEvents(event.user.id);
 		const payload = {
 			template_type: "generic",
