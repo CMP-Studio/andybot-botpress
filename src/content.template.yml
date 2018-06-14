@@ -369,7 +369,7 @@ scavengerhunt-complete:
           -
             type: "postback"
             title: "See Events"
-            payloa d: "SEE_EVENTS"
+            payload: "SEE_EVENTS"
       {{#activities}}
       - 
         subtitle: "{{subtitle}}"
