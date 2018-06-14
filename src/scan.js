@@ -17,7 +17,7 @@ module.exports = async function handleScan(referral, event) {
             } else {
                 const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
                 const image = stampObj.splash_image;
-                event.reply("#stamp_unlock", { image, text: "You unlocked the " + s.name + " stamp!"});
+                event.reply("#stamp_unlock", { image, text: "You unlocked the " + stampObj.name + " stamp!"});
                 return;
             }
         }
@@ -62,7 +62,7 @@ module.exports = async function handleScan(referral, event) {
             if (utils.isNonNull(scanResponse.scavengerhunt)){
                 let res = scanResponse.scavengerhunt.huntResponse;
                 const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-
+                console.log(scanResponse.scavengerhunt)
                 // First get a frame out of the way --> special case
                 if (scanResponse.scan.trigger === 0) {
                     if (res.firstScan && utils.isNonNull(res.nextClue)) {

@@ -179,8 +179,6 @@ module.exports = function (bp) {
 	bp.hear(/BEGIN_ADVENTURE/, beginAdventure);
 
 	bp.hear(/STOP_CONVO/, (event, next) => { stopConvo(event, next, true) });
-	
-	bp.hear(/PRIZES/, prizes);
 
 	eventHandlers.fallBackHandler = fallBackHandler;
 	eventHandlers.getStarted = getStarted;
