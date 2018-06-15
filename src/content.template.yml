@@ -283,7 +283,7 @@ scavengerhunt-first-scan:
     typing: 2s
   - on: facebook
     image: "<%=staticUrl%>img/andy-ready-search.png?time=0"
-  - text: "Nice Work! {foundIt}"
+  - text: "Nice Work! {{foundIt}}"
     typing: 1s
   - template_type: button
     text: "OK, here's your next clue!\n\n{{nextClue}}"
