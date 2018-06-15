@@ -13,6 +13,7 @@ module.exports = async function handleScan(referral, event) {
         if (utils.isNonNull(scanResponse) && utils.isNonNull(scanResponse.stamp)){
             if (scanResponse.stamp.error && scanResponse.stamp.error === "DailyLimitReached") {
                 event.reply("#daily_scan_limit_reached");
+                return;
             } else {
                 const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
                 const image = stampObj.splash_image;
@@ -54,7 +55,7 @@ module.exports = async function handleScan(referral, event) {
 
             if (avaliableActivities.length > 0){
                 setTimeout(() => {
-                    event.reply("#activities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
+                    event.reply("#followupactivities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
                 }, 2000);
             }
         } else if (scanResponse.scan.type === 'scavengerhunt') {

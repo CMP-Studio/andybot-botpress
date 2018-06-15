@@ -71,6 +71,22 @@ activities:
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
+followupactivities:
+  - on: facebook
+    template_type: "generic"
+    elements:
+      {{#activities}}
+      - 
+        subtitle: "{{subtitle}}"
+        title: "{{title}}"
+        image_url: "<%=staticUrl%>img/{{image}}?time=6"
+        buttons:
+          -
+            type: "postback"
+            title: "Select {{type}}"
+            payload: "START_ACTIVITY:{{activity}}"
+      {{/activities}}
+
 no_activity:
   - typing: true
     text: "You don't currently have an activity in progress."
