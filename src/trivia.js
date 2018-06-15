@@ -40,6 +40,7 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 			let referral;
 			if (utils.isNonNull(response.raw.referral)) {
 				referral = response.raw.referral;
+				console.log("SCAN from trivia");
 				await handleScan(referral, event);
 				return;
 			}
