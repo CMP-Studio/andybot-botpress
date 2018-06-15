@@ -349,6 +349,13 @@
             "title": "Poll | Summer Adventure",
             "subtitle": "I want to know what you’re enjoying this summer!",
             "location": "CMNH"
+        },
+        {
+            "activity": "poll-brick",
+            "image": "polls-brick-carousel.png",
+            "title": "Poll | Art of the Brick",
+            "subtitle": "Let's get building! ",
+            "location": "CSC"
         }
     ],
     "scan": [
@@ -376,7 +383,10 @@
             "messenger_code": "stamp-event-grandopening",
             "location": "CSC",
             "type": "event",
-            "trigger": []
+            "trigger": [
+                "poll-brick"
+            ],
+            "followup": "Enjoy the The Art of The Brick! And tell us what you think in this fun poll!"
         },
         {
             "messenger_code": "stamp-event-starfestival",
@@ -646,6 +656,27 @@
                 "poll-5.png"
             ],
             "followup": "Andy Warhol was an American artist, director and producer who was a leading figure in the visual art movement known as pop art. His works explore the relationship between artistic expression, celebrity culture, and advertising."
+        }
+    ],
+    "poll-brick": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "If you were given a new bag of legos, what would you want to build? ",
+            "choices": [
+                "A Building",
+                "A Flower",
+                "A Plane",
+                "An Animal",
+                "A Ship"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ],
+            "followup": "In 2004, at age 31, Nathan Sawaya quit his job and became a full time lego artist. Three years later he had a solo exhibition and he’s been touring his show ever since. "
         }
     ],
     "poll-fashion": [
