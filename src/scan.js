@@ -43,9 +43,7 @@ module.exports = async function handleScan(referral, event) {
             }
         } else if (scanResponse.scan.type === 'activity' || scanResponse.scan.type === 'event') {
             const triggeredActivities = scanResponse.scan.trigger;
-            console.log(triggeredActivities);
             const avaliableActivities = _.map(triggeredActivities, (activity_id) => _.find(activities.manifest, (o) => o.activity === activity_id));
-            console.log(avaliableActivities);
 
             if (utils.isNonNull(scanResponse.scan.followup) && avaliableActivities.length === 0){
                 setTimeout(() => {
@@ -62,7 +60,6 @@ module.exports = async function handleScan(referral, event) {
             if (utils.isNonNull(scanResponse.scavengerhunt)){
                 let res = scanResponse.scavengerhunt;
                 const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-                console.log(scanResponse.scavengerhunt)
                 // First get a frame out of the way --> special case
                 if (scanResponse.scan.trigger === 0) {
                     if (res.firstScan && utils.isNonNull(res.nextClue)) {

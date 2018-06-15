@@ -159,9 +159,6 @@ module.exports = function (bp) {
 			} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
 				referral = event.raw.postback.referral;
 			}
-			console.log("SCAN from fallBackHandler");
-			console.log(event);
-			console.log(event.type)
 			await handleScan(referral, event)
 		}
 	}
