@@ -18,7 +18,7 @@ module.exports = async function PollHandler(convo, event, activityName) {
 	convo.messageTypes = ['postback', 'quick_reply', 'referral']; 
 	const numQuestions = activity.length;
 	for (var i = 0; i < numQuestions; i++) {
-		const followUp = activities[activityName][i].followup;
+		const followUp = activities[activityName][i].followup || "Great!";
 		const isLastQuestion = i === numQuestions - 1;
 		const choices = activities[activityName][i].choices;
 		const images = activities[activityName][i].images;
@@ -66,7 +66,7 @@ module.exports = async function PollHandler(convo, event, activityName) {
 					const agreedWithMe = userResponses[answer];
 					const agreedWithMePercentage = Math.ceil((agreedWithMe / (totalAnswers * 1.0)) * 100);
 					if (isNaN(agreedWithMePercentage)) {
-						followUpStatement = `You're the first person to choose that!`;
+						followUpStatement = `You are the first person to choose that!`;
 					} else {
 						followUpStatement = `${agreedWithMePercentage}% of people agree with you.`;
 					}

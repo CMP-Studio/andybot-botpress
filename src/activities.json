@@ -1,62 +1,32 @@
 {
-    "howtoplay": [
-        {
-            "image": "howtoplay-1.png",
-            "title": "Learn How To Play",
-            "subtitle": "Join us at the Carnegie Museums of Pittsburgh for a Summer Adventure!"
-        },
-        {
-            "image": "howtoplay-2.png",
-            "title": "Meet Your Guide",
-            "subtitle": "Andy CarnegieBot will keep you in the loop, and keep track of your rewards."
-        },
-        {
-            "image": "howtoplay-3.png",
-            "title": "Collect Stamps",
-            "subtitle": "Look for scannable codes on signs in the museum entrances and at special events."
-        },
-        {
-            "image": "howtoplay-4.png",
-            "title": "Scan Codes",
-            "subtitle": "1. Open MESSENGER app   2. Go to PEOPLE tab   3. Tap SCAN CODE"
-        },
-        {
-            "image": "howtoplay-5.png",
-            "title": "Track Progress",
-            "subtitle": "Tap on MY ADVENTURE to view your stamps, and learn how to unlock more!"
-        },
-        {
-            "image": "howtoplay-6.png",
-            "title": "Earn Prizes",
-            "subtitle": "Visit a Carnegie Museum store to exchange your points for great prizes!"
-        },
-        {
-            "image": "howtoplay-7.png",
-            "title": "Win Big",
-            "subtitle": "CMP members can enter their stamps into the grand-prize drawing on August 25."
-        }
-    ],
     "manifest": [
         {
-            "activity": "trivia-robots",
-            "image": "trivia-robots-carousel.png",
-            "title": "Trivia | roboworld®",
-            "subtitle": "I have 6 questions for you. The topic is robots. Beep Boop.",
+            "activity": "trivia-foodscience",
+            "image": "trivia-foodscience-carousel.png",
+            "title": "Trivia | Food Science",
+            "subtitle": "5 questions inspired by food-related facts and objects found at the museums.",
+            "location": "CMP"
+        },
+        {
+            "activity": "trivia-railroad",
+            "image": "trivia-railroad-carousel.png",
+            "title": "Trivia | Miniature Railroad and Village®",
+            "subtitle": "Mini but marvelous! 6 questions about this Pittsburgh treasure.",
             "location": "CSC"
         },
         {
-            "activity": "poll-prince",
-            "image": "poll-prince-carousel.png",
-            "title": "Poll | Prince of Swords",
-            "subtitle": "What does a sculpture do to pass the time? Cast your vote!",
-            "location": "CMOA"
+            "activity": "poll-railroad",
+            "image": "poll-railroad-carousel.png",
+            "title": "Poll | Day Off",
+            "subtitle": "Get inspired by images from the Miniature Railroad and Village.",
+            "location": "CSC"
         },
         {
-            "activity": "poll-lices",
-            "image": "poll-lices-carousel.png",
-            "title": "Poll | Place des Lices",
-            "subtitle": "Take a moment to consider this lovely painting.",
-            "location": "CMOA"
+            "activity": "poll-fame",
+            "image": "polls-fame-carousel.png",
+            "title": "Poll | Fame",
+            "subtitle": "Have you ever dreamed of being famous?",
+            "location": "Warhol"
         },
         {
             "activity": "trivia-warholearly",
@@ -66,24 +36,10 @@
             "location": "Warhol"
         },
         {
-            "activity": "poll-brillo",
-            "image": "poll-brillo-carousel.png",
-            "title": "Poll | Ordinary Art",
-            "subtitle": "Think like Warhol and see who agrees!",
-            "location": "Warhol"
-        },
-        {
-            "activity": "trivia-foodart",
-            "image": "trivia-foodart-carousel.png",
-            "title": "Trivia | Food Art",
-            "subtitle": "5 questions inspired by food-related facts and objects found at the museums.",
-            "location": "CMP"
-        },
-        {
-            "activity": "trivia-mineralsgems",
-            "image": "trivia-mineralsgems-carousel.png",
-            "title": "Trivia | Hillman Hall of Minerals and Gems",
-            "subtitle": "6 questions from one of the most dazzling mineral exhibitions in the country.",
+            "activity": "trivia-dinos",
+            "image": "trivia-dinos-carousel.png",
+            "title": "Trivia | Dinosaurs In Their Time",
+            "subtitle": "6 questions from Pittsburgh’s famous (and most ferocious) collection. ",
             "location": "CMNH"
         },
         {
@@ -94,45 +50,80 @@
             "location": "CMOA"
         },
         {
-            "activity": "trivia-impressionism",
-            "image": "trivia-impressionism-carousel.png",
-            "title": "Trivia | Impressionism",
-            "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
-            "location": "CMOA"
-        },
-        {
-            "activity": "poll-iceberg",
-            "image": "poll-iceberg-carousel.png",
-            "title": "Poll | The Iceberg",
-            "subtitle": "Tell me what you think!",
-            "location": "CMOA"
-        },
-        {
-            "activity": "trivia-dinos",
-            "image": "trivia-dinos-carousel.png",
-            "title": "Trivia | Dinosaurs In Their Time",
-            "subtitle": "6 questions from Pittsburgh’s famous (and most ferocious) collection. ",
+            "activity": "poll-migrations",
+            "image": "polls-migrations-carousel.png",
+            "title": "Poll | Migrations",
+            "subtitle": "For humans and animals alike, the only constant is change.",
             "location": "CMNH"
         },
         {
-            "activity": "trivia-birds",
-            "image": "trivia-birds-carousel.png",
-            "title": "Trivia | Bird Identification",
-            "subtitle": "Can you identify the birds in these 5 photos taken at Powdermill Nature Reserve?",
-            "location": "Powdermill"
+            "activity": "trivia-foodart",
+            "image": "trivia-foodart-carousel.png",
+            "title": "Trivia | Food Art",
+            "subtitle": "5 questions inspired by food-related facts and objects found at the museums.",
+            "location": "CMP"
         },
         {
-            "activity": "trivia-wearenature",
-            "image": "trivia-wearenature-carousel.png",
-            "title": "Trivia | We Are Nature",
-            "subtitle": "Test your nature knowledge with 6 questions from this groundbreaking exhibition.",
+            "activity": "poll-warhol",
+            "image": "polls-warhol-carousel.png",
+            "title": "Poll | Iconic Andy Warhol",
+            "subtitle": "It’s difficult to pin down Andy Warhol. Tell me what you think!",
+            "location": "Warhol"
+        },
+        {
+            "activity": "poll-organs",
+            "image": "poll-organs-carousel.png",
+            "title": "Poll | Organs",
+            "subtitle": "Here’s a tough one...",
+            "location": "CSC"
+        },
+        {
+            "activity": "trivia-robots",
+            "image": "trivia-robots-carousel.png",
+            "title": "Trivia | roboworld®",
+            "subtitle": "I have 6 questions for you. The topic is robots. Beep Boop.",
+            "location": "CSC"
+        },
+        {
+            "activity": "poll-robots",
+            "image": "poll-robots-carousel.png",
+            "title": "Poll | Robots",
+            "subtitle": "How does the robot revolution leave you feeling?",
+            "location": "CSC"
+        },
+        {
+            "activity": "trivia-mineralsgems",
+            "image": "trivia-mineralsgems-carousel.png",
+            "title": "Trivia | Hillman Hall of Minerals and Gems",
+            "subtitle": "6 questions from one of the most dazzling mineral exhibitions in the country.",
             "location": "CMNH"
         },
         {
-            "activity": "trivia-warholart",
-            "image": "trivia-warhol-carousel.png",
-            "title": "Trivia | Warhol Art and Influences",
-            "subtitle": "Think you’re an Andy Warhol aficionado? Try these 6 questions.",
+            "activity": "poll-capsule",
+            "image": "polls-capsule-carousel.png",
+            "title": "Poll | Time Capsules",
+            "subtitle": "Andy Warhol created 610 Time Capsules, let us know what you collect!",
+            "location": "Warhol"
+        },
+        {
+            "activity": "trivia-design",
+            "image": "trivia-design-carousel.png",
+            "title": "Trivia | Decorative Arts and Design",
+            "subtitle": "Design is all around you. These 5 questions should be a breeze, right?",
+            "location": "CMOA"
+        },
+        {
+            "activity": "poll-wearenature",
+            "image": "poll-wearenature-carousel.png",
+            "title": "Poll | We Are Nature",
+            "subtitle": "An important question awaits you!",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-brillo",
+            "image": "poll-brillo-carousel.png",
+            "title": "Poll | Ordinary Art",
+            "subtitle": "Think like Warhol and see who agrees!",
             "location": "Warhol"
         },
         {
@@ -143,25 +134,95 @@
             "location": "CMOA"
         },
         {
-            "activity": "trivia-railroad",
-            "image": "trivia-railroad-carousel.png",
-            "title": "Trivia | Miniature Railroad and Village®",
-            "subtitle": "Mini but marvelous! 6 questions about this Pittsburgh treasure.",
-            "location": "CSC"
+            "activity": "poll-colors",
+            "image": "poll-colors-carousel.png",
+            "title": "Poll | Colors",
+            "subtitle": "A poll inspired by our gems and minerals!",
+            "location": "CMNH"
         },
         {
-            "activity": "trivia-design",
-            "image": "trivia-design-carousel.png",
-            "title": "Trivia | Decorative Arts and Design",
-            "subtitle": "Design is all around you. These 5 questions should be a breeze, right?",
+            "activity": "poll-artmaking",
+            "image": "poll-artmaking-carousel.png",
+            "title": "Poll | Art Making",
+            "subtitle": "Doesn’t a visit to an art museum leave you inspired!?",
+            "location": "Warhol"
+        },
+        {
+            "activity": "trivia-wearenature",
+            "image": "trivia-wearenature-carousel.png",
+            "title": "Trivia | We Are Nature",
+            "subtitle": "Test your nature knowledge with 6 questions from this groundbreaking exhibition.",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-prince",
+            "image": "poll-prince-carousel.png",
+            "title": "Poll | Prince of Swords",
+            "subtitle": "What does a sculpture do to pass the time? Cast your vote!",
             "location": "CMOA"
         },
         {
-            "activity": "trivia-foodscience",
-            "image": "trivia-foodscience-carousel.png",
-            "title": "Trivia | Food Science",
-            "subtitle": "5 questions inspired by food-related facts and objects found at the museums.",
-            "location": "CMP"
+            "activity": "poll-airhockey",
+            "image": "poll-airhockey-carousel.png",
+            "title": "Poll | Air Hockey Bot 1000",
+            "subtitle": "Are you up to the challenge?",
+            "location": "CSC"
+        },
+        {
+            "activity": "trivia-impressionism",
+            "image": "trivia-impressionism-carousel.png",
+            "title": "Trivia | Impressionism",
+            "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
+            "location": "CMOA"
+        },
+        {
+            "activity": "poll-fashion",
+            "image": "polls-fashion-carousel.png",
+            "title": "Poll | Fashion",
+            "subtitle": "Andy Warhol loved fashion, do you?",
+            "location": "Warhol"
+        },
+        {
+            "activity": "trivia-sports",
+            "image": "trivia-sports-carousel.png",
+            "title": "Trivia | Sport Science",
+            "subtitle": "5 questions from the insanely fun SportsWorks® building at the Science Center!",
+            "location": "CSC"
+        },
+        {
+            "activity": "trivia-warholart",
+            "image": "trivia-warhol-carousel.png",
+            "title": "Trivia | Warhol Art and Influences",
+            "subtitle": "Think you’re an Andy Warhol aficionado? Try these 6 questions.",
+            "location": "Warhol"
+        },
+        {
+            "activity": "poll-mummies",
+            "image": "poll-mummies-carousel.png",
+            "title": "Poll | Mummies",
+            "subtitle": "Cast your vote to help us wrap up this poll.  ",
+            "location": "CMNH"
+        },
+        {
+            "activity": "trivia-birds",
+            "image": "trivia-birds-carousel.png",
+            "title": "Trivia | Bird Identification",
+            "subtitle": "Can you identify the birds in these 5 photos taken at Powdermill Nature Reserve?",
+            "location": "Powdermill"
+        },
+        {
+            "activity": "poll-iceberg",
+            "image": "poll-iceberg-carousel.png",
+            "title": "Poll | The Iceberg",
+            "subtitle": "Tell me what you think!",
+            "location": "CMOA"
+        },
+        {
+            "activity": "poll-movies",
+            "image": "polls-movies-carousel.png",
+            "title": "Poll | Films",
+            "subtitle": "Warhol’s unique films let us dream of the types of movie we could make...",
+            "location": "Warhol"
         },
         {
             "activity": "trivia-flowers",
@@ -171,11 +232,380 @@
             "location": "Powdermill"
         },
         {
-            "activity": "trivia-sports",
-            "image": "trivia-sports-carousel.png",
-            "title": "Trivia | Sport Science",
-            "subtitle": "5 questions from the insanely fun SportsWorks® building at the Science Center!",
+            "activity": "poll-namingdinos",
+            "image": "poll-namingdinos-carousel.png",
+            "title": "Poll | Dinosaur Names",
+            "subtitle": "Tell me what you think!",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-space",
+            "image": "poll-space-carousel.png",
+            "title": "Poll | Space Exploration",
+            "subtitle": "The final frontier. What will we find out in space?!",
             "location": "CSC"
+        },
+        {
+            "activity": "poll-lices",
+            "image": "poll-lices-carousel.png",
+            "title": "Poll | Place des Lices",
+            "subtitle": "Take a moment to consider this lovely painting.",
+            "location": "CMOA"
+        },
+        {
+            "activity": "poll-starfestival",
+            "image": "polls-starfestival-carousel.png",
+            "title": "Poll | Star Festival ",
+            "subtitle": "Wish upon a star.",
+            "location": "CMOA"
+        },
+        {
+            "activity": "poll-eveningfashion",
+            "image": "polls-eveningfashion-carousel.png",
+            "title": "Poll | 50’s Fashion",
+            "subtitle": "One important rule of fashion: Accessorize!",
+            "location": "Warhol"
+        },
+        {
+            "activity": "poll-icecream",
+            "image": "polls-icecream-carousel.png",
+            "title": "Poll | Ice Cream",
+            "subtitle": "Don’t tell me you don’t love ice cream.",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-birthday",
+            "image": "polls-birthday-carousel.png",
+            "title": "Poll | Birthday Traditions",
+            "subtitle": "This summer, we’re celebrating Andy Warhol’s 90th birthday! ",
+            "location": "Warhol"
+        },
+        {
+            "activity": "poll-pollinator",
+            "image": "polls-pollinator-carousel.png",
+            "title": "Poll | Oh, Honey! ",
+            "subtitle": "Inspired by bees! You know, ’poll’inators...!",
+            "location": "Powdermill"
+        },
+        {
+            "activity": "poll-outdoorart",
+            "image": "polls-outdoorart-carousel.png",
+            "title": "Poll | Artwork Outdoors",
+            "subtitle": "I wanna know what you like!",
+            "location": "CMOA"
+        },
+        {
+            "activity": "poll-bid",
+            "image": "polls-bid-carousel.png",
+            "title": "Poll | Art Auction",
+            "subtitle": "You’ve got a couple million burning a hole in your pocket. Right?",
+            "location": "CMOA"
+        },
+        {
+            "activity": "poll-gems",
+            "image": "polls-gems-carousel.png",
+            "title": "Poll | Gifts That Sparkle",
+            "subtitle": "Pick an item from the Wertz Gallery.",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-safari",
+            "image": "poll-safari-carousel.png",
+            "title": "Poll | Cute Critters",
+            "subtitle": "Tell me what you think!",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-egypt",
+            "image": "poll-egypt-carousel.png",
+            "title": "Poll | Ancient Egypt",
+            "subtitle": "Go back in time...and tell me your answer!",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-harrypotter",
+            "image": "polls-harrypotter-carousel.png",
+            "title": "Poll | Sorting Hat",
+            "subtitle": "Join us for a magical After Dark event.",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-scientists",
+            "image": "polls-scientists-carousel.png",
+            "title": "Poll | Scientist Takeover",
+            "subtitle": "There are many branches of science, which do you love most!?",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-cats",
+            "image": "polls-cats-carousel.png",
+            "title": "Poll | Meowfest",
+            "subtitle": "A sensational poll about cats!",
+            "location": "CMNH"
+        },
+        {
+            "activity": "poll-trivianight",
+            "image": "polls-trivianight-carousel.png",
+            "title": "Poll | Summer Adventure",
+            "subtitle": "I want to know what you’re enjoying this summer!",
+            "location": "CMNH"
+        }
+    ],
+    "scan": [
+        {
+            "messenger_code": "stamp-checkin-oakland",
+            "location": "CMNH",
+            "type": "checkin"
+        },
+        {
+            "messenger_code": "stamp-checkin-csc",
+            "location": "CSC",
+            "type": "checkin"
+        },
+        {
+            "messenger_code": "stamp-checkin-warhol",
+            "location": "Warhol",
+            "type": "checkin"
+        },
+        {
+            "messenger_code": "stamp-checkin-powdermill",
+            "location": "Powdermill",
+            "type": "checkin"
+        },
+        {
+            "messenger_code": "stamp-event-grandopening",
+            "location": "CSC",
+            "type": "event",
+            "trigger": []
+        },
+        {
+            "messenger_code": "stamp-event-starfestival",
+            "location": "CMOA",
+            "type": "event",
+            "trigger": [
+                "poll-starfestival"
+            ],
+            "followup": "Enjoy the Star Festival! And tell us what you think in this fun poll!"
+        },
+        {
+            "messenger_code": "stamp-event-fashion",
+            "location": "Warhol",
+            "type": "event",
+            "trigger": [
+                "poll-eveningfashion"
+            ],
+            "followup": "Enjoy your Evening of Fashion! And tell us what you think in this fun poll!"
+        },
+        {
+            "messenger_code": "stamp-event-icecream",
+            "location": "CMNH",
+            "type": "event",
+            "trigger": [
+                "poll-icecream"
+            ],
+            "followup": "Enjoy your ice cream! And tell us what you think in this fun poll!"
+        },
+        {
+            "messenger_code": "stamp-event-birthday",
+            "location": "Warhol",
+            "type": "event",
+            "trigger": [
+                "poll-birthday"
+            ],
+            "followup": "Happy Birthday Andy! Tell us what you think in this fun poll!"
+        },
+        {
+            "messenger_code": "stamp-event-pollinatorfestival",
+            "location": "Powdermill",
+            "type": "event",
+            "trigger": [
+                "poll-pollinator"
+            ],
+            "followup": "Enjoy the festival! And tell us what you think in this fun poll!"
+        },
+        {
+            "messenger_code": "stamp-event-membertours",
+            "location": "CMP",
+            "type": "event",
+            "trigger": [
+                "poll-outdoorart",
+                "poll-bid",
+                "poll-gems",
+                "poll-safari",
+                "poll-egypt"
+            ],
+            "followup": "Enjoy the event! Also, try out a fun poll inspired by one of this summer’s Member Tours!"
+        },
+        {
+            "messenger_code": "stamp-event-sciencesaturdays",
+            "location": "CMNH",
+            "type": "event",
+            "trigger": [
+                "poll-scientists",
+                "poll-cats"
+            ],
+            "followup": "Enjoy the event! Also, try out a fun poll inspired by one of this summer’s Super Science Saturdays!"
+        },
+        {
+            "messenger_code": "stamp-event-adults",
+            "location": "CMP",
+            "type": "event",
+            "trigger": [
+                "poll-harrypotter"
+            ],
+            "followup": "Enjoy the event! Also, try out a fun poll inspired by one of this summer’s Evenings For Adults!"
+        },
+        {
+            "messenger_code": "stamp-event-trivianight",
+            "location": "CMNH",
+            "type": "event",
+            "trigger": [
+                "poll-trivianight"
+            ],
+            "followup": "Enjoy the event! And tell us what you thought of Summer Adventure with this poll!"
+        },
+        {
+            "messenger_code": "activities-lunchtime",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "trivia-foodscience",
+                "trivia-foodart"
+            ],
+            "followup": "🍔 Thanks for inviting me to lunch. Want to sprinkle some trivia on that?"
+        },
+        {
+            "messenger_code": "parking-cmnh",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "trivia-dinos",
+                "trivia-mineralsgems",
+                "trivia-wearenature",
+                "trivia-architecture",
+                "trivia-design"
+            ],
+            "followup": "🚗 Thanks for the ride! Want to try out some trivia?"
+        },
+        {
+            "messenger_code": "parking-csc",
+            "location": "CSC",
+            "type": "activity",
+            "trigger": [
+                "trivia-railroad",
+                "trivia-sports",
+                "trivia-robots"
+            ],
+            "followup": "🚗 Thanks for the ride! Want to try out some trivia?"
+        },
+        {
+            "messenger_code": "scavengerhunt-1",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 1
+        },
+        {
+            "messenger_code": "scavengerhunt-2",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 2
+        },
+        {
+            "messenger_code": "scavengerhunt-3",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 3
+        },
+        {
+            "messenger_code": "scavengerhunt-4",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 4
+        },
+        {
+            "messenger_code": "scavengerhunt-5",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 5
+        },
+        {
+            "messenger_code": "scavengerhunt-6",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 6
+        },
+        {
+            "messenger_code": "scavengerhunt-7",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 7
+        },
+        {
+            "messenger_code": "scavengerhunt-8",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 8
+        },
+        {
+            "messenger_code": "scavengerhunt-9",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 9
+        },
+        {
+            "messenger_code": "scavengerhunt-10",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 10
+        },
+        {
+            "messenger_code": "scavengerhunt-11",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 11
+        },
+        {
+            "messenger_code": "scavengerhunt-0",
+            "location": "CMNH",
+            "type": "scavengerhunt",
+            "trigger": 0
+        }
+    ],
+    "howtoplay": [
+        {
+            "image": "howtoplay-1.png",
+            "title": "1. Learn How To Play",
+            "subtitle": "Join us at the Carnegie Museums of Pittsburgh for a Summer Adventure!"
+        },
+        {
+            "image": "howtoplay-2.png",
+            "title": "2. Meet Your Guide",
+            "subtitle": "Andy CarnegieBot will keep you in the loop, and keep track of your rewards."
+        },
+        {
+            "image": "howtoplay-3.png",
+            "title": "3. Collect Stamps",
+            "subtitle": "Look for scannable codes on signs in the museum entrances and at special events."
+        },
+        {
+            "image": "howtoplay-4.png",
+            "title": "4. Scan Codes",
+            "subtitle": "1. Open MESSENGER app   2. Go to PEOPLE tab   3. Tap SCAN CODE"
+        },
+        {
+            "image": "howtoplay-5.png",
+            "title": "5. Track Progress",
+            "subtitle": "Tap on MY ADVENTURE to view your stamps, and learn how to unlock more!"
+        },
+        {
+            "image": "howtoplay-6.png",
+            "title": "6. Earn Prizes",
+            "subtitle": "Visit a Carnegie Museum store to exchange your points for great prizes!"
+        },
+        {
+            "image": "howtoplay-7.png",
+            "title": "7. Win Big",
+            "subtitle": "CMP members can enter their stamps into the grand-prize drawing on August 25."
         }
     ],
     "poll-gallery": [
@@ -195,6 +625,604 @@
                 "poll-4.png"
             ],
             "followup": "Kerry James Marshall, is a living artist who is best known for portraits such as this one. He draws from the canon and history of art, specifically painting, as references for pose and composition."
+        }
+    ],
+    "poll-warhol": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "When I think of Warhol I think of…",
+            "choices": [
+                "Funny Hair",
+                "Bananas",
+                "Flowers",
+                "Soup",
+                "Celebrities"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ],
+            "followup": "Andy Warhol was an American artist, director and producer who was a leading figure in the visual art movement known as pop art. His works explore the relationship between artistic expression, celebrity culture, and advertising."
+        }
+    ],
+    "poll-fashion": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "You have a blank check to spend on a single item of clothing, which do you choose?",
+            "choices": [
+                "Dress",
+                "Bow Tie Set",
+                "Suit",
+                "Pair of Shoes",
+                "Hat"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ],
+            "followup": "Throughout his career, Andy Warhol worked for artistic directors, attended fashion shows, befriended designers and style icons and late in his career, modeled clothing and accessories for the runway and print."
+        }
+    ],
+    "poll-fame": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "How famous would you want to be?",
+            "choices": [
+                "Notorious",
+                "World Famous",
+                "Known by Few",
+                "A Hermit"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ],
+            "followup": "Warhol was infatuated with Hollywood celebrity and fame since childhood. Warhol achieved stardom, and helped others do the same, realizing his expression, ’In the future, everyone will be world-famous for 15 minutes.’"
+        }
+    ],
+    "poll-capsule": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "What objects do you like to collect?",
+            "choices": [
+                "Stamps",
+                "Coins",
+                "Foreign Currency",
+                "Bottle Caps",
+                "Pokémon Cards",
+                "Summer Adventure Stamps"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png",
+                "poll-6.png"
+            ],
+            "followup": "Warhol selected items from the daily flood of correspondence, magazines, gifts, photographs, business records, and material that passed through his hands to put in an open cardboard box by his desk. Once the box was full, he sealed it with tape, marked it with a date, and put it in his archive."
+        }
+    ],
+    "poll-artmaking": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "Which is your favorite art making technique?",
+            "choices": [
+                "Drawing",
+                "Sculpture",
+                "Mixed Media",
+                "Computer Art",
+                "Printmaking",
+                "Painting"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png",
+                "poll-6.png"
+            ],
+            "followup": "In college, Warhol developed a blotted-line technique that combined drawing with basic printmaking. Blotted line allowed him to create a variety of illustrations using the same initial pattern. This was the beginning of his lifelong interest in quickly creating multiples!"
+        }
+    ],
+    "poll-starfestival": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "If you could be granted a wish for one of the following, which would you choose?",
+            "choices": [
+                "Health",
+                "Happiness",
+                "Adventure",
+                "Wealth",
+                "Love"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ]
+        }
+    ],
+    "poll-airhockey": [
+        {
+            "image": "poll-airhockey.png",
+            "question": "Do you think you can win air hockey against this robot? ",
+            "choices": [
+                "Yes!",
+                "Maybe.",
+                "Nope."
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png"
+            ],
+            "followup": "For all its fast action, the Air Hockey Bot 1000 is very simple. By focusing all of its technology on one task (playing air hockey), the robot can often outperform humans, but challenge it to do something else, like playing ping pong or checkers, and you’ll win every time. "
+        }
+    ],
+    "poll-railroad": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "You get a day off and the first thing you want to do is...",
+            "choices": [
+                "Stay home and chill",
+                "Go to the amusement park",
+                "Watch baseball",
+                "Go out to eat",
+                "Have an adventure"
+            ],
+            "images": [
+                "poll-railroad-1.png",
+                "poll-railroad-2.png",
+                "poll-railroad-3.png",
+                "poll-railroad-4.png",
+                "poll-railroad-5.png"
+            ],
+            "followup": "All of those images were from the Miniature Railroad and Village which captures what it was like in western Pennsylvania from the early 1900s to the 1940s. The layout represents important manufacturers, cultural icons, and architectural masterpieces."
+        }
+    ],
+    "poll-eveningfashion": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "Which 1950s fashion accessory would you be most likely to wear? ",
+            "choices": [
+                "Fedora",
+                "Saddle Shoes",
+                "Neck Scarf",
+                "Gloves",
+                "Letterman Jacket"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ]
+        }
+    ],
+    "poll-icecream": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "What is your ice cream sundae topping of choice?",
+            "choices": [
+                "Sprinkles",
+                "Whipped Cream",
+                "Hot Fudge",
+                "Nuts",
+                "Fruit",
+                "Caramel"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png",
+                "poll-6.png"
+            ],
+            "followup": "While there are many rumours about who invented ice cream, there has been little research done to prove the treat’s true origins. The first known mention of ice cream being served was from the Chinese Mogul court in the 14th century."
+        }
+    ],
+    "poll-pollinator": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "What is your favorite way to enjoy honey?",
+            "choices": [
+                "All by itself",
+                "Honey Nut Cheerios",
+                "Baklava",
+                "On biscuits",
+                "On ice cream",
+                "In Tea"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png",
+                "poll-6.png"
+            ]
+        }
+    ],
+    "poll-outdoorart": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": " Which of these outdoor artworks would you commission for your yard?",
+            "choices": [
+                "Spoonbridge and Cherry by Claes Oldenburg and Coosje van Bruggen",
+                "Cloud Gate by Sir Anish Kapoor",
+                "LOVE by Robert Indiana"
+            ],
+            "images": [
+                "poll-outdoorart-1.png",
+                "poll-outdoorart-2.png",
+                "poll-outdoorart-3.png"
+            ]
+        }
+    ],
+    "poll-gems": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "Which of these gems would you wear or give as a gift?",
+            "choices": [
+                "Quartz variety, citrine, and opal",
+                "Grossular variety, tsavorite, and diamond",
+                "Corundum variety sapphire, and diamond",
+                "Quartz variety, flint, and carnelian"
+            ],
+            "images": [
+                "polls-gems-1.png",
+                "polls-gems-2.png",
+                "polls-gems-3.png",
+                "polls-gems-4.png"
+            ]
+        }
+    ],
+    "poll-safari": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "Which of these small mammals would you keep as a pet?",
+            "choices": [
+                "Meerkat",
+                "Pika",
+                "Aardvark",
+                "Fennec Fox"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ]
+        }
+    ],
+    "poll-egypt": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "Which ancient Egyptian god or goddess would you be?",
+            "choices": [
+                "Bast, the cat goddess",
+                "Set, the god of chaos",
+                "Ma’at, the goddess of justice",
+                "Sobek, the crocodile god"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ]
+        }
+    ],
+    "poll-harrypotter": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "Which Hogwarts house would you be sorted into?",
+            "choices": [
+                "Hufflepuff",
+                "Gryffindor",
+                "Slytherin",
+                "Ravenclaw"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ]
+        }
+    ],
+    "poll-scientists": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "What type of scientist would you want to be?",
+            "choices": [
+                "Anthropologist",
+                "Paleontologist",
+                "Geologist",
+                "Herpetologist"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ]
+        }
+    ],
+    "poll-cats": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "What is the most compelling reason cats make the best pets?",
+            "choices": [
+                "Photogenic",
+                "Low Maintenance",
+                "Independent",
+                "Smart"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ],
+            "followup": " Cats may have only recently taken over the internet, but cat ownership dates back thousands of years. The ancient egyptians loved their pet cats, they even mummified them and imposed the death penalty for any one who killed one."
+        }
+    ],
+    "poll-trivianight": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "What was your favorite summer adventure event?",
+            "choices": [
+                "Star Festival",
+                "A Member Tour",
+                "Andy’s Birthday ",
+                "Super Science Saturday",
+                "An Adult Evening",
+                "Trivia Night"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png",
+                "poll-6.png"
+            ]
+        }
+    ],
+    "poll-bid": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "Which of these artworks recently sold at auction would you bid on?",
+            "choices": [
+                "La Jeune Fille Sophisttiquée by Constantin Brancusi",
+                "Past Times by Kerry James Marshall",
+                "Flesh and Spirit by Jean-Michael Basquiat",
+                "Suprematist Composition by Kazimir Malevich"
+            ],
+            "images": [
+                "polls-bid-1.png",
+                "polls-bid-2.png",
+                "polls-bid-3.png",
+                "polls-bid-4.png"
+            ]
+        }
+    ],
+    "poll-birthday": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "How do you like to celebrate your birthday?",
+            "choices": [
+                "Having a party",
+                "Cooking a delicious dinner",
+                "Opening presents",
+                "Eating cake",
+                "Binge-watching your favorite TV show"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png",
+                "poll-5.png"
+            ]
+        }
+    ],
+    "poll-colors": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "My favorite color is...",
+            "choices": [
+                "Yellow",
+                "Green",
+                "Orange",
+                "Blue",
+                "Pink",
+                "Purple"
+            ],
+            "images": [
+                "poll-colors-1.png",
+                "poll-colors-2.png",
+                "poll-colors-3.png",
+                "poll-colors-4.png",
+                "poll-colors-5.png",
+                "poll-colors-6.png"
+            ],
+            "followup": "Color is one of the most obvious properties of gems and minerals, but the causes are complex. Sometimes color is related to a mineral’s crystal structure, as in the case of graphite and diamond. Sometimes color is related to chemical composition, as in the case of the greens in copper."
+        }
+    ],
+    "poll-space": [
+        {
+            "image": "poll-space.png",
+            "question": "Where might humans go next?",
+            "choices": [
+                "Mars",
+                "Pluto",
+                "Kamino",
+                "Saturn",
+                "Gliese 667 Cc"
+            ],
+            "images": [
+                "poll-space-1.png",
+                "poll-space-2.png",
+                "poll-space-3.png",
+                "poll-space-4.png",
+                "poll-space-5.png"
+            ],
+            "followup": "We don’t know exactly where the Canyon Diablo Meteorite came from, but it landed on our planet 50,000 years ago. Objects like the meteorite have inspired wonder about outer space for generations."
+        }
+    ],
+    "poll-robots": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "How likely do you think the robot apocalypse is?",
+            "choices": [
+                "Inevitable",
+                "*Shrug*",
+                "Can be Avoided",
+                "Never happening"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ],
+            "followup": "In 1921 the term ’robot’ was first used in a play called Rossum’s Universal Robots by the Czech writer Karel Capek. The plot was simple: man makes robot then robot kills man!"
+        }
+    ],
+    "poll-organs": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "If you had to pick one, which organ would you go without?",
+            "choices": [
+                "Spleen",
+                "Stomach",
+                "Gallbladder",
+                "A Kidney"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ],
+            "followup": "Our body functions are carried out by systems — groups of organs that work together. All of our organs have important jobs, but you can live without most of them."
+        }
+    ],
+    "poll-movies": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "What genre of movies would you want to make?",
+            "choices": [
+                "Documentary",
+                "Horror",
+                "Drama",
+                "Comedy",
+                "Avant Garde"
+            ],
+            "images": [
+                "poll-movies-1.png",
+                "poll-movies-2.png",
+                "poll-movies-3.png",
+                "poll-movies-4.png",
+                "poll-movies-5.png"
+            ],
+            "followup": "Andy Warhol’s performers were not professional actors, but charismatic personalities who gravitated to the artist’s circle. ’I only wanted to find great people and let them be themselves… and that would be the movie’."
+        }
+    ],
+    "poll-migrations": [
+        {
+            "image": "polls-migrations.png",
+            "question": "The biggest move I’ve made is...",
+            "choices": [
+                "In State",
+                "To a New State",
+                "To a New Country",
+                "Never Moved"
+            ],
+            "images": [
+                "poll-1.png",
+                "poll-2.png",
+                "poll-3.png",
+                "poll-4.png"
+            ],
+            "followup": "Every year, the Arctic Tern flies up to 25,000 miles to travel from the Arctic to Antarctica—the longest migration route of any species in the animal kingdom."
+        }
+    ],
+    "poll-namingdinos": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "If I could have any dinosaur named after me it would be the…",
+            "choices": [
+                "Triceratops Prorsus",
+                "Pachycephalosaurus Wyomingensis",
+                "Tyrannosaurus Rex",
+                "Psittacosaurus",
+                "Coelophysis Bauri"
+            ],
+            "images": [
+                "poll-namingdinos-1.png",
+                "poll-namingdinos-2.png",
+                "poll-namingdinos-3.png",
+                "poll-namingdinos-4.png",
+                "poll-namingdinos-5.png"
+            ],
+            "followup": "When Andrew Carnegie read the newspaper headline, ’MOST COLOSSAL ANIMAL EVER ON EARTH JUST FOUND OUT WEST.’ He sent a note to the director of the Carnegie Museums, requesting that he purchase it. That dinosaur is now named the Diplodocus Carnegii."
+        }
+    ],
+    "poll-mummies": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "When I think of mummies, I think of…",
+            "choices": [
+                "Halloween",
+                "King Tutankhamun",
+                "Ramesses II",
+                "Vladimir Lenin"
+            ],
+            "images": [
+                "poll-mummies-1.png",
+                "poll-mummies-2.png",
+                "poll-mummies-3.png",
+                "poll-mummies-4.png"
+            ],
+            "followup": "All ancient Egyptians possessed a strong desire for eternal survival in the afterlife. Mummification, the preparation of the body, was done to make a permanent house for an individual‘s ka or spirit. "
+        }
+    ],
+    "poll-wearenature": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "I am protecting the planet by...",
+            "choices": [
+                "Riding my Bike",
+                "Composting",
+                "Eating less Beef",
+                "Reusing",
+                "Supporting Renewable Energy"
+            ],
+            "images": [
+                "poll-wearenature-1.png",
+                "poll-wearenature-2.png",
+                "poll-wearenature-3.png",
+                "poll-wearenature-4.png",
+                "poll-wearenature-5.png"
+            ],
+            "followup": "Challenges like climate change, habitat alteration,soaring population, and species extinction are taking place on a very large scale. Your actions connect to larger systems that affect environmental and social change."
         }
     ],
     "poll-lices": [
@@ -281,41 +1309,6 @@
             "followup": "In the mid-1960s Andy Warhol’s caused controversy with his ’Brillo Box’ sculptures. In reference to his boxes, Warhol later said that he ’wanted something ordinary,’ and it was this mundane, commercial subject matter that infuriated the critics."
         }
     ],
-    "faq": [
-        {
-            "question": "What is a Chatbot?"
-        },
-        {
-            "question": "How do I scan a code? "
-        },
-        {
-            "question": "Can you tell me a joke?"
-        },
-        {
-            "question": "Who are you? "
-        },
-        {
-            "question": "What is Summer Adventure?"
-        },
-        {
-            "question": "Where are the Carnegie Museums?"
-        },
-        {
-            "question": "How do I play? "
-        },
-        {
-            "question": "What can you do?"
-        },
-        {
-            "question": "What do you do? "
-        },
-        {
-            "question": "Where is the Trivia?"
-        },
-        {
-            "question": "Where are the polls?"
-        }
-    ],
     "schedule": [
         {
             "id": "event-goodfridays",
@@ -400,6 +1393,16 @@
             "when": "July 7, 12:30–4:30 pm"
         },
         {
+            "id": "event-cmoamembertour-publicart",
+            "stamp_id": "stamp-event-membertours",
+            "event": "Member Tour: Fresh Air, Public Art",
+            "image": "event-carousel-cmoamembertours.png",
+            "location": "CMOA",
+            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
+            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78920&view=Detail",
+            "when": "July 8, 2–3pm"
+        },
+        {
             "id": "event-fashion",
             "stamp_id": "stamp-event-fashion",
             "event": "Evening of Fashion",
@@ -419,16 +1422,6 @@
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
             "url": "http://members.carnegiemuseums.org/site/Calendar?id=78921&view=Detail",
             "when": "July 14, 2–3pm"
-        },
-        {
-            "id": "event-cmoamembertour-publicart",
-            "stamp_id": "stamp-event-membertours",
-            "event": "Member Tour: Fresh Air, Public Art",
-            "image": "event-carousel-cmoamembertours.png",
-            "location": "CMOA",
-            "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "http://members.carnegiemuseums.org/site/Calendar?id=78920&view=Detail",
-            "when": "July 15, 2–3pm"
         },
         {
             "id": "event-icecream",
@@ -773,237 +1766,6 @@
             "multiple": "false "
         }
     ],
-    "scan": [
-        {
-            "messenger_code": "stamp-checkin-oakland",
-            "location": "CMNH",
-            "type": "checkin"
-        },
-        {
-            "messenger_code": "stamp-checkin-csc",
-            "location": "CSC",
-            "type": "checkin"
-        },
-        {
-            "messenger_code": "stamp-checkin-warhol",
-            "location": "Warhol",
-            "type": "checkin"
-        },
-        {
-            "messenger_code": "stamp-checkin-powdermill",
-            "location": "Powdermill",
-            "type": "checkin"
-        },
-        {
-            "messenger_code": "stamp-event-grandopening",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-starfestival",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-fashion",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-icecream",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-birthday",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-pollinatorfestival",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-membertours",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-sciencesaturdays",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-adults",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "stamp-event-trivianight",
-            "location": "CMNH",
-            "type": "event"
-        },
-        {
-            "messenger_code": "trivia-mineralsgems",
-            "location": "CMNH",
-            "type": "activity",
-            "trigger": [
-                "trivia-mineralsgems"
-            ]
-        },
-        {
-            "messenger_code": "trivia-dinos",
-            "location": "CMNH",
-            "type": "activity",
-            "trigger": [
-                "trivia-dinos"
-            ]
-        },
-        {
-            "messenger_code": "trivia-wearenature",
-            "location": "CMNH",
-            "type": "activity",
-            "trigger": [
-                "trivia-wearenature"
-            ]
-        },
-        {
-            "messenger_code": "trivia-flowers",
-            "location": "CMNH",
-            "type": "activity",
-            "trigger": [
-                "trivia-flowers"
-            ]
-        },
-        {
-            "messenger_code": "trivia-architecture",
-            "location": "CMNH",
-            "type": "activity",
-            "trigger": [
-                "trivia-architecture"
-            ]
-        },
-        {
-            "messenger_code": "trivia-design",
-            "location": "CMNH",
-            "type": "activity",
-            "trigger": [
-                "trivia-design"
-            ]
-        },
-        {
-            "messenger_code": "paper-map",
-            "location": "Offsite",
-            "type": "activity"
-        },
-        {
-            "messenger_code": "activities-lunchtime",
-            "location": "CMNH",
-            "type": "activity",
-            "trigger": [
-                "trivia-foodscience",
-                "trivia-foodart"
-            ],
-            "followup": "🍔 Thanks for inviting me to lunch. Want to sprinkle some trivia on that?"
-        },
-        {
-            "messenger_code": "parking-cmnh",
-            "location": "CMNH",
-            "type": "activity",
-            "trigger": [
-                "trivia-dinos",
-                "trivia-mineralsgems",
-                "trivia-wearenature",
-                "trivia-architecture",
-                "trivia-design"
-            ],
-            "followup": "🚗 Thanks for the ride! Want to try out some trivia?"
-        },
-        {
-            "messenger_code": "parking-csc",
-            "location": "CSC",
-            "type": "activity",
-            "trigger": [
-                "trivia-railroad",
-                "trivia-sports",
-                "trivia-robots"
-            ],
-            "followup": "🚗 Thanks for the ride! Want to try out some trivia?"
-        },
-        {
-            "messenger_code": "scavengerhunt-1",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 1
-        },
-        {
-            "messenger_code": "scavengerhunt-2",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 2
-        },
-        {
-            "messenger_code": "scavengerhunt-3",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 3
-        },
-        {
-            "messenger_code": "scavengerhunt-4",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 4
-        },
-        {
-            "messenger_code": "scavengerhunt-5",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 5
-        },
-        {
-            "messenger_code": "scavengerhunt-6",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 6
-        },
-        {
-            "messenger_code": "scavengerhunt-7",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 7
-        },
-        {
-            "messenger_code": "scavengerhunt-8",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 8
-        },
-        {
-            "messenger_code": "scavengerhunt-9",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 9
-        },
-        {
-            "messenger_code": "scavengerhunt-10",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 10
-        },
-        {
-            "messenger_code": "scavengerhunt-11",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 11
-        },
-        {
-            "messenger_code": "scavengerhunt-0",
-            "location": "CMNH",
-            "type": "scavengerhunt",
-            "trigger": 0
-        }
-    ],
     "trivia-railroad": [
         {
             "text": "The Miniature Railroad and Village® was displayed for the first time ever in ____ by its creator Charles Bowdish.",
@@ -1177,7 +1939,7 @@
     ],
     "trivia-robots": [
         {
-            "text": "What year was the term “robot” invented?",
+            "text": "What year was the term \"robot\" invented?",
             "image": "trivia-robots-5.png",
             "difficulty": 2,
             "answer": 1920,
@@ -1221,7 +1983,7 @@
             "followup": "In 1961, it was Devol and Engelberger’s UNIMATE."
         },
         {
-            "text": "What is the name of this robot, who was introduced in the class sci-fi film “Metropolis”?",
+            "text": "What is the name of this robot, who was introduced in the class sci-fi film \"Metropolis\"?",
             "image": "trivia-robots-4.png",
             "difficulty": 1,
             "answer": "Maria",
@@ -1349,12 +2111,12 @@
                 "Salesman",
                 "Photographer"
             ],
-            "followup": "His first commercial work appeared in a 1949 issue of Glamour magazine, in which he illustrated a story called “What is Success?”"
+            "followup": "His first commercial work appeared in a 1949 issue of Glamour magazine, in which he illustrated a story called \"What is Success?\""
         }
     ],
     "trivia-warholart": [
         {
-            "text": "Warhol said: “I always notice ___________.”",
+            "text": "Warhol said: \"I always notice ___________.\"",
             "difficulty": 2,
             "answer": "Flowers",
             "incorrect": [
@@ -1657,7 +2419,7 @@
             "followup": "The Rococo style is characterized by asymmetrical compositions of sensuous S- and C-shaped curves and the use of naturalistic motifs, such as rocks, shells, and foliage."
         },
         {
-            "text": "The swelling, curved lower section of this furniture is described as ____________, a term derived from a French word that means “to bulge”.",
+            "text": "The swelling, curved lower section of this furniture is described as ____________, a term derived from a French word that means \"to bulge\".",
             "image": "trivia-design-4.png",
             "difficulty": 2,
             "answer": "Bombé",
@@ -1692,7 +2454,7 @@
     ],
     "trivia-dinos": [
         {
-            "text": "What kind of dinosaur is “Dippy,” who appears in Carnegie Museum of Natural History’s logo?",
+            "text": "What kind of dinosaur is \"Dippy,\" who appears in Carnegie Museum of Natural History’s logo?",
             "image": "trivia-dinos-10.png",
             "difficulty": 1,
             "answer": "Diplodocus",

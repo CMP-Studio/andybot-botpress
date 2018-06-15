@@ -186,7 +186,6 @@ module.exports = function (bp) {
 	eventHandlers.stopConvo = stopConvo;
 	eventHandlers.startActivity = startActivity;
 	eventHandlers.sendScavengerHuntHint = sendScavengerHuntHint;
-	eventHandlers.prizes = prizes;
 };
 
 

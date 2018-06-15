@@ -63,7 +63,7 @@ activities:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=5"
+        image_url: "<%=staticUrl%>img/{{image}}?time=6"
         buttons:
           -
             type: "postback"
@@ -94,7 +94,7 @@ more-activities:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=5"
+        image_url: "<%=staticUrl%>img/{{image}}?time=6"
         buttons:
           -
             type: "postback"
@@ -345,7 +345,7 @@ scavengerhunt-last-scan:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=5"
+        image_url: "<%=staticUrl%>img/{{image}}?time=6"
         buttons:
           -
             type: "postback"
@@ -374,7 +374,7 @@ scavengerhunt-complete:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=5"
+        image_url: "<%=staticUrl%>img/{{image}}?time=6"
         buttons:
           -
             type: "postback"
