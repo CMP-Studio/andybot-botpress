@@ -47,7 +47,7 @@ module.exports = async function handleScan(referral, event) {
             const avaliableActivities = _.map(triggeredActivities, (activity_id) => _.find(activities.manifest, (o) => o.activity === activity_id));
             console.log(avaliableActivities);
 
-            if (utils.isNonNull(scanResponse.scan.followup)){
+            if (utils.isNonNull(scanResponse.scan.followup) && avaliableActivities.length === 0){
                 setTimeout(() => {
                     event.reply("#text",  { text: scanResponse.scan.followup });
                 }, 500);
@@ -55,7 +55,7 @@ module.exports = async function handleScan(referral, event) {
 
             if (avaliableActivities.length > 0){
                 setTimeout(() => {
-                    event.reply("#followupactivities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
+                    event.reply("#followupactivities",  { activities: _.shuffle(avaliableActivities).slice(0, 9), text: scanResponse.scan.followup || "Try these activities"  });
                 }, 2000);
             }
         } else if (scanResponse.scan.type === 'scavengerhunt') {

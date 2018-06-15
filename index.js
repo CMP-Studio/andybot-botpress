@@ -160,7 +160,7 @@ module.exports = function (bp) {
 				referral = event.raw.postback.referral;
 			}
 
-			await handleScan(referral, event)
+			// await handleScan(referral, event)
 		}
 	}
 

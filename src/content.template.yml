@@ -72,6 +72,8 @@ activities:
       {{/activities}}
 
 followupactivities:
+  - typing: true
+    text: "{{text}}"
   - on: facebook
     template_type: "generic"
     elements:
