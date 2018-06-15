@@ -13,12 +13,10 @@ module.exports = async function handleScan(referral, event) {
         if (utils.isNonNull(scanResponse) && utils.isNonNull(scanResponse.stamp)){
             if (scanResponse.stamp.error && scanResponse.stamp.error === "DailyLimitReached") {
                 event.reply("#daily_scan_limit_reached");
-                return;
             } else {
                 const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code.ref)
                 const image = stampObj.splash_image;
                 event.reply("#stamp_unlock", { image, text: "You unlocked the " + stampObj.name + " stamp!"});
-                return;
             }
         }
 
@@ -42,13 +40,12 @@ module.exports = async function handleScan(referral, event) {
                     event.reply("#activities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
                 }, 2000);
             }
-            return;
         } else if (scanResponse.scan.type === 'activity' || scanResponse.scan.type === 'event') {
             const triggeredActivities = scanResponse.scan.trigger;
             console.log(triggeredActivities);
             const avaliableActivities = _.map(triggeredActivities, (activity_id) => _.find(activities.manifest, (o) => o.activity === activity_id));
             console.log(avaliableActivities);
-            
+
             if (utils.isNonNull(scanResponse.scan.followup)){
                 setTimeout(() => {
                     event.reply("#text",  { text: scanResponse.scan.followup });
@@ -60,9 +57,6 @@ module.exports = async function handleScan(referral, event) {
                     event.reply("#activities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
                 }, 2000);
             }
-            
-            return;
-
         } else if (scanResponse.scan.type === 'scavengerhunt') {
             if (utils.isNonNull(scanResponse.scavengerhunt)){
                 let res = scanResponse.scavengerhunt;
@@ -77,7 +71,6 @@ module.exports = async function handleScan(referral, event) {
                     } else if (res.huntComplete) {
                         event.reply("scavengerhunt-complete", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
                     }
-                    return;
                 } else {
                     if (res.firstScan && utils.isNonNull(res.nextClue) && utils.isNonNull(res.foundIt)) {
                         event.reply("scavengerhunt-first-scan", { foundIt: res.foundIt, nextClue: res.nextClue, nextClueNumber: res.nextClueNumber });
@@ -94,4 +87,5 @@ module.exports = async function handleScan(referral, event) {
             }
         }
     }
+    return;
 }
