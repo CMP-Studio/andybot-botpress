@@ -294,7 +294,7 @@ scavengerhunt-first-scan:
         payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
 
 scavengerhunt-scan:
-  - text: "Nice Work! {foundIt}"
+  - text: "Nice Work! {{foundIt}}"
     typing: 1s
   - template_type: button
     text: "OK, here's your next clue!\n\n{{nextClue}}"
