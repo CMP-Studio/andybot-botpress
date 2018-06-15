@@ -22,6 +22,7 @@ module.exports = async function handleScan(referral, event) {
             }
         }
 
+        console.log(scanResponse.scan.type);
         // 2. Handle Possible check in to a museum
         if (scanResponse.scan.type === 'checkin') {
             const avaliableActivities = await andybot.avaliableActivities(event.user.id);
@@ -44,8 +45,10 @@ module.exports = async function handleScan(referral, event) {
             return;
         } else if (scanResponse.scan.type === 'activity' || scanResponse.scan.type === 'event') {
             const triggeredActivities = scanResponse.scan.trigger;
+            console.log(triggeredActivities);
             const avaliableActivities = _.map(triggeredActivities, (activity_id) => _.find(activities.manifest, (o) => o.activity === activity_id));
-
+            console.log(avaliableActivities);
+            
             if (utils.isNonNull(scanResponse.scan.followup)){
                 setTimeout(() => {
                     event.reply("#text",  { text: scanResponse.scan.followup });

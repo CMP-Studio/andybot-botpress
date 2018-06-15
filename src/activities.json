@@ -344,7 +344,7 @@
             "location": "CMNH"
         },
         {
-            "activity": "poll-trivianight",
+            "activity": "poll-finalnight",
             "image": "polls-trivianight-carousel.png",
             "title": "Poll | Summer Adventure",
             "subtitle": "I want to know what you’re enjoying this summer!",
@@ -460,7 +460,7 @@
             "location": "CMNH",
             "type": "event",
             "trigger": [
-                "poll-trivianight"
+                "poll-finalnight"
             ],
             "followup": "Enjoy the event! And tell us what you thought of Summer Adventure with this poll!"
         },
@@ -982,7 +982,7 @@
             "followup": " Cats may have only recently taken over the internet, but cat ownership dates back thousands of years. The ancient egyptians loved their pet cats, they even mummified them and imposed the death penalty for any one who killed one."
         }
     ],
-    "poll-trivianight": [
+    "poll-finalnight": [
         {
             "image": "andy-what-you-think.png",
             "question": "What was your favorite summer adventure event?",
