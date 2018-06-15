@@ -42,7 +42,7 @@ module.exports = async function handleScan(referral, event) {
                 }, 2000);
             }
             return;
-        } else if (scanResponse.scan.type === 'activity') {
+        } else if (scanResponse.scan.type === 'activity' || scanResponse.scan.type === 'event') {
             const triggeredActivities = scanResponse.scan.trigger;
             const avaliableActivities = _.map(triggeredActivities, (activity_id) => _.find(activities.manifest, (o) => o.activity === activity_id));
 
@@ -52,9 +52,11 @@ module.exports = async function handleScan(referral, event) {
                 }, 500);
             }
 
-            setTimeout(() => {
-                event.reply("#activities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
-            }, 2000);
+            if (avaliableActivities.length > 0){
+                setTimeout(() => {
+                    event.reply("#activities",  { activities: _.shuffle(avaliableActivities).slice(0, 9) });
+                }, 2000);
+            }
             
             return;
 
