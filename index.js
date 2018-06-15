@@ -56,7 +56,6 @@ module.exports = function (bp) {
 			}
 
 			if (utils.isNonNull(referral)) {
-				console.log("SCAN from get started");
 				await handleScan(referral, event);
 			}
 		} catch (err){
@@ -161,6 +160,8 @@ module.exports = function (bp) {
 				referral = event.raw.postback.referral;
 			}
 			console.log("SCAN from fallBackHandler");
+			console.log(event);
+			console.log(event.type)
 			await handleScan(referral, event)
 		}
 	}

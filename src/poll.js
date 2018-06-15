@@ -28,7 +28,6 @@ module.exports = async function PollHandler(convo, event, activityName) {
 			let referral;
 			if (utils.isNonNull(response.raw.referral)) {
 				referral = response.raw.referral;
-				console.log("SCAN from poll");
 				await handleScan(referral, event);
 				return;
 			}
