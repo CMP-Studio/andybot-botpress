@@ -321,7 +321,7 @@ scavengerhunt-hint:
     text: "{{hint}}"
 
 scavengerhunt-last-scan:
-  - text: "{foundIt}"
+  - text: "{{foundIt}}"
     typing: 1s
   - text: "Congratulations, you've found all 11 objects in the Good Eye Scavenger Hunt."
     typing: 1s
