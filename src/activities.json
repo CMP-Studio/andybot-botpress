@@ -71,6 +71,13 @@
             "location": "Warhol"
         },
         {
+            "activity": "trivia-wearenature",
+            "image": "trivia-wearenature-carousel.png",
+            "title": "Trivia | We Are Nature",
+            "subtitle": "Test your nature knowledge with 6 questions from this groundbreaking exhibition.",
+            "location": "CMNH"
+        },
+        {
             "activity": "poll-organs",
             "image": "poll-organs-carousel.png",
             "title": "Poll | Organs",
@@ -90,6 +97,20 @@
             "title": "Poll | Robots",
             "subtitle": "How does the robot revolution leave you feeling?",
             "location": "CSC"
+        },
+        {
+            "activity": "trivia-warholart",
+            "image": "trivia-warhol-carousel.png",
+            "title": "Trivia | Warhol Art and Influences",
+            "subtitle": "Think you’re an Andy Warhol aficionado? Try these 6 questions.",
+            "location": "Warhol"
+        },
+        {
+            "activity": "trivia-birds",
+            "image": "trivia-birds-carousel.png",
+            "title": "Trivia | Bird Identification",
+            "subtitle": "Can you identify the birds in these 5 photos taken at Powdermill Nature Reserve?",
+            "location": "Powdermill"
         },
         {
             "activity": "trivia-mineralsgems",
@@ -120,11 +141,25 @@
             "location": "CMNH"
         },
         {
+            "activity": "trivia-sports",
+            "image": "trivia-sports-carousel.png",
+            "title": "Trivia | Sport Science",
+            "subtitle": "5 questions from the insanely fun SportsWorks® building at the Science Center!",
+            "location": "CSC"
+        },
+        {
             "activity": "poll-brillo",
             "image": "poll-brillo-carousel.png",
             "title": "Poll | Ordinary Art",
             "subtitle": "Think like Warhol and see who agrees!",
             "location": "Warhol"
+        },
+        {
+            "activity": "trivia-flowers",
+            "image": "trivia-flowers-carousel.png",
+            "title": "Trivia | Flower Identification",
+            "subtitle": "Can you identify the flowers in these 5 photos from Powdermill Nature Reserve?",
+            "location": "Powdermill"
         },
         {
             "activity": "trivia-architecture",
@@ -141,18 +176,18 @@
             "location": "CMNH"
         },
         {
+            "activity": "trivia-impressionism",
+            "image": "trivia-impressionism-carousel.png",
+            "title": "Trivia | Impressionism",
+            "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
+            "location": "CMOA"
+        },
+        {
             "activity": "poll-artmaking",
             "image": "poll-artmaking-carousel.png",
             "title": "Poll | Art Making",
             "subtitle": "Doesn’t a visit to an art museum leave you inspired!?",
             "location": "Warhol"
-        },
-        {
-            "activity": "trivia-wearenature",
-            "image": "trivia-wearenature-carousel.png",
-            "title": "Trivia | We Are Nature",
-            "subtitle": "Test your nature knowledge with 6 questions from this groundbreaking exhibition.",
-            "location": "CMNH"
         },
         {
             "activity": "poll-prince",
@@ -169,31 +204,10 @@
             "location": "CSC"
         },
         {
-            "activity": "trivia-impressionism",
-            "image": "trivia-impressionism-carousel.png",
-            "title": "Trivia | Impressionism",
-            "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
-            "location": "CMOA"
-        },
-        {
             "activity": "poll-fashion",
             "image": "polls-fashion-carousel.png",
             "title": "Poll | Fashion",
             "subtitle": "Andy Warhol loved fashion, do you?",
-            "location": "Warhol"
-        },
-        {
-            "activity": "trivia-sports",
-            "image": "trivia-sports-carousel.png",
-            "title": "Trivia | Sport Science",
-            "subtitle": "5 questions from the insanely fun SportsWorks® building at the Science Center!",
-            "location": "CSC"
-        },
-        {
-            "activity": "trivia-warholart",
-            "image": "trivia-warhol-carousel.png",
-            "title": "Trivia | Warhol Art and Influences",
-            "subtitle": "Think you’re an Andy Warhol aficionado? Try these 6 questions.",
             "location": "Warhol"
         },
         {
@@ -202,13 +216,6 @@
             "title": "Poll | Mummies",
             "subtitle": "Cast your vote to help us wrap up this poll.  ",
             "location": "CMNH"
-        },
-        {
-            "activity": "trivia-birds",
-            "image": "trivia-birds-carousel.png",
-            "title": "Trivia | Bird Identification",
-            "subtitle": "Can you identify the birds in these 5 photos taken at Powdermill Nature Reserve?",
-            "location": "Powdermill"
         },
         {
             "activity": "poll-iceberg",
@@ -223,13 +230,6 @@
             "title": "Poll | Films",
             "subtitle": "Warhol’s unique films let us dream of the types of movie we could make...",
             "location": "Warhol"
-        },
-        {
-            "activity": "trivia-flowers",
-            "image": "trivia-flowers-carousel.png",
-            "title": "Trivia | Flower Identification",
-            "subtitle": "Can you identify the flowers in these 5 photos from Powdermill Nature Reserve?",
-            "location": "Powdermill"
         },
         {
             "activity": "poll-namingdinos",
@@ -354,7 +354,7 @@
             "activity": "poll-brick",
             "image": "polls-brick-carousel.png",
             "title": "Poll | Art of the Brick",
-            "subtitle": "Let’s get building!",
+            "subtitle": "Let’s get building! ",
             "location": "CSC"
         }
     ],
