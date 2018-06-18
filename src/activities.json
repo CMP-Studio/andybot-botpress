@@ -22,11 +22,11 @@
             "location": "CSC"
         },
         {
-            "activity": "poll-fame",
-            "image": "polls-fame-carousel.png",
-            "title": "Poll | Fame",
-            "subtitle": "Have you ever dreamed of being famous?",
-            "location": "Warhol"
+            "activity": "poll-hunt",
+            "image": "poll-hunt-carousel.png",
+            "title": "Poll | The Game Is On!",
+            "subtitle": "What is your detective style, let us know!",
+            "location": "CMNH"
         },
         {
             "activity": "trivia-warholearly",
@@ -64,10 +64,10 @@
             "location": "CMP"
         },
         {
-            "activity": "poll-warhol",
-            "image": "polls-warhol-carousel.png",
-            "title": "Poll | Iconic Andy Warhol",
-            "subtitle": "It’s difficult to pin down Andy Warhol. Tell me what you think!",
+            "activity": "poll-fame",
+            "image": "polls-fame-carousel.png",
+            "title": "Poll | Fame",
+            "subtitle": "Have you ever dreamed of being famous?",
             "location": "Warhol"
         },
         {
@@ -169,6 +169,13 @@
             "location": "CMOA"
         },
         {
+            "activity": "trivia-impressionism",
+            "image": "trivia-impressionism-carousel.png",
+            "title": "Trivia | Impressionism",
+            "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
+            "location": "CMOA"
+        },
+        {
             "activity": "poll-colors",
             "image": "poll-colors-carousel.png",
             "title": "Poll | Colors",
@@ -176,11 +183,11 @@
             "location": "CMNH"
         },
         {
-            "activity": "trivia-impressionism",
-            "image": "trivia-impressionism-carousel.png",
-            "title": "Trivia | Impressionism",
-            "subtitle": "Get inspired with 5 questions on some of the most beloved artists in history!",
-            "location": "CMOA"
+            "activity": "poll-warhol",
+            "image": "polls-warhol-carousel.png",
+            "title": "Poll | Iconic Andy Warhol",
+            "subtitle": "It’s difficult to pin down Andy Warhol. Tell me what you think!",
+            "location": "Warhol"
         },
         {
             "activity": "poll-artmaking",
@@ -616,6 +623,29 @@
             "image": "howtoplay-7.png",
             "title": "7. Win Big",
             "subtitle": "CMP members can enter their stamps into the grand-prize drawing on August 25."
+        }
+    ],
+    "poll-hunt": [
+        {
+            "image": "andy-what-you-think.png",
+            "question": "What is your strength as a detective?",
+            "choices": [
+                "My Intellect",
+                "Being Adventurous",
+                "Sneaking Skills",
+                "Attention To Detail",
+                "Persistence",
+                "Mind Games"
+            ],
+            "images": [
+                "polls-hunt-1.png",
+                "polls-hunt-2.png",
+                "polls-hunt-3.png",
+                "polls-hunt-4.png",
+                "polls-hunt-5.png",
+                "polls-hunt-6.png"
+            ],
+            "followup": "Test your detective skills at the Carnegie Museum of Natural History Scavenger Hunt. Here is the first clue: We travel to a civilization hot and old, with dog-headed gods and coffins of gold. Head to the back, find the burial room. Your destination will look like a tomb. Find this object to uncover the next clue!!"
         }
     ],
     "poll-gallery": [
@@ -2485,7 +2515,7 @@
     ],
     "trivia-dinos": [
         {
-            "text": "What kind of dinosaur is \"Dippy,\" who appears in Carnegie Museum of Natural History’s logo?",
+            "text": "What kind of dinosaur is ’Dippy,’ who appears in Carnegie Museum of Natural History’s logo?",
             "image": "trivia-dinos-10.png",
             "difficulty": 1,
             "answer": "Diplodocus",
