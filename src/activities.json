@@ -492,6 +492,29 @@
             "followup": "🍔 Thanks for inviting me to lunch. Want to sprinkle some trivia on that?"
         },
         {
+            "messenger_code": "summer-adventure-papermap",
+            "location": "CMP",
+            "type": "activity",
+            "trigger": [
+                "trivia-foodscience",
+                "trivia-warholart",
+                "trivia-impressionism",
+                "trivia-robots",
+                "trivia-wearenature",
+                "trivia-foodart"
+            ],
+            "followup": "Hey there! Want to try out some trivia? 🤔"
+        },
+        {
+            "messenger_code": "airport",
+            "location": "CMNH",
+            "type": "activity",
+            "trigger": [
+                "poll-hunt"
+            ],
+            "followup": "Visit Carnegie Museum of Natural History to try out the Good Eye Scavenger Hunt, created by Juliette and Julianna Heiby! 🔎⚬ ⚬ ⚬ ⚬ ⚬ 🏆"
+        },
+        {
             "messenger_code": "parking-cmnh",
             "location": "CMNH",
             "type": "activity",
@@ -2172,7 +2195,7 @@
                 "Salesman",
                 "Photographer"
             ],
-            "followup": "His first commercial work appeared in a 1949 issue of Glamour magazine, in which he illustrated a story called \"What is Success?\""
+            "followup": "His first commercial work appeared in a 1949 issue of Glamour magazine, in which he illustrated a story called ’What is Success?’"
         }
     ],
     "trivia-warholart": [
