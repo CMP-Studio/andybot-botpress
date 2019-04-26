@@ -93,6 +93,13 @@ module.exports = {
 			{ clue_number },
 			{ headers: { 'Content-Type': 'application/json'} });
 			return rsp.data; 			
+		},
+
+		getClue: async function( fb_page_id ) {
+			const rsp = await axios.post(`${config.apiEndpoint}/scavengerhunt/getClue`, 
+			{ fb_page_id },
+			{ headers: { 'Content-Type': 'application/json'} });
+			return rsp.data; 			
 		}
 	}
 

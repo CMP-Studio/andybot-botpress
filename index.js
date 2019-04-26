@@ -28,10 +28,13 @@ module.exports = function (bp) {
 	
 	function getActivityType(activityId) {
 		if (activityId.indexOf('-') < 0) {
-			throw new Error('Invalid activity name');
+			const split = activityId.split('-');
+			return split[0];
 		}
-		const split = activityId.split('-');
-		return split[0];
+		else {
+			return activityId;
+		}
+		
 	};
 
 	// Catch get started button press
@@ -54,8 +57,8 @@ module.exports = function (bp) {
 			// Get Started may have an associated event.
 			let referral;
 			if (utils.isNonNull(event.raw.postback.referral) && utils.isNonNull(event.raw.postback.referral.ref)) {
-				console.log("SCANNED CODE BEFORE GETTING STARTED:") 
-				console.log(event.raw.postback.referral.ref);
+				// console.log("SCANNED CODE BEFORE GETTING STARTED:") 
+				// console.log(event.raw.postback.referral.ref);
 				referral = event.raw.postback.referral.ref;
 				await handleScan(referral, event);
 			} 

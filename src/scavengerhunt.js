@@ -9,17 +9,16 @@ const handleScan = require('./scan');
 
 module.exports = async function ScavengerHuntHandler(convo, event, activityName) {
 
-	if (utils.isNull(activities)) {
-		activities = require('./activities.json');
-	}
-
 	const userPageId = event.user.id;
-	const activity = activities[activityName];
-	const activityTitle = _.find(activities.activities, (e) => e.activity === activityName).title;
-	if ( utils.isNull(activity)){
-		// return 
-		
-	}
+	const avaliableActivities = await andybot.avaliableActivities(userPageId);
+	const hunt = await andybot.scavengerhunt.getClue(userPageId);
 
-	event.reply('#scavengerhunt-time');	
+	if (hunt.begin) {
+		event.reply('#scavengerhunt-begin', { nextClue: hunt.nextClue, nextClueNumber: hunt.nextClueNumber });	
+	} else if (hunt.completed) {
+		event.reply('#scavengerhunt-complete');
+		event.reply("#more-activities", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
+	} else {
+		event.reply('#scavengerhunt-continue', { nextClue: hunt.nextClue, nextClueNumber: hunt.nextClueNumber });
+	}
 };

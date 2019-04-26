@@ -15,17 +15,26 @@ welcome: # this is the #welcome bloc referenced in index.js
 welcome-back: # this is the #welcome bloc referenced in index.js
   - typing: true
     text: Hey {{user.name}}! Good to see you again.
-  - typing: true
-    text: Let's continue our summer adventure.
     quick_replies:
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play
       - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Go
+
+map: 
+  - typing: true
+    text: Are you planning to join me on Messenger this year?
+    quick_replies:
+      - <<%=postbacks.HOW_TO_PLAY%>> How to Play
+      - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Go
+
+generic:
+  - typing: true
+    text: The museum is buzzing with excitement today!
 
 ################ HOW TO PLAY TEMPLATE #######################
 
 how-to-play:
   - typing: true
-    text: Glad you asked. Here is some more information on how to play the game
+    text: Glad you asked. Here is some more information!
   - on: facebook
     template_type: "generic"
     elements:
@@ -55,7 +64,7 @@ text:
 
 activities:
   - typing: true
-    text: "Here are some activities you can take part in"
+    text: "Here are some activities you can take part in:"
   - on: facebook
     template_type: "generic"
     elements:
@@ -208,19 +217,35 @@ stamp-limit-reached:
 ################## SCAVENGER HUNT TEMPLATES #############################
 
 
-scavengerhunt-time:
+scavengerhunt-begin:
   - on: facebook
     image: "<%=staticUrl%>andy-ready-search.png"
-  - text: "I have 10 clues for you to solve. Each clue leads to an object at the Carnegie Museums of Art and Natural History. Find and scan the object's code to collect it and recieve your next clue!"
+  - text: "I have 10 clues for you to solve. Each clue leads to an object at the Carnegie Museums of Art and Natural History. When you find an object, scan its code to recieve your next clue!"
     typing: 2s
+  - text: "Here's your first clue:"
+  - template_type: button
+    text: "{{nextClue}}"
+    buttons:
+      -
+        type: "postback"
+        title: "Hint"
+        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
 
 scavengerhunt-first-scan:
-  - on: facebook
-    image: "<%=staticUrl%>andy-ready-search.png"
-  - text: "I have 10 clues for you to solve. Each clue leads to an object at the Carnegie Museums of Art and Natural History. Find and scan the object's code to collect it and recieve your next clue!"
-    typing: 2s
-  - text: "You're ahead of the game. You found your first object!"
+  - text: "You found your first object in the Summer Adventure scavenger hunt!"
   - text: "{{foundIt}}"
+    typing: 1s
+  - text: "How about another clue?"
+  - template_type: button
+    text: "{{nextClue}}"
+    buttons:
+      -
+        type: "postback"
+        title: "Hint"
+        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
+
+scavengerhunt-continue:
+  - text: "Here's a clue you haven't solved yet:"
     typing: 1s
   - template_type: button
     text: "{{nextClue}}"
@@ -244,6 +269,7 @@ scavengerhunt-scan:
 scavengerhunt-repeat-scan: 
   - text: "You already found this object!"
     typing: 1s
+  - text: "How about another clue?"
   - template_type: button
     typing: 2s
     text: "{{nextClue}}"

@@ -46,6 +46,17 @@ module.exports = async function handleScan(referral, event) {
             }  
         }
     }
+
+    // 3. Handle paper map
+    if (utils.isNonNull(scanResponse) && scanResponse.type === 'map') {
+        event.reply("map");
+    }
+
+    // 4. Handle generic
+    if (utils.isNonNull(scanResponse) && scanResponse.type === 'generic') {
+        event.reply("generic");
+        event.reply("#activities", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
+    }
     
     return;
 }

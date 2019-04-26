@@ -8,17 +8,17 @@
         {
             "image": "howtoplay-2.png",
             "title": "2. Meet Your Guide",
-            "subtitle": "Andy CarnegieBot will keep you in the loop, and keep track of your rewards."
+            "subtitle": "Andy CarnegieBot will keep you in the loop, and keep track of your rewards!"
         },
         {
             "image": "howtoplay-3.png",
             "title": "3. Collect Stamps",
-            "subtitle": "Look for scannable codes on signs in the museum entrances and at special events."
+            "subtitle": "Look for scannable codes on signs in the museum entrances and at events."
         },
         {
             "image": "howtoplay-4.png",
             "title": "4. Scan Codes",
-            "subtitle": "Use your phone's QR code reader to scan a code. Follow the link to chat!"
+            "subtitle": "1. Open Camera app 2. Hold phone towards QR Code 3. Follow link to chat!"
         },
         {
             "image": "howtoplay-5.png",
@@ -28,7 +28,7 @@
         {
             "image": "howtoplay-7.png",
             "title": "6. Win Big",
-            "subtitle": "CMP members can enter their stamps into the grand-prize drawing on August 29."
+            "subtitle": "CMP members can enter their stamps in the grand-prize drawing on August 29."
         }
     ],
     "activities": [
@@ -42,28 +42,28 @@
         {
             "activity": "trivia-cmoa",
             "image": "trivia-cmoa-carousel.png",
-            "title": "Trivia | CMOA",
+            "title": "Art Trivia",
             "subtitle": "Get inspired with this trivia set from Carnegie Museum of Art!",
             "location": "CMOA"
         },
         {
             "activity": "trivia-csc",
             "image": "trivia-csc-carousel.png",
-            "title": "Trivia | CSC",
+            "title": "Science Trivia",
             "subtitle": "See what you know with this trivia set from Carnegie Science Center!",
             "location": "CSC"
         },
         {
             "activity": "trivia-warhol",
             "image": "trivia-warhol-carousel.png",
-            "title": "Trivia | Warhol",
+            "title": "Warhol Trivia",
             "subtitle": "Shoot for the stars with Andy Warhol Museum trivia!",
             "location": "Warhol"
         },
         {
             "activity": "trivia-cmnh",
             "image": "trivia-cmnh-carousel.png",
-            "title": "Trivia | CMNH",
+            "title": "Natural History Trivia",
             "subtitle": "Test your knowledge with a trivia set from Carnegie Museum of Natural History!",
             "location": "CMNH"
         }
@@ -71,7 +71,7 @@
     "schedule": [
         {
             "id": "event-goodfridays",
-            "stamp_id": "stamp-event-adults",
+            "stamp": "yes",
             "event": "Good Fridays",
             "image": "event-carousel-goodfridays.png",
             "location": "Warhol",
@@ -81,7 +81,7 @@
         },
         {
             "id": "event-membertour-monet",
-            "stamp_id": "stamp-event-membertours",
+            "stamp": "yes",
             "event": "Member Tour: Monet and the Modern City",
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
@@ -91,7 +91,7 @@
         },
         {
             "id": "event-membertour-ruth",
-            "stamp_id": "stamp-event-membertours",
+            "stamp": "yes",
             "event": "Member Tour: Ruth Root and the Persistence of Painting",
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
@@ -101,7 +101,7 @@
         },
         {
             "id": "event-membertour-summer",
-            "stamp_id": "stamp-event-membertours",
+            "stamp": "yes",
             "event": "Member Tour: Summer Splash",
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
@@ -111,7 +111,7 @@
         },
         {
             "id": "event-membertour-kim",
-            "stamp_id": "stamp-event-membertours",
+            "stamp": "yes",
             "event": "Member Tour: Kim Gordon: Lo–Fi Glamour",
             "image": "event-carousel-warholmembertours.png",
             "location": "Warhol",
@@ -121,7 +121,7 @@
         },
         {
             "id": "event-summerkickoff",
-            "stamp_id": "stamp-event-summerkickoff",
+            "stamp": "yes",
             "event": "Summer Kick-Off Celebration",
             "image": "event-carousel-summerkickoff.png",
             "location": "CMOA",
@@ -131,7 +131,7 @@
         },
         {
             "id": "event-artofsight",
-            "stamp_id": "stamp-event-artofsight",
+            "stamp": "yes",
             "event": "The Art of Sight ",
             "image": "event-carousel-artofsight.png",
             "location": "CMNH",
@@ -141,7 +141,7 @@
         },
         {
             "id": "event-factory",
-            "stamp_id": "stamp-event-factory",
+            "stamp": "yes",
             "event": "Visit The Factory",
             "image": "event-carousel-factory-stamp.png",
             "location": "Warhol",
@@ -151,7 +151,7 @@
         },
         {
             "id": "event-spaceout",
-            "stamp_id": "stamp-event-spaceout",
+            "stamp": "yes",
             "event": "Space Out! Astronomy Weekend ",
             "image": "event-carousel-spaceout.png",
             "location": "CSC",
@@ -161,7 +161,7 @@
         },
         {
             "id": "event-pollinatorfestival",
-            "stamp_id": "stamp-event-pollinatorfestival",
+            "stamp": "yes",
             "event": "Pollinator Festival",
             "image": "event-carousel-pollinatorfestival.png",
             "location": "Powdermill",
@@ -171,7 +171,7 @@
         },
         {
             "id": "event-lozzi",
-            "stamp_id": "stamp-event-lozzi",
+            "stamp": "yes",
             "event": "Lozzi–palooza",
             "image": "event-carousel-lozzi.png",
             "location": "CMOA",
@@ -181,7 +181,7 @@
         },
         {
             "id": "event-trivianight",
-            "stamp_id": "stamp-event-trivianight",
+            "stamp": "yes",
             "event": "Trivia Night",
             "image": "event-carousel-trivianight.png",
             "location": "Warhol",
@@ -191,7 +191,7 @@
         },
         {
             "id": "event-thirdthursday-wilkinsburg",
-            "stamp_id": "stamp-event-adults",
+            "stamp": "yes",
             "event": "Third Thursday",
             "image": "event-carousel-thirdthursday.png",
             "location": "CMOA",
@@ -201,7 +201,7 @@
         },
         {
             "id": "event-afterdark-potterfest",
-            "stamp_id": "stamp-event-adults",
+            "stamp": "yes",
             "event": "After Dark: Potterfest",
             "image": "event-carousel-afterdark.png",
             "location": "CMNH",
@@ -211,7 +211,7 @@
         },
         {
             "id": "event-sciencesaturday-jurassic",
-            "stamp_id": "stamp-event-sciencesaturdays",
+            "stamp": "yes",
             "event": "Super Science Saturday: Jurassic Day",
             "image": "event-carousel-sciencesaturday.png",
             "location": "CMNH",
@@ -221,7 +221,7 @@
         },
         {
             "id": "event-sciencesaturday-scientist",
-            "stamp_id": "stamp-event-sciencesaturdays",
+            "stamp": "yes",
             "event": "Super Science Saturday: Scientist Takeover",
             "image": "event-carousel-sciencesaturday.png",
             "location": "CMNH",
@@ -231,7 +231,7 @@
         },
         {
             "id": "event-sciencesaturday-pet",
-            "stamp_id": "stamp-event-sciencesaturdays",
+            "stamp": "yes",
             "event": "Super Science Saturday: Pet Palooza",
             "image": "event-carousel-sciencesaturday.png",
             "location": "CMNH",
