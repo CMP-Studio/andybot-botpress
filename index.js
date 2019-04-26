@@ -160,7 +160,7 @@ module.exports = function (bp) {
 				}
 			})
 		}
-		 
+		
 		bp.messenger.sendTemplate(event.user.id, payload, { typing: 2000 })
 	}
 
