@@ -37,6 +37,16 @@ module.exports = function (bp) {
 		
 	};
 
+	function checkForUser(event) {
+		try {
+			const pageId = event.user.id;
+			const exists = await andybot.userExists(pageId);
+			if (!exists) {
+				getStarted();
+			}
+		}
+	}
+
 	// Catch get started button press
 	// As well as any codes scanned
 	async function getStarted(event, next) {
@@ -71,6 +81,7 @@ module.exports = function (bp) {
 
 	// Catch scanned codes
 	async function fallBackHandler(event, next) {
+		checkForUser();
 		if (utils.isNonNull(event.raw.referral) && utils.isNonNull(event.raw.referral.ref)) {
 			// A code was scanned
 			console.log("SCANNED CODE:") 
@@ -80,6 +91,7 @@ module.exports = function (bp) {
 	}
 
 	async function howToPlay(event, next){
+		checkForUser();
  		if (bp.convo.find(event)) {
 			await stopConvo(event, null, false);
 		}
@@ -90,6 +102,7 @@ module.exports = function (bp) {
 
 
 	async function sendScavengerHuntHint(event, next) {
+		checkForUser();
 		const clueNumber = event.raw.postback.payload.split(':')[1];		
 		const hintResponse = await andybot.scavengerhunt.getHint(clueNumber);
 		event.reply("#scavengerhunt-hint", { hint: hintResponse.hint });
@@ -97,6 +110,7 @@ module.exports = function (bp) {
 	}
 	
 	async function startActivity(event, next) {
+		checkForUser();
 		const activityName = event.raw.postback.payload.split(':')[1];		
 		const activityType = getActivityType(activityName);
 		if (isValidActivityType(activityType) === false) {
@@ -116,6 +130,7 @@ module.exports = function (bp) {
 	}
 
 	async function seeEvents(event) {
+		checkForUser();
 		if (bp.convo.find(event)) {
 			await stopConvo(event, null, false);
 		}
@@ -146,6 +161,7 @@ module.exports = function (bp) {
 	}
 
 	async function stopConvo(event, next, sendNotification){
+		checkForUser();
 		const convo = bp.convo.find(event);
 		if (convo) {
 			convo.stop('aborted');
@@ -160,6 +176,7 @@ module.exports = function (bp) {
 	}
 
 	async function beginAdventure(event, next) {
+		checkForUser();
 		const avaliableActivities = await andybot.avaliableActivities(event.user.id);
 		event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) });
 	}
