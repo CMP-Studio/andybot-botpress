@@ -27,7 +27,7 @@ module.exports = function (bp) {
 	};
 	
 	function getActivityType(activityId) {
-		if (activityId.indexOf('-') < 0) {
+		if (activityId.indexOf('-') > 0) {
 			const split = activityId.split('-');
 			return split[0];
 		}
