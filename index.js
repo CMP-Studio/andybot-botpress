@@ -85,7 +85,7 @@ module.exports = function (bp) {
 
 	// Catch scanned codes
 	async function fallBackHandler(event, next) {
-		await checkForUser();
+		await checkForUser(event);
 		if (utils.isNonNull(event.raw.referral) && utils.isNonNull(event.raw.referral.ref)) {
 			// A code was scanned
 			console.log("SCANNED CODE:") 
@@ -95,7 +95,7 @@ module.exports = function (bp) {
 	}
 
 	async function howToPlay(event, next){
-		await checkForUser();
+		await checkForUser(event);
  		if (bp.convo.find(event)) {
 			await stopConvo(event, null, false);
 		}
@@ -106,7 +106,7 @@ module.exports = function (bp) {
 
 
 	async function sendScavengerHuntHint(event, next) {
-		await checkForUser();
+		await checkForUser(event);
 		const clueNumber = event.raw.postback.payload.split(':')[1];		
 		const hintResponse = await andybot.scavengerhunt.getHint(clueNumber);
 		event.reply("#scavengerhunt-hint", { hint: hintResponse.hint });
@@ -114,7 +114,7 @@ module.exports = function (bp) {
 	}
 	
 	async function startActivity(event, next) {
-		await checkForUser();
+		await checkForUser(event);
 		const activityName = event.raw.postback.payload.split(':')[1];		
 		const activityType = getActivityType(activityName);
 		if (isValidActivityType(activityType) === false) {
@@ -134,7 +134,7 @@ module.exports = function (bp) {
 	}
 
 	async function seeEvents(event) {
-		await checkForUser();
+		await checkForUser(event);
 		if (bp.convo.find(event)) {
 			await stopConvo(event, null, false);
 		}
@@ -165,7 +165,7 @@ module.exports = function (bp) {
 	}
 
 	async function stopConvo(event, next, sendNotification){
-		await checkForUser();
+		await checkForUser(event);
 		const convo = bp.convo.find(event);
 		if (convo) {
 			convo.stop('aborted');
@@ -180,7 +180,7 @@ module.exports = function (bp) {
 	}
 
 	async function beginAdventure(event, next) {
-		await checkForUser();
+		await checkForUser(event);
 		const avaliableActivities = await andybot.avaliableActivities(event.user.id);
 		event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) });
 	}
