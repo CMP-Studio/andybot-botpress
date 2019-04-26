@@ -3,12 +3,12 @@ const andybot = require('./src/andybot');
 const activities = require('./src/activities.json');
 
 const TriviaHandler = require('./src/trivia');
-const PollHandler = require('./src/poll');
+const ScavengerHuntHandler = require('./src/scavengerhunt');
 const utils = require('./utils');
 const config = require('./src/config');
 const activityHandlers = {
 	trivia: TriviaHandler,
-	poll: PollHandler
+	scavengerhunt: ScavengerHuntHandler
 };
 
 const _ = require('lodash');
@@ -22,7 +22,7 @@ let getStarted;
 module.exports = function (bp) {
 
 	function isValidActivityType(activityType) {
-		const validActivityTypes = ['poll', 'trivia', 'scavengerhunt'];
+		const validActivityTypes = ['trivia', 'scavengerhunt'];
 		return validActivityTypes.indexOf(activityType);
 	};
 	
@@ -34,7 +34,11 @@ module.exports = function (bp) {
 		return split[0];
 	};
 
-	getStarted = async function (event, next) {
+	// Catch get started button press
+	// As well as any codes scanned
+	async function getStarted(event, next) {
+		//console.log(event);
+		//console.log(event.raw.postback.referral.ref);
 
 		try {
 			const pageId = event.user.id;
@@ -49,18 +53,26 @@ module.exports = function (bp) {
 
 			// Get Started may have an associated event.
 			let referral;
-			if (utils.isNonNull(event.raw.referral)) {
-				referral = event.raw.referral;
-			} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
-				referral = event.raw.postback.referral;
-			}
-
-			if (utils.isNonNull(referral)) {
+			if (utils.isNonNull(event.raw.postback.referral) && utils.isNonNull(event.raw.postback.referral.ref)) {
+				console.log("SCANNED CODE BEFORE GETTING STARTED:") 
+				console.log(event.raw.postback.referral.ref);
+				referral = event.raw.postback.referral.ref;
 				await handleScan(referral, event);
-			}
+			} 
+
 		} catch (err){
 			console.error(err);
 			event.reply('#error');
+		}
+	}
+
+	// Catch scanned codes
+	async function fallBackHandler(event, next) {
+		if (utils.isNonNull(event.raw.referral) && utils.isNonNull(event.raw.referral.ref)) {
+			// A code was scanned
+			console.log("SCANNED CODE:") 
+			console.log(event.raw.referral.ref);
+			await handleScan(event.raw.referral.ref, event)
 		}
 	}
 
@@ -68,10 +80,8 @@ module.exports = function (bp) {
  		if (bp.convo.find(event)) {
 			await stopConvo(event, null, false);
 		}
-
 		const howtoplay = activities['howtoplay'];
-
-		event.reply('#how_to_play', { howtoplay });
+		event.reply('#how-to-play', { howtoplay });
 		return;
 	}
 
@@ -117,7 +127,7 @@ module.exports = function (bp) {
 				return {
 					title: ele.title,
 					subtitle: ele.subtitle,
-					image_url: `${config.staticUrl}img/${imageName}?time=7`,
+					image_url: `${config.staticUrl}${imageName}`,
 					buttons: [
 						{
 							type: "web_url",
@@ -139,7 +149,7 @@ module.exports = function (bp) {
 			if (sendNotification === true) {
 				event.reply('#activity_ended');
 				const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-				event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) })
+				event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) });
 			}
 		} else {
 			event.reply('#no_activity');
@@ -151,17 +161,6 @@ module.exports = function (bp) {
 		event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) });
 	}
 
-	async function fallBackHandler(event, next) {
-		if (event.type === 'postback' || event.type === 'message' || event.type === 'referral') {
-			let referral;
-			if (utils.isNonNull(event.raw.referral)) {
-				referral = event.raw.referral;
-			} else if (utils.isNonNull(event.raw.postback) && utils.isNonNull(event.raw.postback.referral)) {
-				referral = event.raw.postback.referral;
-			}
-			await handleScan(referral, event)
-		}
-	}
 
 	bp.fallbackHandler = fallBackHandler;
 

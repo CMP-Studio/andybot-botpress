@@ -16,7 +16,7 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 
 	const userPageId = event.user.id;
 	const activity = activities[activityName];
-	const activityTitle = _.find(activities.manifest, (e) => e.activity === activityName).title;
+	const activityTitle = _.find(activities.activities, (e) => e.activity === activityName).title;
 	if ( utils.isNull(activity)){
 		return 
 		

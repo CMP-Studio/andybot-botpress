@@ -76,8 +76,6 @@ module.exports = {
 				{ headers: { 'Content-Type': 'application/json'} });
 			return rsp.data; 
 		}
-
-
 	},
 
 	scan: {

@@ -8,7 +8,7 @@ const config = {
 		verifyToken: process.env.FB_VERIFY_TOKEN,
 		chatExtensionHomeUrl: 'https://andybot.org',
 		hostname: 'bots.pagekite.me',
-		staticUrl: 'https://static.andybot.org/static/',
+		staticUrl: 'https://carnegiebot.org/static/img/',
 		apiEndpoint: 'http://localhost:3001',
 		trustedDomain: 'https://andybot.org'
 	},
@@ -18,10 +18,10 @@ const config = {
 		accessToken: process.env.FB_PAGE_ACCESS_TOKEN,
 		verifyToken: process.env.FB_VERIFY_TOKEN,
 		chatExtensionHomeUrl: 'https://andybot.org',
-		hostname: 'bots.pagekite.me',
-		staticUrl: 'https://static.andybot.org/static/',
+		hostname: 'ae16137f.ngrok.io',
+		staticUrl: 'https://carnegiebot.org/static/img/',
 		apiEndpoint: 'http://localhost:3001',
-		trustedDomain: 'https://andybot.org'
+		trustedDomain: 'https://carnegiebot.org'
 	},
 	production: {        
 		applicationId: process.env.FB_APP_ID,
@@ -30,7 +30,7 @@ const config = {
 		verifyToken: process.env.FB_VERIFY_TOKEN,
 		chatExtensionHomeUrl: 'https://carnegiebot.org',
 		hostname: 'bots-b681d.carnegiebot.org',
-		staticUrl: 'https://static.andybot.org/static/',
+		staticUrl: 'https://carnegiebot.org/static/img/',
 		apiEndpoint: 'https://api.carnegiebot.org',
 		trustedDomain: 'https://carnegiebot.org'
 	},
@@ -40,8 +40,8 @@ const config = {
 		accessToken: process.env.FB_PAGE_ACCESS_TOKEN,
 		verifyToken: process.env.FB_VERIFY_TOKEN,
 		chatExtensionHomeUrl: 'https://carnegiebot.org',
-		hostname: '1efdb5da.ngrok.io',
-		staticUrl: 'https://static.andybot.org/static/',
+		hostname: '15ccb790.ngrok.io',
+		staticUrl: 'https://carnegiebot.org/static/img/',
 		apiEndpoint: 'http://localhost:3001',
 		trustedDomain: 'https://carnegiebot.org'
 	}

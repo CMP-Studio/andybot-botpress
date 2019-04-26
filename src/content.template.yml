@@ -1,7 +1,9 @@
 
+########### WELCOME TEMPLATES ########################
+
 welcome: # this is the #welcome bloc referenced in index.js
   - on: facebook
-    image: <%=staticUrl%>img/andy-hello.png
+    image: <%=staticUrl%>andy-hello.png
   - typing: true
     text: I'm Andy CarnegieBot! Pleased to meet you!
   - text: Let's get started on an amazing summer adventure.
@@ -9,12 +11,6 @@ welcome: # this is the #welcome bloc referenced in index.js
     quick_replies:
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play
       - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Begin
-
-checkin-stamp:
-  - on: facebook
-    image: <%=staticUrl%>img/{{image}}
-  - typing: true
-    text: "{{text}}"
 
 welcome-back: # this is the #welcome bloc referenced in index.js
   - typing: true
@@ -25,12 +21,9 @@ welcome-back: # this is the #welcome bloc referenced in index.js
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play
       - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Go
 
-error:
-  - typing: true
-    text: This is embarassing...looks like something went wrong. Please try again later.
+################ HOW TO PLAY TEMPLATE #######################
 
-
-how_to_play:
+how-to-play:
   - typing: true
     text: Glad you asked. Here is some more information on how to play the game
   - on: facebook
@@ -40,9 +33,25 @@ how_to_play:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=1"
+        image_url: "<%=staticUrl%>{{image}}"
       {{/howtoplay}}
 
+############### ERROR / FALLBACK TEMPLATES ###########################
+
+error:
+  - typing: true
+    text: This is embarassing...looks like something went wrong. Please try again later.
+
+unknown-selection:
+  - typing: 1s
+    text: "I'm not quite sure what you meant by that. Try using the menu options below."
+
+text:
+  - typing: true
+    text: "{{text}}"
+
+
+#################### ACTIVITY DISPLAY TEMPLATES #####################3
 
 activities:
   - typing: true
@@ -53,7 +62,7 @@ activities:
       -
         subtitle: "Check out museum events and see upcoming stamp opportunities."
         title: "What's Happening"
-        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
+        image_url: "<%=staticUrl%>museumevents-carousel.png"
         buttons:
           -
             type: "postback"
@@ -63,38 +72,16 @@ activities:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=6"
+        image_url: "<%=staticUrl%>{{image}}"
         buttons:
           -
             type: "postback"
-            title: "Select {{type}}"
+            title: "Start {{type}}"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
-
-followupactivities:
-  - typing: true
-    text: "{{text}}"
-  - on: facebook
-    template_type: "generic"
-    elements:
-      {{#activities}}
-      - 
-        subtitle: "{{subtitle}}"
-        title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=6"
-        buttons:
-          -
-            type: "postback"
-            title: "Select {{type}}"
-            payload: "START_ACTIVITY:{{activity}}"
-      {{/activities}}
-
-no_activity:
-  - typing: true
-    text: "You don't currently have an activity in progress."
 
 more-activities:
-  - typing: true
+  - typing: 2s
     text: "Keep the adventure going with more activities."
   - on: facebook
     template_type: "generic"
@@ -102,7 +89,7 @@ more-activities:
       -
         subtitle: "Check out museum events and see upcoming stamp opportunities."
         title: "What's Happening"
-        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
+        image_url: "<%=staticUrl%>museumevents-carousel.png"
         buttons:
           -
             type: "postback"
@@ -112,58 +99,20 @@ more-activities:
       - 
         subtitle: "{{subtitle}}"
         title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=6"
+        image_url: "<%=staticUrl%>{{image}}"
         buttons:
           -
             type: "postback"
-            title: "Select {{type}}"
+            title: "Start {{type}}"
             payload: "START_ACTIVITY:{{activity}}"
       {{/activities}}
 
 
-unknown-selection:
-  - typing: 1s
-    text: "I'm not quite sure what you meant by that. Try using the quick replies or menu options below."
-
-
-poll-time:
-  - on: facebook
-    image: "<%=staticUrl%>img/{{image}}"
-
-poll-question:
-  - text: "{{question}}"
-    typing: 1s
-  - on: facebook
-    template_type: "generic"
-    elements:
-      {{#choices}}
-      -
-        title: "{{text}}"
-        image_url: "<%=staticUrl%>img/{{image}}?invalidate=2"
-        buttons:
-          -
-            type: "postback"
-            title: "Vote"
-            payload: "VOTE:{{choiceIndex}}"
-      {{/choices}}
-
-poll-followup:
-  - typing: 1s
-    text: "{{feedback}}"
-  - typing: true
-    text: "{{text}}"
-
-poll-doubledip: 
-  - typing: 1s
-    text: "Hey there! You already voted in this poll. This vote will not be recorded."
-
-poll-complete:
-  - on: facebook
-    image: "<%=staticUrl%>img/andy-rock-vote.png?time=1234"
+################## TRIVIA TEMPLATES #############################
 
 trivia-time:
   - on: facebook
-    image: "<%=staticUrl%>img/andy-trivia-time.png?time=0"
+    image: "<%=staticUrl%>andy-trivia-time.png"
 
 trivia-followup:
   - text: "{{feedback}} {{text}}"
@@ -173,15 +122,11 @@ trivia-followup-short:
   - text: '{{feedback}}'
     typing: 1s
 
-activity_ended:
-  - text: "Let’s move on to something else..."
-    typing: 1s
-
 trivia-question:
   - text: "Question {{questionNumber}}"
     typing: 1s
   - on: facebook
-    image: "<%=staticUrl%>img/{{question.image}}?well=2"
+    image: "<%=staticUrl%>{{question.image}}"
   - on: facebook
     template_type: "button"
     text: "{{question.text}}"
@@ -195,7 +140,7 @@ trivia-question:
 
 trivia-question-short:
   - on: facebook
-    image: "<%=staticUrl%>img/{{question.image}}"
+    image: "<%=staticUrl%>{{question.image}}"
   - on: facebook
     template_type: "button"
     text: "Question {{questionNumber}}"
@@ -227,84 +172,58 @@ trivia-complete:
 
 trivia-complete-smartcookie:
   - typing: .5s
-    text: Amazing work...can't fool you!
+    text: Amazing work...can't fool you! You scored 100%
   - on: facebook
-    image: "<%=staticUrl%>img/andy-smart-cookie.png"
+    image: "<%=staticUrl%>andy-smart-cookie.png"
 
 trivia-complete-quizwiz:
   - typing: .5s
     text: That was tricky...I'm impressed! You scored {{ score }}%
   - on: facebook
-    image: "<%=staticUrl%>img/andy-quiz-wiz.png"
+    image: "<%=staticUrl%>andy-quiz-wiz.png"
 
 trivia-complete-quizwiz-low:
   - typing: .5s
     text: That trivia was tricky. Learn the answers...and more...at the Carnegie Museums of Pittburgh this summer!
   - on: facebook
-    image: "<%=staticUrl%>img/andy-quiz-wiz.png"
+    image: "<%=staticUrl%>andy-quiz-wiz.png"
 
-goodbye:
-  - text: You are leaving because of reason {{reason}}
-    typing: true
-  - Hope to see you back again soon! # if no other properties, you can just send a strings
 
-askStopConvo:
-  - template_type: button
-    text: You have another activity in progress. You must first end the previous activity.
-    buttons:
-      - <STOP_CONVO> End Activity
+################## STAMP TEMPLATES #############################
 
-daily_scan_limit_reached:
-  - text: You have reached today's scan limit for this stamp.
-    typing: 2s
-
-stamp_unlock:
+stamp-unlock:
   - on: facebook
+    typing: 1s
     template_type: "generic"
     elements:
       -
-        title: "{{text}}"
-        image_url: <%=staticUrl%>img/{{image}}
-        buttons:
-          -
-            type: "web_url"
-            title: "My Stamps"
-            messenger_extensions: true
-            url: "https://dev.andybot.org/me"
+        title: "{{title}}"
+        image_url: <%=staticUrl%>{{image}}
 
-scavengerhunt-first-scan-sign:
-  - text: "Welcome to the Good Eye Scavenger Hunt! I have 11 clues for you to solve. Each clue leads to a Carnegie Museum of Natural History object. Scan the object's code to collect it and recieve your next clue!"
-    typing: 2s
+stamp-limit-reached:
+  - text: Ooops! You already collected this stamp.  
+    typing: 1s
+
+
+################## SCAVENGER HUNT TEMPLATES #############################
+
+
+scavengerhunt-time:
   - on: facebook
-    image: "<%=staticUrl%>img/andy-ready-search.png?time=0"
-  - template_type: button
-    text: "OK, here's your first clue!\n\n{{nextClue}}"
-    buttons:
-      -
-        type: "postback"
-        title: "Hint"
-        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
-
-scavengerhunt-scan-sign:
-  - text: "This is a sign for the Good Eye Scavenger Hunt, but it's not an object that needs finding! Keep on searching..."
+    image: "<%=staticUrl%>andy-ready-search.png"
+  - text: "I have 10 clues for you to solve. Each clue leads to an object at the Carnegie Museums of Art and Natural History. Find and scan the object's code to collect it and recieve your next clue!"
     typing: 2s
-  - template_type: button
-    text: "Here's a clue:\n\n{{nextClue}}"
-    buttons:
-      -
-        type: "postback"
-        title: "Hint"
-        payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
 
 scavengerhunt-first-scan:
-  - text: "Welcome to the Good Eye Scavenger Hunt! I have 11 clues for you to solve. Each clue leads to a Carnegie Museum of Natural History object. Scan the object's code to collect it and recieve your next clue!"
-    typing: 2s
   - on: facebook
-    image: "<%=staticUrl%>img/andy-ready-search.png?time=0"
-  - text: "Nice Work! {{foundIt}}"
+    image: "<%=staticUrl%>andy-ready-search.png"
+  - text: "I have 10 clues for you to solve. Each clue leads to an object at the Carnegie Museums of Art and Natural History. Find and scan the object's code to collect it and recieve your next clue!"
+    typing: 2s
+  - text: "You're ahead of the game. You found your first object!"
+  - text: "{{foundIt}}"
     typing: 1s
   - template_type: button
-    text: "OK, here's your next clue!\n\n{{nextClue}}"
+    text: "{{nextClue}}"
     buttons:
       -
         type: "postback"
@@ -312,10 +231,10 @@ scavengerhunt-first-scan:
         payload: "SCAVENGER_HUNT_HINT:{{nextClueNumber}}"
 
 scavengerhunt-scan:
-  - text: "Nice Work! {{foundIt}}"
+  - text: "{{foundIt}}"
     typing: 1s
   - template_type: button
-    text: "OK, here's your next clue!\n\n{{nextClue}}"
+    text: "{{nextClue}}"
     buttons:
       -
         type: "postback"
@@ -327,7 +246,7 @@ scavengerhunt-repeat-scan:
     typing: 1s
   - template_type: button
     typing: 2s
-    text: "Here is your next clue: \n\n{{nextClue}}"
+    text: "{{nextClue}}"
     buttons:
       -
         type: "postback"
@@ -340,66 +259,9 @@ scavengerhunt-hint:
 
 scavengerhunt-last-scan:
   - text: "{{foundIt}}"
-    typing: 1s
-  - text: "Congratulations, you've found all 11 objects in the Good Eye Scavenger Hunt."
-    typing: 1s
+  - text: "Congratulations, you've found all of the objects in this scavenger hunt!"
   - on: facebook
-    image: "<%=staticUrl%>img/andy-good-eye.png?time=0"
-  - typing: 2s
-    text: "Keep the adventure going with more activities."
-  - on: facebook
-    template_type: "generic"
-    elements:
-      -
-        subtitle: "Check out museum events and see upcoming stamp opportunities."
-        title: "What's Happening"
-        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
-        buttons:
-          -
-            type: "postback"
-            title: "See Events"
-            payload: "SEE_EVENTS"
-      {{#activities}}
-      - 
-        subtitle: "{{subtitle}}"
-        title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=6"
-        buttons:
-          -
-            type: "postback"
-            title: "Select {{type}}"
-            payload: "START_ACTIVITY:{{activity}}"
-      {{/activities}}
+    image: "<%=staticUrl%>andy-good-eye.png"
 
 scavengerhunt-complete:
-  - text: "You've already finished the Good Eye Scavenger Hunt!"
-    typing: 1s
-  - typing: true
-    text: "Keep the adventure going with more activities."
-  - on: facebook
-    template_type: "generic"
-    elements:
-      -
-        subtitle: "Check out museum events and see upcoming stamp opportunities."
-        title: "What's Happening"
-        image_url: "<%=staticUrl%>img/museumevents-carousel.png"
-        buttons:
-          -
-            type: "postback"
-            title: "See Events"
-            payload: "SEE_EVENTS"
-      {{#activities}}
-      - 
-        subtitle: "{{subtitle}}"
-        title: "{{title}}"
-        image_url: "<%=staticUrl%>img/{{image}}?time=6"
-        buttons:
-          -
-            type: "postback"
-            title: "Select {{type}}"
-            payload: "START_ACTIVITY:{{activity}}"
-      {{/activities}}
-
-text:
-  - typing: true
-    text: "{{text}}"
+  - text: "You've already finished this scavenger hunt!"

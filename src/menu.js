@@ -9,8 +9,8 @@ module.exports =  [
 
     {
         type: "web_url",
-        title: "🎫 My Adventure",
-        url: "https://dev.andybot.org/me",
+        title: "🎫 My Stamps",
+        url: "https://carnegiebot.org/me",
         webview_height_ratio: "full",
         messenger_extensions: true
     },
