@@ -20,7 +20,7 @@ welcome-back: # this is the #welcome bloc referenced in index.js
       - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Go
 
 map: 
-  - typing: true
+  - typing: 2s
     text: Are you planning to join me on Messenger this year?
     quick_replies:
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play

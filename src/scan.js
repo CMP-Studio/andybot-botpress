@@ -17,8 +17,10 @@ module.exports = async function handleScan(referral, event) {
             event.reply("#more-activities", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
             return;
         } else {
+            console.log(scanResponse.code);
             const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code)
             const image = "andy-" + stampObj.stamp_id + ".png";
+            console.log(stampObj);
             event.reply("#stamp_unlock", { image, title: "You unlocked the " + stampObj.name + " stamp!" });
             event.reply("#more-activities", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
         }
