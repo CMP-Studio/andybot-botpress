@@ -37,13 +37,17 @@ module.exports = function (bp) {
 		
 	};
 
-	function checkForUser(event) {
+	async function checkForUser(event) {
 		try {
 			const pageId = event.user.id;
 			const exists = await andybot.userExists(pageId);
-			if (!exists) {
-				getStarted();
-			}
+			if (exists === false) {
+				event.reply('#welcome');
+				andybot.createUser(pageId, event.user.first_name);
+			} 
+		} catch (err){
+			console.error(err);
+			event.reply('#error');
 		}
 	}
 
@@ -81,7 +85,7 @@ module.exports = function (bp) {
 
 	// Catch scanned codes
 	async function fallBackHandler(event, next) {
-		checkForUser();
+		await checkForUser();
 		if (utils.isNonNull(event.raw.referral) && utils.isNonNull(event.raw.referral.ref)) {
 			// A code was scanned
 			console.log("SCANNED CODE:") 
@@ -91,7 +95,7 @@ module.exports = function (bp) {
 	}
 
 	async function howToPlay(event, next){
-		checkForUser();
+		await checkForUser();
  		if (bp.convo.find(event)) {
 			await stopConvo(event, null, false);
 		}
@@ -102,7 +106,7 @@ module.exports = function (bp) {
 
 
 	async function sendScavengerHuntHint(event, next) {
-		checkForUser();
+		await checkForUser();
 		const clueNumber = event.raw.postback.payload.split(':')[1];		
 		const hintResponse = await andybot.scavengerhunt.getHint(clueNumber);
 		event.reply("#scavengerhunt-hint", { hint: hintResponse.hint });
@@ -110,7 +114,7 @@ module.exports = function (bp) {
 	}
 	
 	async function startActivity(event, next) {
-		checkForUser();
+		await checkForUser();
 		const activityName = event.raw.postback.payload.split(':')[1];		
 		const activityType = getActivityType(activityName);
 		if (isValidActivityType(activityType) === false) {
@@ -130,7 +134,7 @@ module.exports = function (bp) {
 	}
 
 	async function seeEvents(event) {
-		checkForUser();
+		await checkForUser();
 		if (bp.convo.find(event)) {
 			await stopConvo(event, null, false);
 		}
@@ -161,7 +165,7 @@ module.exports = function (bp) {
 	}
 
 	async function stopConvo(event, next, sendNotification){
-		checkForUser();
+		await checkForUser();
 		const convo = bp.convo.find(event);
 		if (convo) {
 			convo.stop('aborted');
@@ -176,7 +180,7 @@ module.exports = function (bp) {
 	}
 
 	async function beginAdventure(event, next) {
-		checkForUser();
+		await checkForUser();
 		const avaliableActivities = await andybot.avaliableActivities(event.user.id);
 		event.reply('#activities', { activities: _.shuffle(avaliableActivities).slice(0, 9) });
 	}
