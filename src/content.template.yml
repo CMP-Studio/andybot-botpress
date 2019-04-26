@@ -4,17 +4,14 @@
 welcome: # this is the #welcome bloc referenced in index.js
   - on: facebook
     image: <%=staticUrl%>andy-hello.png
-  - typing: true
-    text: I'm Andy CarnegieBot! Pleased to meet you!
+  - text: I'm Andy CarnegieBot! Pleased to meet you!
   - text: Let's get started on an amazing summer adventure.
-    typing: 2s
     quick_replies:
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play
       - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Begin
 
 welcome-back: # this is the #welcome bloc referenced in index.js
-  - typing: true
-    text: Hey {{user.name}}! Good to see you again.
+  - text: Hey {{user.name}}! Good to see you again.
     quick_replies:
       - <<%=postbacks.HOW_TO_PLAY%>> How to Play
       - <<%=postbacks.BEGIN_ADVENTURE%>> Let's Go
@@ -63,7 +60,7 @@ text:
 #################### ACTIVITY DISPLAY TEMPLATES #####################3
 
 activities:
-  - typing: true
+  - typing: 3s
     text: "Here are some activities you can take part in:"
   - on: facebook
     template_type: "generic"
@@ -90,7 +87,7 @@ activities:
       {{/activities}}
 
 more-activities:
-  - typing: 2s
+  - typing: 3s
     text: "Keep the adventure going with more activities."
   - on: facebook
     template_type: "generic"
