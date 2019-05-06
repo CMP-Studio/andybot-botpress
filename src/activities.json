@@ -36,7 +36,7 @@
             "activity": "scavengerhunt",
             "image": "scavengerhunt-oakland-carousel.png",
             "title": "Scavenger Hunt",
-            "subtitle": "Solve exciting clues and discover museum treasures!",
+            "subtitle": "Join us at Carnegie Museums of Art and Natural History to solve exciting clues!",
             "location": "CMNH"
         },
         {
@@ -86,7 +86,7 @@
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://carnegiemuseums.org/join-support/membership/member-events/",
+            "url": "https://members.carnegiemuseums.org/site/Calendar?id=79817&view=Detail&_ga=2.203514704.1307281418.1556542318-1949000828.1489604483",
             "when": "June 9, 2–3pm"
         },
         {
@@ -96,7 +96,7 @@
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://carnegiemuseums.org/join-support/membership/member-events/",
+            "url": "https://members.carnegiemuseums.org/site/Calendar?id=79818&view=Detail&_ga=2.190950378.1307281418.1556542318-1949000828.1489604483",
             "when": "July 14, 2–3pm"
         },
         {
@@ -106,7 +106,7 @@
             "image": "event-carousel-cmoamembertours.png",
             "location": "CMOA",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://carnegiemuseums.org/join-support/membership/member-events/",
+            "url": "https://members.carnegiemuseums.org/site/Calendar?id=79819&view=Detail&_ga=2.190950378.1307281418.1556542318-1949000828.1489604483",
             "when": "August 11, 2–3pm"
         },
         {
@@ -116,7 +116,7 @@
             "image": "event-carousel-warholmembertours.png",
             "location": "Warhol",
             "description": "To register, call 412.622.3314 or email membership@carnegiemuseums.org.",
-            "url": "https://carnegiemuseums.org/join-support/membership/member-events/",
+            "url": "https://members.carnegiemuseums.org/site/Calendar?id=79820&view=Detail&_ga=2.190950378.1307281418.1556542318-1949000828.1489604483",
             "when": "June 22, 2–3pm"
         },
         {
@@ -136,7 +136,7 @@
             "image": "event-carousel-artofsight.png",
             "location": "CMNH",
             "description": "Join us in Carnegie Music Hall for a talk by Dr. José-Alain Sahel, director of the UPMC Eye Center.",
-            "url": "https://carnegiemuseums.org/join-support/membership/member-events/",
+            "url": "https://cmoa.org/event/lecture-the-art-of-sight-with-dr-jose-alain-sahel/",
             "when": "June 13, 6:30pm–8pm"
         },
         {
@@ -442,11 +442,11 @@
             "location": "John White Alexander - the third floor of the Grand Staircase",
             "clue": "Can you find the parade on the wall of the third floor balcony? I’m hanging out close by.",
             "hint": "Look on the wall above the staircase.",
-            "answer": "This is the top level of John White Alexander’s masterpiece, The Crowning of Labor. Look around at the white walls: Alexander had planned to extend the mural, but unfortunately passed away before his work was complete."
+            "answer": "Great work! This is the top level of John White Alexander’s masterpiece, The Crowning of Labor. Look around at the white walls: Alexander had planned to extend the mural, but unfortunately passed away before his work was complete."
         },
         {
             "location": "Dec. Arts - The vitrine located just inside the left-hand set of doors to the Bruce Galleries",
-            "clue": "Great work! For your next clue: Shine bright like a diamond—or crystal! Look for me by two dazzling containers in the Bruce Galleries for Decorative Arts and Design on the second floor.",
+            "clue": "For your next clue: Shine bright like a diamond—or crystal! Look for me by two dazzling containers in the Bruce Galleries for Decorative Arts and Design on the second floor.",
             "hint": "The Bruce Galleries are located on the second floor, just off the Grand Staircase.",
             "answer": "These sparkling decanters were made right here in Pittsburgh for U.S. President James Monroe in 1818. Quite different from our modern water bottles, right?"
         },
@@ -513,13 +513,12 @@
         {
             "text": "The spectators in the model of Forbes Field are made out of ________?",
             "image": "trivia-railroad-4.png",
-            "answer": 1,
-            "incorrect": "Q-tips",
-            "followup": [
+            "answer": "Q-tips",
+            "incorrect": [
                 "Wood chips",
                 "Peas"
             ],
-            "": "The real Forbes Field took only four months to build out of steel and concrete, but the model took over a year to complete."
+            "followup": "The real Forbes Field took only four months to build out of steel and concrete, but the model took over a year to complete."
         },
         {
             "text": "A good hockey goalie has a reaction time that is ___% faster than an average person’s.",
@@ -660,7 +659,7 @@
                 "Poland",
                 "Hungary"
             ],
-            "followup": "Andrej and Julia Warhola were Carpatho-Rusyns who immigrated from what is now eastern Slovakia in the 1920s."
+            "followup": "Andrej and Julia Warhola were Carpatho-Rusyns who emigrated from what is now eastern Slovakia in the 1920s."
         },
         {
             "text": "Warhol attended college at Carnegie Tech (now Carnegie Mellon University). How did he afford it?",

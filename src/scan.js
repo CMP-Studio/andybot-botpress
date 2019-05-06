@@ -19,7 +19,11 @@ module.exports = async function handleScan(referral, event) {
         } else {
             const stampObj = _.find(activities.stamps, (s) => s.stamp_id === scanResponse.code)
             const image = "andy-" + stampObj.stamp_id + ".png";
-            event.reply("#stamp-unlock", { image, title: "You unlocked the " + stampObj.name + " stamp!" });
+            var unlockString = "You unlocked the " + stampObj.name + " stamp!"
+            if (stampObj.name.substring(0, 3) === "The") {
+                unlockString = "You unlocked " + stampObj.name + " stamp!";
+            }
+            event.reply("#stamp-unlock", { image, title: unlockString });
             event.reply("#more-activities", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
         }
     }

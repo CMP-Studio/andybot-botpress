@@ -255,6 +255,8 @@ scavengerhunt-continue:
 scavengerhunt-scan:
   - text: "{{foundIt}}"
     typing: 1s
+  - text: "Next clue:"
+    typing: 1s
   - template_type: button
     text: "{{nextClue}}"
     buttons:
