@@ -5,9 +5,11 @@ const utils = require('./utils');
 const handleScan = require('./scan');
 
 module.exports = async function ScavengerHuntHandler(convo, event, activityName) {
-
+	console.log("HITTING HANDLER")
 	const userPageId = event.user.id;
 	const hunt = await andybot.scavengerhunt.getClue(userPageId);
+
+	console.log(hunt);
 
 	if (hunt.begin) {
 		event.reply('#scavengerhunt-begin', { nextClue: hunt.nextClue, nextClueNumber: hunt.nextClueNumber });	
