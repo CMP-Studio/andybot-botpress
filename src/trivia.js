@@ -19,7 +19,6 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 	const activityTitle = _.find(activities.activities, (e) => e.activity === activityName).title;
 	if ( utils.isNull(activity)){
 		return 
-		
 	}
 
 	event.reply('#trivia-time', { name: activityTitle, numQuestions: activity.length });
@@ -50,6 +49,8 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 				feedback = '👍 Correct!';
 				correctAnswers += 1;
 			} else {
+				if (correctAnswer === "False ") { correctAnswer = "False"; }
+				if (correctAnswer === "True ") { correctAnswer = "True"; }
 				feedback = '❌ Incorrect. The answer is ' + correctAnswer + '.';
 			}
 
