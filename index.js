@@ -54,8 +54,8 @@ module.exports = function (bp) {
 	// Catch get started button press
 	// As well as any codes scanned
 	async function getStarted(event, next) {
-		//console.log(event);
-		//console.log(event.raw.postback.referral.ref);
+		// console.log(event);
+		// console.log(event.raw.postback.referral.ref);
 
 		try {
 			const pageId = event.user.id;
@@ -71,8 +71,8 @@ module.exports = function (bp) {
 			// Get Started may have an associated event.
 			let referral;
 			if (utils.isNonNull(event.raw.postback.referral) && utils.isNonNull(event.raw.postback.referral.ref)) {
-				// console.log("SCANNED CODE BEFORE GETTING STARTED:") 
-				// console.log(event.raw.postback.referral.ref);
+				console.log("SCANNED CODE BEFORE GETTING STARTED:") 
+				console.log(event.raw.postback.referral.ref);
 				referral = event.raw.postback.referral.ref;
 				await handleScan(referral, event);
 			} 
@@ -85,11 +85,13 @@ module.exports = function (bp) {
 
 	// Catch scanned codes
 	async function fallBackHandler(event, next) {
+		// console.log(event.raw.referral);
 		await checkForUser(event);
+		// console.log("Checked for user")
 		if (utils.isNonNull(event.raw.referral) && utils.isNonNull(event.raw.referral.ref)) {
 			// A code was scanned
-			console.log("SCANNED CODE:") 
-			console.log(event.raw.referral.ref);
+			// console.log("SCANNED CODE:") 
+			// console.log(event.raw.referral.ref);
 			await handleScan(event.raw.referral.ref, event)
 		}
 	}
