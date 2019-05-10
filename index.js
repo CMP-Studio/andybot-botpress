@@ -54,9 +54,6 @@ module.exports = function (bp) {
 	// Catch get started button press
 	// As well as any codes scanned
 	async function getStarted(event, next) {
-		// console.log(event);
-		// console.log(event.raw.postback.referral.ref);
-
 		try {
 			const pageId = event.user.id;
 			const exists = await andybot.userExists(pageId);
@@ -76,7 +73,6 @@ module.exports = function (bp) {
 				referral = event.raw.postback.referral.ref;
 				await handleScan(referral, event);
 			} 
-
 		} catch (err){
 			console.error(err);
 			event.reply('#error');
@@ -104,6 +100,18 @@ module.exports = function (bp) {
 		const howtoplay = activities['howtoplay'];
 		event.reply('#how-to-play', { howtoplay });
 		return;
+	}
+
+	async function clearHunt(event, next) {
+		await checkForUser(event);
+		const pageId = event.user.id;
+		const cleared = await andybot.scavengerhunt.clearProgress(pageId);
+		event.reply("#scavengerhunt-clearhunt");
+		try {
+			scavengerHuntHandler(convo, event, activityName);
+		} catch (err) {
+			console.error(err);
+		}
 	}
 
 
@@ -201,6 +209,8 @@ module.exports = function (bp) {
 	bp.hear(/HOW_TO_PLAY/, howToPlay);
 
 	bp.hear(/BEGIN_ADVENTURE/, beginAdventure);
+
+	bp.hear(/CLEAR_HUNT/, clearHunt);
 
 	bp.hear(/STOP_CONVO/, (event, next) => { stopConvo(event, next, true) });
 
