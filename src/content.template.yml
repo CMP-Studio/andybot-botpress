@@ -213,6 +213,8 @@ stamp-limit-reached:
 
 ################## SCAVENGER HUNT TEMPLATES #############################
 
+scavengerhunt-clearhunt: 
+  - text: "You got it! Starting over..."
 
 scavengerhunt-begin:
   - on: facebook
@@ -290,3 +292,5 @@ scavengerhunt-last-scan:
 
 scavengerhunt-complete:
   - text: "You've already finished this scavenger hunt!"
+    quick_replies:
+      - <<%=postbacks.CLEAR_HUNT%>> Start Over

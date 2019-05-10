@@ -24,7 +24,6 @@ module.exports = {
 		return response.data; 
 	},
 
-
 	avaliableActivities: async function (page_id) {
 		const response = await axios.post(`${config.apiEndpoint}/avaliableActivities`,
 			{ page_id },
@@ -100,6 +99,13 @@ module.exports = {
 			{ fb_page_id },
 			{ headers: { 'Content-Type': 'application/json'} });
 			return rsp.data; 			
+		},
+
+		clearProgress: async function (fb_page_id) {
+			const rsp = await axios.post(`${config.apiEndpoint}/scavengerhunt/clearProgress`, 
+			{ page_id: fb_page_id },
+			{ headers: { 'Content-Type': 'application/json'} });
+			return rsp.data; 
 		}
 	}
 

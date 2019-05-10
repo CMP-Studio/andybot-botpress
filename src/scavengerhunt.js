@@ -17,7 +17,6 @@ module.exports = async function ScavengerHuntHandler(convo, event, activityName)
 		event.reply('#scavengerhunt-begin', { nextClue: hunt.nextClue, nextClueNumber: hunt.nextClueNumber });	
 	} else if (hunt.completed) {
 		event.reply('#scavengerhunt-complete');
-		event.reply("#more-activities", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
 	} else {
 		event.reply('#scavengerhunt-continue', { nextClue: hunt.nextClue, nextClueNumber: hunt.nextClueNumber });
 	}

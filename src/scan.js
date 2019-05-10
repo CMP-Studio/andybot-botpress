@@ -36,7 +36,6 @@ module.exports = async function handleScan(referral, event) {
             
             if (res.completed) {
                 event.reply("scavengerhunt-complete");
-                event.reply("#more-activities", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
             } else if (res.lastScan && utils.isNonNull(res.foundIt)) {
                 event.reply("scavengerhunt-last-scan", { foundIt: res.foundIt });
                 event.reply("#more-activities", { activities: _.shuffle(avaliableActivities).slice(0, 9) });
