@@ -216,6 +216,7 @@ module.exports = function (bp) {
 
 	eventHandlers.fallBackHandler = fallBackHandler;
 	eventHandlers.getStarted = getStarted;
+	eventHandlers.clearHunt = clearHunt;
 	eventHandlers.howToPlay = howToPlay;
 	eventHandlers.stopConvo = stopConvo;
 	eventHandlers.startActivity = startActivity;

@@ -49,8 +49,8 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 				feedback = '👍 Correct!';
 				correctAnswers += 1;
 			} else {
-				if (correctAnswer === "False ") { correctAnswer = "False"; }
-				if (correctAnswer === "True ") { correctAnswer = "True"; }
+				if (correctAnswer === "False ") { correctAnswer = "False" }
+				else if (correctAnswer === "True ") { correctAnswer = "True" }
 				feedback = '❌ Incorrect. The answer is ' + correctAnswer + '.';
 			}
 
