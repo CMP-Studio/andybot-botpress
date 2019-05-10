@@ -2,15 +2,11 @@ const _ = require('lodash');
 
 const andybot = require('./andybot');
 const utils = require('./utils');
-
-let activities;
-
 const handleScan = require('./scan');
 
 module.exports = async function ScavengerHuntHandler(convo, event, activityName) {
 
 	const userPageId = event.user.id;
-	const avaliableActivities = await andybot.avaliableActivities(userPageId);
 	const hunt = await andybot.scavengerhunt.getClue(userPageId);
 
 	if (hunt.begin) {
