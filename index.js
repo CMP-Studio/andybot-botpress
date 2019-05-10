@@ -108,12 +108,11 @@ module.exports = function (bp) {
 		const cleared = await andybot.scavengerhunt.clearProgress(pageId);
 		event.reply("#scavengerhunt-clearhunt");
 		try {
-			activityHandlers.scavengerhunt(convo, event, activityName);
+			activityHandlers.scavengerhunt(null, event, null);
 		} catch (err) {
 			console.error(err);
 		}
 	}
-
 
 	async function sendScavengerHuntHint(event, next) {
 		await checkForUser(event);
