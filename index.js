@@ -108,7 +108,7 @@ module.exports = function (bp) {
 		const cleared = await andybot.scavengerhunt.clearProgress(pageId);
 		event.reply("#scavengerhunt-clearhunt");
 		try {
-			scavengerHuntHandler(convo, event, activityName);
+			activityHandlers.scavengerhunt(convo, event, activityName);
 		} catch (err) {
 			console.error(err);
 		}
