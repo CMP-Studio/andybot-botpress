@@ -31,7 +31,7 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 		const isLastQuestion = i === numQuestions - 1;
 		const options = [ ...activity[i].incorrect, activity[i].answer ];
 		const choices = _.shuffle(options);
-		const correctAnswer = activity[i].answer;
+		let correctAnswer = activity[i].answer;
 
 		const responseCallback = async (response) => {
 
@@ -49,15 +49,9 @@ module.exports = async function TriviaHandler(convo, event, activityName) {
 				feedback = '👍 Correct!';
 				correctAnswers += 1;
 			} else {
-				try {
-					console.log(correctAnswer);
-					if (correctAnswer === "False ") { correctAnswer = "False" }
-					else if (correctAnswer === "True ") { correctAnswer = "True" }
-					console.log(correctAnswer);
-					feedback = '❌ Incorrect. The answer is ' + correctAnswer + '.';
-				} catch (e) {
-					console.log(e);
-				}
+				if (correctAnswer === "False ") { correctAnswer = "False" }
+				else if (correctAnswer === "True ") { correctAnswer = "True" }
+				feedback = '❌ Incorrect. The answer is ' + correctAnswer + '.';	
 			}
 
 			if (utils.isNonNull(followUp)) {
