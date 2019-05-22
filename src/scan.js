@@ -2,6 +2,7 @@ const andybot = require('./andybot');
 const activities = require('./activities.json');
 const utils = require('./utils');
 const _ = require('lodash');
+const ScavengerHuntHandler = require('./src/scavengerhunt');
 
 // Scan handler
 
@@ -33,8 +34,10 @@ module.exports = async function handleScan(referral, event) {
         if (utils.isNonNull(scanResponse.scavengerhunt)){
             let res = scanResponse.scavengerhunt;
             const avaliableActivities = await andybot.avaliableActivities(event.user.id);
-            
-            if (res.completed) {
+
+            if (res.onboard) {
+                ScavengerHuntHandler(null, event, null);
+            } else if (res.completed) {
                 event.reply("scavengerhunt-complete");
             } else if (res.lastScan && utils.isNonNull(res.foundIt)) {
                 event.reply("scavengerhunt-last-scan", { foundIt: res.foundIt });
