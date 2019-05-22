@@ -291,6 +291,10 @@ scavengerhunt-last-scan:
     image: "<%=staticUrl%>andy-good-eye.png"
 
 scavengerhunt-complete:
-  - text: "You've already finished this scavenger hunt!"
-    quick_replies:
-      - <<%=postbacks.CLEAR_HUNT%>> Start Over
+  - on: facebook
+    template_type: "button"
+    text: "You've already finished this scavenger hunt!"
+    buttons:
+      - type: "postback"
+        title: "Start Over"
+        payload: "CLEAR_HUNT"
