@@ -2,7 +2,7 @@ const andybot = require('./andybot');
 const activities = require('./activities.json');
 const utils = require('./utils');
 const _ = require('lodash');
-const ScavengerHuntHandler = require('./src/scavengerhunt');
+const ScavengerHuntHandler = require('./scavengerhunt');
 
 // Scan handler
 
