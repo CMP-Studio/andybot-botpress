@@ -40,7 +40,7 @@ const config = {
 		accessToken: process.env.FB_PAGE_ACCESS_TOKEN,
 		verifyToken: process.env.FB_VERIFY_TOKEN,
 		chatExtensionHomeUrl: 'https://carnegiebot.org',
-		hostname: '15ccb790.ngrok.io',
+		hostname: '3b424d0e.ngrok.io',
 		staticUrl: 'https://carnegiebot.org/static/img/',
 		apiEndpoint: 'http://localhost:3001',
 		trustedDomain: 'https://carnegiebot.org'

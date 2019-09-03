@@ -1,4 +1,10 @@
 
+vacation:
+  - on: facebook
+    image: https://carnegiebot.org/static/img/andy-vacation.png
+  - typing: true
+    text: Hi there! I'm on vacation and taking a break from Messenger. Check back with me later!
+
 ########### WELCOME TEMPLATES ########################
 
 welcome: # this is the #welcome bloc referenced in index.js

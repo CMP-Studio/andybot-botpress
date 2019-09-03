@@ -9,14 +9,11 @@ appSecret: "<%=appSecret%>"
 verifyToken: "<%=verifyToken%>"
 
 displayGetStarted: true
-greetingMessage: "<%=greetingMessage%>"
-persistentMenu: true
-persistentMenuItems:
-<%=menu%>
+persistentMenu: false
 
 trustedDomains: ["https://carnegiebot.org"]
 autoRespondGetStarted: false
-composerInputDisabled: true
+composerInputDisabled: false
 chatExtensionHomeUrl: "https://carnegiebot.org"
 chatExtensionInTest: false
 chatExtensionShowShareButton: true
