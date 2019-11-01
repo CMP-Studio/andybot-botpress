@@ -11,7 +11,7 @@
     "botpress-terminal": "^1.0.2",
     "dotenv": "^6.0.0",
     "json2yaml": "^1.1.0",
-    "knex": "^0.14.6",
+    "knex": "^0.19.5",
     "lodash": "^4.17.5"
   },
   "devDependencies": {
