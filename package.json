@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "botpress": "^1.1.13",
     "botpress-broadcast": "^2.0.11",
     "botpress-messenger": "^2.2.11",
